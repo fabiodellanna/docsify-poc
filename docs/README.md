@@ -3,23 +3,22 @@
 Digital Commerce API
 ====================  
 
-1 Swiss Post e-commerce API reference
--------------------------------------  
+# 1 Swiss Post e-commerce API reference
+
 
 The Swiss Post **e-commerce API** is a **REST** API which provides predictable and resource-oriented URLs and uses HTTP response codes to indicate API errors. It uses built-in HTTP features to receive commands and return responses. This makes it easy to communicate with from a wide variety of environments, from command-line utilities, server-side or client-side web applications and mobile devices. It supports the **JSON** format in requests and it returns JSON content in all of its responses, including errors. It supports cross-origin resource sharing to allow you to interact securely with our API from a client-side web application.
 
 The access to the Swiss Post e-commerce API is controlled by the **OAuth** authorization protocol. An **access token** is required to consume the **endpoints** exposed by the API. This is obtained after a sucessful authentication.
 
-2 Overview
-----------  
+# 2 Overview
 
 ![](https://developer.post.ch/-/media/post-maxisites/developer/images/ms-develop-dc-api-general-info-01.jpg?mw=1600&vs=2&sc_lang=en&hash=33149EEA90A1215CC53FAD2FDFC241C4)
 
 ![](https://developer.post.ch/-/media/post-maxisites/developer/images/ms-develop-dc-api-general-info-02.jpg?mw=1600&vs=2&sc_lang=en&hash=7BADBF17749FE08E274F94C2BF85A1D2)
 
-### 2.1 API endpoints
+## 2.1 API endpoints
 |Endpoint|URL|Aim|
-|--|--|--|
+|---|---|---|
 |address|[https://wedec.post.ch/api/address/v1](https://wedec.post.ch/api/address/v1)|Provides the access to the personal addresses of Swiss Post registered users, it refers to the list of their delivery addresses. Moreover this API provides the access to unpersonal business data and exposes address validation service and an auto-completion service for zip codes, street names and house numbers.  |
 |delivery|[https://wedec.post.ch/api/delivery/v1](https://wedec.post.ch/api/delivery/v1)|Provides the access to unpersonal data delivered by the logistic services of Swiss Post, it refers to the list of the deliverabilities, when and how a given valid address can be delivered.|
 |Pickpost|[https://wedec.post.ch/api/pickpost/v1](https://wedec.post.ch/api/pickpost/v1)|Provides access to retrieve the Pickpost user ID. If a user does not exist yet in PickPost a new PickPost ID is automatically generated and returned to the caller.|
@@ -30,9 +29,7 @@ The access to the Swiss Post e-commerce API is controlled by the **OAuth** autho
 |token|[https://wedec.post.ch/WEDECOAuth/token](https://wedec.post.ch/WEDECOAuth/token)|OAuth Endpoint for exchanging an authorization code against an access token.<br>[http://openid.net/specs/openid-connect-core-1\_0.html#TokenRequest](http://openid.net/specs/openid-connect-core-1_0.html#TokenRequest)|
 
 
-3 Authentication
-----------------  
-
+# 3 Authentication
 The access to the Swiss Post connector and the e-commerce API is controlled by both **OpenID-Connect** protocol **version 1.0** and **OAuth** authorization protocol **version 2.0**.
 
 Only Swiss Post registered clients can be authorized to consume the Swiss Post connector and the e-commerce API. The OpenID endpoint and some endpoints of the e-commerce API require the **authorization** of the end users when personal data is queried.
@@ -41,8 +38,7 @@ OAuth is an authorization protocol and not an authentication protocol. The clien
 
 For more information see [http://tools.ietf.org/html/rfc6749](http://tools.ietf.org/html/rfc6749)
 
-### 3.1 OAuth
-
+## 3.1 OAuth
 A client of the Swiss Post e-commerce API must first obtain an OAuth **access token** in order to consume the endpoints of the API.
 
 * The client is authenticated by the OAuth credentials received after a successful registration: **client-id, client-secret**.
@@ -56,8 +52,7 @@ The OAuth authorization protocol defines a set of standard flows for querying an
 
 For more information see [http://tools.ietf.org/html/rfc6749](http://tools.ietf.org/html/rfc6749)
 
-### 3.2 OpenID-Connect
-
+## 3.2 OpenID-Connect
 The access to personal data by a registered client through the Swiss Post connector is controlled by the OpenID-Connect protocol. This is based on the OAuth standard authorization protocol. The OpenID-Connect flow is based on the OAuth authorization code grant flow or the OAuth implicit code grant flow. It finally returns an ID-Token and an access token to the client.
 
 * The returned ID-Token contains the personal data out of the identity of the end user mapped to each ordered OpenID scope.
@@ -69,8 +64,7 @@ A client of the Swiss Post Connector is responsible for the integration of the d
 
 For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#Introduction](http://openid.net/specs/openid-connect-core-1_0.html#Introduction)
 
-### 3.3 Authorization code grant flow
-
+## 3.3 Authorization code grant flow
 See [http://openid.net/specs/openid-connect-core-1\_0.html#CodeFlowAuth](http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth)
 
 Flow meant for scopes giving access to personal data, requiring consent by the end user.
@@ -79,16 +73,14 @@ Some scopes giving access to non-personal data can be ordered besides the other 
 
 If only non-personal-data scopes are used, it’s usually better to use the Client Credentials flow
 
-#### 3.3.1 Authentication request
-
+### 3.3.1 Authentication request
 **GET request**
 
     https://wedec.post.ch/WEDECOAuth/authorization? client_id=wedec-fake-shop& scope=WEDEC_READ_ADDRESS+openid+profile+email+address& response_type=code& redirect_uri=http://localhost:8080/fake-shop/& nonce=f5bb9f70-2& state=bbe6606b-b
 
 For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#AuthRequest](http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest)
 
-#### 3.3.2 Authentication response
-
+### 3.3.2 Authentication response
 **Response**
 
      HTTP/1.1 302 Found 
@@ -96,12 +88,10 @@ For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#
 
 For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#AuthResponse](http://openid.net/specs/openid-connect-core-1_0.html#AuthResponse)
 
-#### 3.3.3 Authentication response validation
-
+### 3.3.3 Authentication response validation
 We recommend that the client validates the authentication response, see [http://openid.net/specs/openid-connect-core-1\_0.html#AuthResponseValidation](http://openid.net/specs/openid-connect-core-1_0.html#AuthResponseValidation)
 
-#### 3.3.4 Token request
-
+### 3.3.4 Token request
 **POST request**
 
     https://wedec.post.ch/WEDECOAuth/token? 
@@ -113,11 +103,12 @@ We recommend that the client validates the authentication response, see [http://
 
 For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#TokenRequest](http://openid.net/specs/openid-connect-core-1_0.html#TokenRequest)
 
-#### 3.3.5 Token response
-
+### 3.3.5 Token response
 **Response**
 
      HTTP/1.1 200 OK 
+
+```json
      Content-Type: application/json;charset=UTF-8 
      { 
          “expires_in”:300, 
@@ -125,27 +116,25 @@ For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#
          “id_token”: “eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0MTEwNTE5MTQsInN1YiI6IjEwMDQ5MjIiLCJub25jZSI6IjczZDc3N2U0LTciLCJhdWQiOlsid2Vk ZWMtZmFrZS1zaG9wIl0sImlzcyI6Imh0dHBzOlwvXC9hcGlkZXYucG5ldC5jaCIsImlhdCI6MTQxMTA1MTMxNH0. SBYodQCRmsbZvSHnBenLqPGS-U9Q_Z S8wTM7TvvyiDxiF27pKvjwsF6vYzJsucpluz750bH-OVtL-Esh72M-Ki8L_3hGImgpZ-K7KaRRM9BG3UA- 5M8ZZloVTpz6W47H_xi-Q_NwCqApgawdEP8rI ECKtSdk3En8A3rDSrCLNhF2LO-56rsC2rwcdBqrpth_89Iq00O1kMPNZ2H_HJpQzBIku04WGOwbx- 2K3f5b_BV-VKVjqkqEMoacJcP_c9pQY2YxpIGAfOnS ROMYCJfM5M-QmsgDCn9B9Z0yicbPwDexS4y1FqOMFXVIJYt94qek8n8CVqp9KQBl2ptEuAbD6HIA”,
          “access_token”:“eyJhbGciOiJSU0ExXzUiLCJlbmMiOiJBMjU2R0NNIn0.XpENWZLOwkvlwiY0TWCUZ2LTAbd- P895E1BlAClqmB3oHTehtMGkXCNudURQtwc CVR23dYalRYLDP_huIHqwNjHoAYip2CsyiTrYQySp4wZzRb5Cm1QKvTq2yGfFUcK2qIqr7nFD_CEei8_EpVHanYSE3srnWZkVEI8btQOg32bKOaidwLBaP LgFHfgom6l7n6ewh7UFv1WcRjk9Ug48oHUrpVQEBnu1pXr8gFEtEpmTZhT1TUCwUsyxzH36dkgzSZ4DHCvuIPDOtWpurQZQiu0OQVWd3ih2z7jSECXzUD7 9oIxqzN_pWNVeb4jGvVhTYktBmsCYxJZCslm_NtuMJg.V4qpGmkldszeRMk.KI_swCCP6rvvkiGOkNWLghqK- 0BXrsz5qdimYNxkGNkbE2NQeJKfaGPtLKb 1d59YIwe_Ng_kqpBg05_39OOLgC4tA5JsEipOPm951fDlclmx0ybKwPqtNCjigGP_yxrwcbHwPSEofnNMakt- GnVpCadUMjeNUb6QRzybylS3CxeWsv19md U48xTiHGNqzgB2iWT9DkzfCcP0o3bTqTNcdD4uLdE1oA-hev5bT3XDV56XlH1SprSva2sQ86k6mFgHTcqTp8MnFzEXSjBe_ QkiJJgfx53c8pzVruby2kiW xdYm91ILStVUCQZ26EPGFhTN03TZTZ0BeM6cHvapvOO_JWwWdbsc_dx4YLpCIdF9FjlJruLHFx- 29ZAweSuXdSmM4v7X9jCh3_5iNWeniYjwmzYb9vMbOd2 UrlGoGxnUdJ_BTOjB8LXHQ7mO35ycl4L0o7j8pF6qDxJiQapPFl4jI77WksrvkVFNvyTUIL_JggQrPjO0cCuHlevIi- W0I50aS3Vj8oGLFcOM9QnBuL3tyk 1BvQdwtfXX6mmqvp1OfFWkfClytBcBcBWdLgzFKKpkXQ0Unaa_uQxtVLBfAuisF1w8idPia9hcP2jv_Eeyy0iqjnDtO. CKPdNsuq22qlhNRRQODqnw” 
      }  
+```
 
 For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#TokenResponse](http://openid.net/specs/openid-connect-core-1_0.html#TokenResponse)
 
-#### 3.3.6 Token response validation
-
+### 3.3.6 Token response validation
 We recommend that the client validates the token response, see [http://openid.net/specs/openid-connectcore-1\_0.html#TokenResponseValidation](http://openid.net/specs/openid-connectcore-1_0.html#TokenResponseValidation)
 
-### 3.4 Client credential flow
-
+## 3.4 Client credential flow
 This flow is suitable for the server-side access by a registered client to non-personal data. No consent by any end user is necessary for the ordered scopes, the client exchanges its OAuth credentials for an access token.
 
 This flow is implemented on the server side.
 
-#### 3.4.1 Token request
+### 3.4.1 Token request
 
       $ curl -X POST https://wedec.post.ch/WEDECOAuth/token?grant_type=client_credentials&client_id=wedec-fake-shop&client_secret=wedec-fake-shop-secret&scope=WEDEC_DELIVERY  
 
 
-### 3.5 Use access token
-
-#### 3.5.1 Resource request
+## 3.5 Use access token
+### 3.5.1 Resource request
 
     $ curl -H Authorization: Bearer 
     eyJhbGciOiJSU0ExXzUiLCJlbmMiOiJBMjU2R0NNIn0.XpENWZLOwkvlwiY0TWCUZ2LTAbdP895E1BlAClqm- B3oHTehtMGkXCNudURQtwc CVR23dYalRYLDP_huIHqwNjHoAYip2CsyiTrYQySp4wZzRb5Cm1QKvTq2yGfFUcK2qIqr7nFD_CEei8_ EpVHanYSE3srnWZkVEI8btQOg32bKOaidwLBaP LgFHfgom6l7n6ewh7UFv1WcRjk9Ug48oHUrpVQEBnu1pXr8gFEtEpmTZhT1TUCwUsyxzH36dkgzSZ4DHCvuIPDOtWpurQZQiu0OQVWd3ih2z7jSECXzUD7 9oIxqzN_pWNVeb4jGvVhTYktBmsCYxJZCslm_NtuMJg.V4qpGmkldszeRMk.KI_swCCP6rvvkiGOkNWLghqK0BXrsz5qdimYNxkGNkbE2NQeJKfaGPtLKb 1d59YIwe_Ng_kqpBg05_39OOLgC4tA5JsEipOPm951fDlclmx0ybKwPqtNCjigGP_yxrwcbHwPSEofnNMaktGnVpCadUMjeNUb6QRzybylS3CxeWsv19md U48xTiHGNqzgB2iWT9DkzfCcP0o3bTqTNcdD4uLdE1oAhev5bT3XDV56XlH1SprSva2sQ86k6mFgHTcqTp8MnFzEXSjBe_ QkiJJgfx53c8pzVruby2kiW xdYm91ILStVUCQZ26EPGFhTN03TZTZ0BeM6cHvapvOO_JWwWdbsc_dx4YLpCIdF9FjlJruLHFx- 29ZAweSuXdSmM4v7X9jCh3_5iNWeniYjwmzYb9vMbOd2 UrlGoGxnUdJ_BTOjB8LXHQ7mO35ycl4L0o7j8pF6qDxJiQapPFl4jI77WksrvkVFNvyTUIL_JggQrPjO0cCu- HlevIiW0I50aS3Vj8oGLFcOM9QnBuL3tyk 1BvQdwtfXX6mmqvp1OfFWkfClytBcBcBWdLgzFKKpkXQ0Unaa_uQxtVLBfAuisF1w8idPia9hcP2jv_Eeyy- 0iqjnDtO.CKPdNsuq22qlhNRRQODqnw 
@@ -160,30 +149,26 @@ This flow is implemented on the server side.
        “email”: “michael.lang@gmail.com”, 
     }  
 
-### 3.6 Use refresh token
-
+## 3.6 Use refresh token
 Refresh tokens are issued when access tokens are issued during the authorization code grant flow and client credential grant flow. It can also depend on the configuration of the authroization server.
 
 A refresh token has a higher TTL than the associated access token. This refresh token is used for access token renewal without user consent.
 
-#### 3.6.1 Access token renewal
+### 3.6.1 Access token renewal
 
     $ curl -H Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW 
     https://wedec.post.ch/WEDECOAuth/token? 
     grant_type=refresh_token& 
     refresh_token=tGzv3JOkF0XG5Qx2TlKWIA  
 
-### 3.7 End user’s personal information query (Login Post Connector)
-
-#### 3.7.1 Prerequisites
-
+## 3.7 End user’s personal information query (Login Post Connector)
+### 3.7.1 Prerequisites
 * OAuth access token for a set of OpenID scopes: openid, profile, email, address, phone. These scopes require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow.
 * Each OpenID scope is associated with a set of OpenID claims, see [https://openid.net/specs/openid-connect-core-1\_0.html#ClaimsNot AccessibleTarget not accessible](https://openid.net/specs/openid-connect-core-1_0.html#Claims)
 * Bearer access token stored in the header of the request:    
   Authorization: Bearer <OAuth access token>
 
-#### 3.7.2 KLP mapping
-
+### 3.7.2 KLP mapping
 The standard OpenID claims (see [http://openid.net/specs/openid-connect-core-1\_0.html#StandardClaims](http://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)) are mapped this way:  
 
 |OpenID claims|Aggregation|Swiss Post profile attribute|
@@ -205,46 +190,35 @@ The standard OpenID claims (see [http://openid.net/specs/openid-connect-core-1\_
 |address|country|country|
 |updated_at|-|last user account change|
 
-#### 3.7.3 The information out of the profile of the end user
-
+### 3.7.3 The information out of the profile of the end user
 **GET request**
 
     https://wedec.post.ch/api/userinfo  
 
+**Response**
 
-#### Response
+    { 
+        “sub”: “248289761001”, 
+        “name”: “Lang Michael”, 
+        “given_name”: “Michael”, 
+        “family_name”: “Lang”, 
+        “preferred_username”: “michael.lang”, 
+        “email”: “michael.lang@gmail.com”,
+    }  
 
-{ “sub”: “248289761001”, “name”: “Lang Michael”, “given_name”: “Michael”, “family_name”: “Lang”, “preferred_username”: “michael.lang”, “email”: “michael.lang@gmail.com”, }  
-Copy
 
-#### 3.7.4 Error codes
+### 3.7.4 Error codes
 
-Code
+|Code|Reason|
+|---|---|
+|200|OK|
+|403|Not authorized|
+|404|No results found|
+|500|Internal server error|
 
-Reason
-
-200
-
-OK
-
-403
-
-Not authorized
-
-404
-
-No results found
-
-500
-
-Internal server error
-
-4 Alternative Delivery Addresses
---------------------------------  
-
-### 4.1 End user’s addresses query
-
-#### 4.1.1 Prerequisites
+# 4 Alternative Delivery Addresses
+## 4.1 End user’s addresses query
+### 4.1.1 Prerequisites
 
 * OAuth access token for a set of scopes: WEDEC\_READ\_ADDRESS, WEDEC\_READ\_MAIN\_ADDRESS. Both scopes require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow.
 * Bearer access token stored in the header of the request:    
@@ -252,76 +226,119 @@ Internal server error
 * Address API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml)
 * Address API | PROD | [https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/address/v1/swagger.yaml](https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/address/v1/swagger.yaml)
 
-#### 4.1.2 The personal addresses of the end user
+### 4.1.2 The personal addresses of the end user
+**GET request**
 
-#### GET request
+    https://wedec.post.ch/api/address/v1/users/current/addresses  
 
-https://wedec.post.ch/api/address/v1/users/current/addresses  
-Copy
+**Response**
 
-#### Response
+    [ 
+      { 
+        “type”:“MAIN”, 
+        “nickname”:“KLP”, 
+        “addressee”: {
+           “firstName”:“Massimo”,
+           “lastName”:“Cotelli”
+        }, 
+        “geographicLocation”: {
+           “house”: {
+              “street”:“Via Golena”,
+              “houseNumber”:“31C”
+           },
+           “zip”: {
+              “zip”:“6512”,
+              “city”:“Giubiasco”
+           }
+        }, 
+        “logisticLocation”: {
+           “house”: {
+              “street”:“Via Golena”,
+              “houseNumber”:“31C”
+           },
+           “zip”: {
+              “zip”:“6512”,
+              “city”:“Giubiasco”
+           }
+        } 
+      }, 
+      { 
+         “id”:“e3089ed6-35cd-47ed-b477-143396f96ef4”, 
+         “type”:“DOMICILE”, 
+         “nickname”:“test-zytglogge”, 
+         “addressee”: {
+            “title”:“MISTER”,
+            “firstName”:“Massimo”,
+            “lastName”:“Cotelli”
+         }, 
+         “geographicLocation”: {
+            “house”: {
+                “street”:“Zytgloggelaube”,
+                “houseNumber”:“2”,
+                “houseKey”:“701091 5”
+            },
+            “zip”: {
+                “zip”:“3011”,
+                “city”:“Bern”
+            }
+         }, 
+         “logisticLocation”: {
+            “house”: {
+                “street”:“Zytgloggelaube”,
+                “houseNumber”:“2”,
+                “houseKey”:“7010915”
+            }, “zip”:{“zip”:“3011”,“city”:“Bern”}} }, { “id”:“573b3a3c-43df-4c3b-aaf2-4c3c0ca8f315”, “type”:“POST_OFFICE”, “nickname”:“432”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Bahnhofstrasse”,“houseNumber”:“18”,“houseKey”:“37651 ”},“zip”:{“zip”:“611000”,“city”:“Wolhusen”}}, “logisticLocation”:{“postBoxNumber”:“999”,“house”:{“street”:“Postfach”,“houseKey”:“37651”},“- zip”:{“zip”:“6110”,“city”:“Wolhusen”}} }, { “id”:“1abf6700-2a3c-49fb-bf2c-c1790d85352f”, “type”:“PICK_POST”, “nickname”:“Test Modifica”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Brünigstrasse”,“houseNumber”:“101”,“house- Key”:“174827”}, “zip”:{“zip”:“607200”,“city”:“Sachseln”}}, “logisticLocation”:{“postBoxNumber”:“5”,“house”:{“street”:“Postfach”,“houseKey”:“174827”},“zip”: {“zip”:“6072”,“city”:“Sachseln”}} }, { “id”:“b8dbdf51-6a6a-4ba4-aa55-45377277651f”, “type”:“MY_POST_24”, “nickname”:“mypost24”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Avenue A.Piccard”,“houseKey”:“76419394”},“zip”:{“zip”:“101573”,“city”:“Lausanne”}}, “logisticLocation”:{“house”:{“street”:“Avenue A.Piccard”,“houseKey”:“76419394”},“zip”:{“zip”:“1015”,“city”:“Lausanne”}} }, { “id”:“36e720e8-a908-469e-9daf-6b376071a557”, “type”:“POSTBOX”, “nickname”:“testPF”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Via Galbisio”,“houseNumber”:“2”,“houseKey”:“72014233”,“zip”:{“zip”:“6503”,“city”:“Bellinzona”}}, “logisticLocation”:{“postBoxNumber”:“123”,“house”:{“street”:“Casella postale”,“houseKey”:“72014233”},“zip”:{“zip”:“6503”,“city”:“Bellinzona”}} } ]  
 
-[ { “type”:“MAIN”, “nickname”:“KLP”, “addressee”:{“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Via Golena”,“houseNumber”:“31C”},“zip”:{“zip”:“6512”,“city”:“Giubiasco”}}, “logisticLocation”:{“house”:{“street”:“Via Golena”,“houseNumber”:“31C”},“zip”:{“zip”:“6512”,“city”:“Giubiasco”}} }, { “id”:“e3089ed6-35cd-47ed-b477-143396f96ef4”, “type”:“DOMICILE”, “nickname”:“test-zytglogge”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“houseKey”:“701091 5”},“zip”:{“zip”:“3011”,“city”:“Bern”}}, “logisticLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“houseKey”:“7010915”}, “zip”:{“zip”:“3011”,“city”:“Bern”}} }, { “id”:“573b3a3c-43df-4c3b-aaf2-4c3c0ca8f315”, “type”:“POST_OFFICE”, “nickname”:“432”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Bahnhofstrasse”,“houseNumber”:“18”,“houseKey”:“37651 ”},“zip”:{“zip”:“611000”,“city”:“Wolhusen”}}, “logisticLocation”:{“postBoxNumber”:“999”,“house”:{“street”:“Postfach”,“houseKey”:“37651”},“- zip”:{“zip”:“6110”,“city”:“Wolhusen”}} }, { “id”:“1abf6700-2a3c-49fb-bf2c-c1790d85352f”, “type”:“PICK_POST”, “nickname”:“Test Modifica”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Brünigstrasse”,“houseNumber”:“101”,“house- Key”:“174827”}, “zip”:{“zip”:“607200”,“city”:“Sachseln”}}, “logisticLocation”:{“postBoxNumber”:“5”,“house”:{“street”:“Postfach”,“houseKey”:“174827”},“zip”: {“zip”:“6072”,“city”:“Sachseln”}} }, { “id”:“b8dbdf51-6a6a-4ba4-aa55-45377277651f”, “type”:“MY_POST_24”, “nickname”:“mypost24”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Avenue A.Piccard”,“houseKey”:“76419394”},“zip”:{“zip”:“101573”,“city”:“Lausanne”}}, “logisticLocation”:{“house”:{“street”:“Avenue A.Piccard”,“houseKey”:“76419394”},“zip”:{“zip”:“1015”,“city”:“Lausanne”}} }, { “id”:“36e720e8-a908-469e-9daf-6b376071a557”, “type”:“POSTBOX”, “nickname”:“testPF”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Via Galbisio”,“houseNumber”:“2”,“houseKey”:“72014233”,“zip”:{“zip”:“6503”,“city”:“Bellinzona”}}, “logisticLocation”:{“postBoxNumber”:“123”,“house”:{“street”:“Casella postale”,“houseKey”:“72014233”},“zip”:{“zip”:“6503”,“city”:“Bellinzona”}} } ]  
-Copy
 
-#### 4.1.3 The main address of the end user
+### 4.1.3 The main address of the end user
+**GET request**
 
-#### GET request
+     https://wedec.post.ch/api/address/v1/users/current/addresses/main
 
-https://wedec.post.ch/api/address/v1/users/current/addresses/main  
-Copy
+**Response**
 
-#### Response
+    { 
+        “type”:“MAIN”, 
+        “nickname”:“KLP”, 
+        “addressee”: {
+            “firstName”:“Massimo”,
+            “lastName”:“Cotelli”
+        }, 
+        “geographicLocation”: {
+           “house”: {
+              “street”:“Via Golena”,
+              “houseNumber”:“31C”
+           },
+           zip”: {
+              “zip”:“6512”, 
+              “city”:“Giubiasco”
+           }
+        }, 
+        “logisticLocation”:{“house”:{“street”:“Via Golena”,“houseNumber”:“31C”},“zip”:{“zip”:“6512”,“city”: “Giubiasco”}} }  
 
-{ “type”:“MAIN”, “nickname”:“KLP”, “addressee”:{“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Via Golena”,“houseNumber”:“31C”},“zip”:{“zip”:“6512”, “city”:“Giubiasco”}}, “logisticLocation”:{“house”:{“street”:“Via Golena”,“houseNumber”:“31C”},“zip”:{“zip”:“6512”,“city”: “Giubiasco”}} }  
-Copy
+### 4.1.4 A single personal address of the end user
+**GET request**
 
-#### 4.1.4 A single personal address of the end user
+    https://wedec.post.ch/api/address/v1/users/current/addresses/e3089ed6-35cd-47ed-b477-143396f96ef4  
 
-#### GET request
+**Response**
 
-https://wedec.post.ch/api/address/v1/users/current/addresses/e3089ed6-35cd-47ed-b477-143396f96ef4  
-Copy
-
-#### Response
-
-{ “id”:“e3089ed6-35cd-47ed-b477-143396f96ef4”, “type”:“DOMICILE”, “nickname”:“test-zytglogge”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“house- Key”:“7010915” ,“zip”:{“zip”:“3011”,“city”:“Bern”}}, “logisticLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“house- Key”:“7010915”},“zip :{“zip”:“3011”,“city”:“Bern”}} }  
-Copy
-
-#### 4.1.5 Error codes
-
-Code
-
-Reason
-
-200
-
-OK
-
-400
-
-Invalis id parameter
-
-403
-
-Not authorized
-
-404
-
-No result found or address does not exist or is not owned by the currently authenticated Swiss Post user
-
-500
-
-Internal server error
+    { “id”:“e3089ed6-35cd-47ed-b477-143396f96ef4”, “type”:“DOMICILE”, “nickname”:“test-zytglogge”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“house- Key”:“7010915” ,“zip”:{“zip”:“3011”,“city”:“Bern”}}, “logisticLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“house- Key”:“7010915”},“zip :{“zip”:“3011”,“city”:“Bern”}} }  
 
 
+### 4.1.5 Error codes
 
-5 Address Checker
------------------  
+|Code|Reason|
+|---|---|
+|200|OK|
+|400|Invalid id parameter|
+|403|Not authorized|
+|404|No result found or address does not exist or is not owned by the currently authenticated Swiss Post user|
+|500|Internal server error|
 
-### 5.1 Address validation
-
-#### 5.1.1 Prerequisites
+# 5 Address Checker
+## 5.1 Address validation
+### 5.1.1 Prerequisites
 
 * OAuth access token for scope WEDEC\_VALIDATE\_ADDRESS. This scope does not require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow or a client credential grant flow.
 * Bearer access token stored in the header of the request:    
@@ -329,23 +346,64 @@ Internal server error
 * Address API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml)
 * Address API | PROD | [https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/address/v1/swagger.yaml](https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/address/v1/swagger.yaml)
 
-#### 5.1.2 Validate a given address
+### 5.1.2 Validate a given address
+**POST request**
 
-#### POST request
+    https://wedec.post.ch/api/address/v1/addresses/validation  
 
-https://wedec.post.ch/api/address/v1/addresses/validation  
-Copy
+**POST payload**
 
-#### POST payload
+    { 
+      "addressee":{ 
+        "firstName":"Hans", 
+        "lastName":"Muster", 
+        "title":"MISTER" 
+      }, 
+      "geographicLocation":{ 
+        "house":{ 
+          "street":"viale Stazione", 
+         "houseNumber":"15", 
+          "additionalAddress":"" 
+        }, 
+        "zip":{ 
+          "zip":"6500", 
+        "city":"Bellinzona" 
+        } 
+      }, 
+      "logisticLocation":{ 
+        "postBoxNumber":"" 
+      }, 
+      "fullValidation":true 
+    }  
 
-{ "addressee":{ "firstName":"Hans", "lastName":"Muster", "title":"MISTER" }, "geographicLocation":{ "house":{ "street":"viale Stazione", "houseNumber":"15", "additionalAddress":"" }, "zip":{ "zip":"6500", "city":"Bellinzona" } }, "logisticLocation":{ "postBoxNumber":"" }, "fullValidation":true }  
-Copy
+**Response**
 
-#### Response
+    { 
+      "quality":"CERTIFIED", 
+      "expires":"20190822T181333+0200", 
+      "address":{ 
+        "type":"DOMICILE", 
+        "addressee":{ 
+          "firstName":"Hans", 
+          "lastName":"Muster" 
+        }, 
+        "logisticLocation":{ 
+          "postBoxNumber":"", 
+          "house":{              
 
-{ "quality":"CERTIFIED", "expires":"20190822T181333+0200", "address":{ "type":"DOMICILE", "addressee":{ "firstName":"Hans", "lastName":"Muster" }, "logisticLocation":{ "postBoxNumber":"", "house":{              },  
-"zip":{              }  
-}, "geographicLocation":{ "house":{ "street":"viale Stazione", "houseNumber":"15", "additionalAddress":"", "houseKey":"76439798" }, "zip":{ "zip":"6500", "city":"Bellinzona" } }, "id":"034ce086-c9bb-49df-9ed1-1b674e6d5717" } }  
+          },
+          "zip":{              
+          }
+        }, 
+        "geographicLocation":{ 
+          "house":{ 
+            "street":"viale Stazione", 
+            "houseNumber":"15", 
+            "additionalAddress":"", 
+            "houseKey":"76439798" 
+          }, 
+          "zip":{ 
+      "zip":"6500", "city":"Bellinzona" } }, "id":"034ce086-c9bb-49df-9ed1-1b674e6d5717" } }  
 Copy
 
 #### 5.1.3 Error codes
