@@ -106,9 +106,8 @@ For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#
 ### 3.3.5 Token response
 **Response**
 
+HTTP/1.1 200 OK<br>Content-Type: application/json;charset=UTF-8
 ```json
-HTTP/1.1 200 OK
-Content-Type: application/json;charset=UTF-8 
 { 
     “expires_in”:300, 
     “token_type”:“Bearer”, 
