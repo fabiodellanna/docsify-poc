@@ -1,87 +1,37 @@
 
 
 Digital Commerce API
-====================
+====================  
 
 1 Swiss Post e-commerce API reference
--------------------------------------
+-------------------------------------  
 
 The Swiss Post **e-commerce API** is a **REST** API which provides predictable and resource-oriented URLs and uses HTTP response codes to indicate API errors. It uses built-in HTTP features to receive commands and return responses. This makes it easy to communicate with from a wide variety of environments, from command-line utilities, server-side or client-side web applications and mobile devices. It supports the **JSON** format in requests and it returns JSON content in all of its responses, including errors. It supports cross-origin resource sharing to allow you to interact securely with our API from a client-side web application.
 
 The access to the Swiss Post e-commerce API is controlled by the **OAuth** authorization protocol. An **access token** is required to consume the **endpoints** exposed by the API. This is obtained after a sucessful authentication.
 
 2 Overview
-----------
+----------  
 
 ![](https://developer.post.ch/-/media/post-maxisites/developer/images/ms-develop-dc-api-general-info-01.jpg?mw=1600&vs=2&sc_lang=en&hash=33149EEA90A1215CC53FAD2FDFC241C4)
 
 ![](https://developer.post.ch/-/media/post-maxisites/developer/images/ms-develop-dc-api-general-info-02.jpg?mw=1600&vs=2&sc_lang=en&hash=7BADBF17749FE08E274F94C2BF85A1D2)
 
 ### 2.1 API endpoints
-
-Endpoint
-
-URL
-
-Aim
-
-address
-
-[https://wedec.post.ch/api/address/v1](https://wedec.post.ch/api/address/v1)
-
-Provides the access to the personal addresses of Swiss Post registered users, it refers to the list of their delivery addresses.  
-Moreover this API provides the access to unpersonal business data and exposes address validation service and an auto-completion service for zip codes, street names and house numbers.
-
-delivery
-
-[https://wedec.post.ch/api/delivery/v1](https://wedec.post.ch/api/delivery/v1)
-
-Provides the access to unpersonal data delivered by the logistic services of Swiss Post, it refers to the list of the deliverabilities, when and how a given valid address can be delivered.
-
-Pickpost
-
-[https://wedec.post.ch/api/pickpost/v1](https://wedec.post.ch/api/pickpost/v1)
-
-Provides access to retrieve the Pickpost user ID. If a user does not exist yet in PickPost a new PickPost ID is automatically generated and returned to the caller.
-
-Barcode
-
-[https://wedec.post.ch/api/barcode/v1](https://wedec.post.ch/api/barcode/v1)
-
-Provides access to generate address labels
-
-pick@home
-
-[https://api.post.ch/pah/v1](https://api.post.ch/pah/v1)
-
-Allows to create return orders for the collection at a customers home address.
-
-userinfo
-
-[https://wedec.post.ch/api/userinfo](http://https://wedec.post.ch/api/userinfo)
-
-Provides the access to personal data of Swiss Post registered users, it refers to the attributes of their Swiss Post profile.  
-[http://openid.net/specs/openid-connect-core-1\_0.html#UserInfo](http://openid.net/specs/openid-connect-core-1_0.html#UserInfo)  
-[http://openid.net/specs/openid-connect-core-1\_0.html#IDToken](http://openid.net/specs/openid-connect-core-1_0.html#IDToken)
-
-authorization
-
-[https://wedec.post.ch/WEDECOAuth/authorization](https://wedec.post.ch/WEDECOAuth/authorization)
-
-OAuth Endpoint for querying an authorization code, usually obtained with the consent of an authenticated end user, given a set of scopes and credentials.  
-[http://openid.net/specs/openid-connect-core-1\_0.html#AuthRequest](http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest)
-
-token
-
-[https://wedec.post.ch/WEDECOAuth/token](https://wedec.post.ch/WEDECOAuth/token)
-
-OAuth Endpoint for exchanging an authorization code against an access token.  
-[http://openid.net/specs/openid-connect-core-1\_0.html#TokenRequest](http://openid.net/specs/openid-connect-core-1_0.html#TokenRequest)
-
+|Endpoint|URL|Aim|
+|--|--|--|
+|address|[https://wedec.post.ch/api/address/v1](https://wedec.post.ch/api/address/v1)|Provides the access to the personal addresses of Swiss Post registered users, it refers to the list of their delivery addresses. Moreover this API provides the access to unpersonal business data and exposes address validation service and an auto-completion service for zip codes, street names and house numbers.  |
+|delivery|[https://wedec.post.ch/api/delivery/v1](https://wedec.post.ch/api/delivery/v1)|Provides the access to unpersonal data delivered by the logistic services of Swiss Post, it refers to the list of the deliverabilities, when and how a given valid address can be delivered.|
+|Pickpost|[https://wedec.post.ch/api/pickpost/v1](https://wedec.post.ch/api/pickpost/v1)|Provides access to retrieve the Pickpost user ID. If a user does not exist yet in PickPost a new PickPost ID is automatically generated and returned to the caller.|
+|Barcode|[https://wedec.post.ch/api/barcode/v1](https://wedec.post.ch/api/barcode/v1)|Provides access to generate address labels|
+|pick@home|[https://api.post.ch/pah/v1](https://api.post.ch/pah/v1)|Allows to create return orders for the collection at a customers home address.|
+|userinfo|[https://wedec.post.ch/api/userinfo](http://https://wedec.post.ch/api/userinfo)|Provides the access to personal data of Swiss Post registered users, it refers to the attributes of their Swiss Post profile.<br>[http://openid.net/specs/openid-connect-core-1\_0.html#UserInfo](http://openid.net/specs/openid-connect-core-1_0.html#UserInfo)<br>[http://openid.net/specs/openid-connect-core-1\_0.html#IDToken](http://openid.net/specs/openid-connect-core-1_0.html#IDToken)|
+|authorization|[https://wedec.post.ch/WEDECOAuth/authorization](https://wedec.post.ch/WEDECOAuth/authorization)|OAuth Endpoint for querying an authorization code, usually obtained with the consent of an authenticated end user, given a set of scopes and credentials.<br>[http://openid.net/specs/openid-connect-core-1\_0.html#AuthRequest](http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest)|
+|token|[https://wedec.post.ch/WEDECOAuth/token](https://wedec.post.ch/WEDECOAuth/token)|OAuth Endpoint for exchanging an authorization code against an access token.<br>[http://openid.net/specs/openid-connect-core-1\_0.html#TokenRequest](http://openid.net/specs/openid-connect-core-1_0.html#TokenRequest)|
 
 
 3 Authentication
-----------------
+----------------  
 
 The access to the Swiss Post connector and the e-commerce API is controlled by both **OpenID-Connect** protocol **version 1.0** and **OAuth** authorization protocol **version 2.0**.
 
@@ -95,12 +45,12 @@ For more information see [http://tools.ietf.org/html/rfc6749](http://tools.ietf.
 
 A client of the Swiss Post e-commerce API must first obtain an OAuth **access token** in order to consume the endpoints of the API.
 
-*   The client is authenticated by the OAuth credentials received after a successful registration: **client-id, client-secret**.
-*   A set of scopes need to be mentioned when ordering the access token, a scope corresponds to a use case applied on one or more endpoints of the API.
-*   These **scopes** must be a subset of the ones configured during the **registration** process.
-*   Moreover the end user may have to be **authenticated** and have to **authorize** the client for the set of ordered scopes.
-*   Finally an **access token** is returned to the client through a **redirection URL** configured during the registration. The returned access token is a **bearer token**.
-*   Depending on the implemented OAuth **flow** for the query of the access token, a **refresh token** is returned. This is used for access token renewal without user consent.
+* The client is authenticated by the OAuth credentials received after a successful registration: **client-id, client-secret**.
+* A set of scopes need to be mentioned when ordering the access token, a scope corresponds to a use case applied on one or more endpoints of the API.
+* These **scopes** must be a subset of the ones configured during the **registration** process.
+* Moreover the end user may have to be **authenticated** and have to **authorize** the client for the set of ordered scopes.
+* Finally an **access token** is returned to the client through a **redirection URL** configured during the registration. The returned access token is a **bearer token**.
+* Depending on the implemented OAuth **flow** for the query of the access token, a **refresh token** is returned. This is used for access token renewal without user consent.
 
 The OAuth authorization protocol defines a set of standard flows for querying an access token. A client of the Swiss Post e-commerce API is responsible for the integration of the desired flows in his use cases.
 
@@ -110,10 +60,10 @@ For more information see [http://tools.ietf.org/html/rfc6749](http://tools.ietf.
 
 The access to personal data by a registered client through the Swiss Post connector is controlled by the OpenID-Connect protocol. This is based on the OAuth standard authorization protocol. The OpenID-Connect flow is based on the OAuth authorization code grant flow or the OAuth implicit code grant flow. It finally returns an ID-Token and an access token to the client.
 
-*   The returned ID-Token contains the personal data out of the identity of the end user mapped to each ordered OpenID scope.
-*   The returned access token can be used for consuming the standard Userinfo endpoint or the endpoints of the Swiss Post e-commerce API when eventually covered by the other ordered non-OpenID scopes.
-*   Both the returned ID-Token and access token are bearer tokens.
-*   With the ID-Token the client maybe already receives the full desired data at the end of the flow and is not forced to implement a subsequent call to consume the standard Userinfo endpoint.
+* The returned ID-Token contains the personal data out of the identity of the end user mapped to each ordered OpenID scope.
+* The returned access token can be used for consuming the standard Userinfo endpoint or the endpoints of the Swiss Post e-commerce API when eventually covered by the other ordered non-OpenID scopes.
+* Both the returned ID-Token and access token are bearer tokens.
+* With the ID-Token the client maybe already receives the full desired data at the end of the flow and is not forced to implement a subsequent call to consume the standard Userinfo endpoint.
 
 A client of the Swiss Post Connector is responsible for the integration of the desired flows in his use cases.
 
@@ -131,28 +81,18 @@ If only non-personal-data scopes are used, it’s usually better to use the Clie
 
 #### 3.3.1 Authentication request
 
-#### GET request
+**GET request**
 
-    https://wedec.post.ch/WEDECOAuth/authorization?
-    client_id=wedec-fake-shop&
-    scope=WEDEC_READ_ADDRESS+openid+profile+email+address&
-    response_type=code&
-    redirect_uri=http://localhost:8080/fake-shop/&
-    nonce=f5bb9f70-2&
-    state=bbe6606b-b
-
-Copy
+    https://wedec.post.ch/WEDECOAuth/authorization? client_id=wedec-fake-shop& scope=WEDEC_READ_ADDRESS+openid+profile+email+address& response_type=code& redirect_uri=http://localhost:8080/fake-shop/& nonce=f5bb9f70-2& state=bbe6606b-b
 
 For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#AuthRequest](http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest)
 
 #### 3.3.2 Authentication response
 
-#### Response
+**Response**
 
-    HTTP/1.1 302 Found
-    Location: http://localhost:8080/fake-shop/?state=056be689-d&code=iUkxvid_e4k813KgLWcNvYj2KAqK60r0ixe8W4kiMPY
-
-Copy
+     HTTP/1.1 302 Found 
+     Location: http://localhost:8080/fake-shop/?state=056be689-d&code=iUkxvid_e4k813KgLWcNvYj2KAqK60r0ixe8W4kiMPY  
 
 For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#AuthResponse](http://openid.net/specs/openid-connect-core-1_0.html#AuthResponse)
 
@@ -162,56 +102,29 @@ We recommend that the client validates the authentication response, see [http://
 
 #### 3.3.4 Token request
 
-#### POST request
+**POST request**
 
-    https://wedec.post.ch/WEDECOAuth/token?
-    grant_type=authorization_code&
-    client_id=wedec-fake-shop&
-    client_secret=wedec-fake-shop-secret&
-    redirect_uri=http://localhost:8080/fake-shop/&
-    code=iUkxvid_e4k813KgLWcNvYj2KAqK60r0ixe8W4kiMPY
-
-Copy
+    https://wedec.post.ch/WEDECOAuth/token? 
+    grant_type=authorization_code& 
+    client_id=wedec-fake-shop& 
+    client_secret=wedec-fake-shop-secret& 
+    redirect_uri=http://localhost:8080/fake-shop/& 
+    code=iUkxvid_e4k813KgLWcNvYj2KAqK60r0ixe8W4kiMPY  
 
 For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#TokenRequest](http://openid.net/specs/openid-connect-core-1_0.html#TokenRequest)
 
 #### 3.3.5 Token response
 
-#### Response
+**Response**
 
-    HTTP/1.1 200 OK
-    Content-Type: application/json;charset=UTF-8
-    {
-    “expires_in”:300,
-    “token_type”:“Bearer”,
-    “id_token”:
-    “eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0MTEwNTE5MTQsInN1YiI6IjEwMDQ5MjIiLCJub25jZSI6IjczZDc3N2U0LTciLCJhdWQiOlsid2Vk
-    ZWMtZmFrZS1zaG9wIl0sImlzcyI6Imh0dHBzOlwvXC9hcGlkZXYucG5ldC5jaCIsImlhdCI6MTQxMTA1MTMxNH0.
-    SBYodQCRmsbZvSHnBenLqPGS-U9Q_Z
-    S8wTM7TvvyiDxiF27pKvjwsF6vYzJsucpluz750bH-OVtL-Esh72M-Ki8L_3hGImgpZ-K7KaRRM9BG3UA-
-    5M8ZZloVTpz6W47H_xi-Q_NwCqApgawdEP8rI
-    ECKtSdk3En8A3rDSrCLNhF2LO-56rsC2rwcdBqrpth_89Iq00O1kMPNZ2H_HJpQzBIku04WGOwbx-
-    2K3f5b_BV-VKVjqkqEMoacJcP_c9pQY2YxpIGAfOnS
-    ROMYCJfM5M-QmsgDCn9B9Z0yicbPwDexS4y1FqOMFXVIJYt94qek8n8CVqp9KQBl2ptEuAbD6HIA”,
-    “access_token”:“eyJhbGciOiJSU0ExXzUiLCJlbmMiOiJBMjU2R0NNIn0.XpENWZLOwkvlwiY0TWCUZ2LTAbd-
-    P895E1BlAClqmB3oHTehtMGkXCNudURQtwc
-    CVR23dYalRYLDP_huIHqwNjHoAYip2CsyiTrYQySp4wZzRb5Cm1QKvTq2yGfFUcK2qIqr7nFD_CEei8_EpVHanYSE3srnWZkVEI8btQOg32bKOaidwLBaP
-    LgFHfgom6l7n6ewh7UFv1WcRjk9Ug48oHUrpVQEBnu1pXr8gFEtEpmTZhT1TUCwUsyxzH36dkgzSZ4DHCvuIPDOtWpurQZQiu0OQVWd3ih2z7jSECXzUD7
-    9oIxqzN_pWNVeb4jGvVhTYktBmsCYxJZCslm_NtuMJg.V4qpGmkldszeRMk.KI_swCCP6rvvkiGOkNWLghqK-
-    0BXrsz5qdimYNxkGNkbE2NQeJKfaGPtLKb
-    1d59YIwe_Ng_kqpBg05_39OOLgC4tA5JsEipOPm951fDlclmx0ybKwPqtNCjigGP_yxrwcbHwPSEofnNMakt-
-    GnVpCadUMjeNUb6QRzybylS3CxeWsv19md
-    U48xTiHGNqzgB2iWT9DkzfCcP0o3bTqTNcdD4uLdE1oA-hev5bT3XDV56XlH1SprSva2sQ86k6mFgHTcqTp8MnFzEXSjBe_
-    QkiJJgfx53c8pzVruby2kiW
-    xdYm91ILStVUCQZ26EPGFhTN03TZTZ0BeM6cHvapvOO_JWwWdbsc_dx4YLpCIdF9FjlJruLHFx-
-    29ZAweSuXdSmM4v7X9jCh3_5iNWeniYjwmzYb9vMbOd2
-    UrlGoGxnUdJ_BTOjB8LXHQ7mO35ycl4L0o7j8pF6qDxJiQapPFl4jI77WksrvkVFNvyTUIL_JggQrPjO0cCuHlevIi-
-    W0I50aS3Vj8oGLFcOM9QnBuL3tyk
-    1BvQdwtfXX6mmqvp1OfFWkfClytBcBcBWdLgzFKKpkXQ0Unaa_uQxtVLBfAuisF1w8idPia9hcP2jv_Eeyy0iqjnDtO.
-    CKPdNsuq22qlhNRRQODqnw”
-    }
-
-Copy
+     HTTP/1.1 200 OK 
+     Content-Type: application/json;charset=UTF-8 
+     { 
+         “expires_in”:300, 
+         “token_type”:“Bearer”, 
+         “id_token”: “eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0MTEwNTE5MTQsInN1YiI6IjEwMDQ5MjIiLCJub25jZSI6IjczZDc3N2U0LTciLCJhdWQiOlsid2Vk ZWMtZmFrZS1zaG9wIl0sImlzcyI6Imh0dHBzOlwvXC9hcGlkZXYucG5ldC5jaCIsImlhdCI6MTQxMTA1MTMxNH0. SBYodQCRmsbZvSHnBenLqPGS-U9Q_Z S8wTM7TvvyiDxiF27pKvjwsF6vYzJsucpluz750bH-OVtL-Esh72M-Ki8L_3hGImgpZ-K7KaRRM9BG3UA- 5M8ZZloVTpz6W47H_xi-Q_NwCqApgawdEP8rI ECKtSdk3En8A3rDSrCLNhF2LO-56rsC2rwcdBqrpth_89Iq00O1kMPNZ2H_HJpQzBIku04WGOwbx- 2K3f5b_BV-VKVjqkqEMoacJcP_c9pQY2YxpIGAfOnS ROMYCJfM5M-QmsgDCn9B9Z0yicbPwDexS4y1FqOMFXVIJYt94qek8n8CVqp9KQBl2ptEuAbD6HIA”,
+         “access_token”:“eyJhbGciOiJSU0ExXzUiLCJlbmMiOiJBMjU2R0NNIn0.XpENWZLOwkvlwiY0TWCUZ2LTAbd- P895E1BlAClqmB3oHTehtMGkXCNudURQtwc CVR23dYalRYLDP_huIHqwNjHoAYip2CsyiTrYQySp4wZzRb5Cm1QKvTq2yGfFUcK2qIqr7nFD_CEei8_EpVHanYSE3srnWZkVEI8btQOg32bKOaidwLBaP LgFHfgom6l7n6ewh7UFv1WcRjk9Ug48oHUrpVQEBnu1pXr8gFEtEpmTZhT1TUCwUsyxzH36dkgzSZ4DHCvuIPDOtWpurQZQiu0OQVWd3ih2z7jSECXzUD7 9oIxqzN_pWNVeb4jGvVhTYktBmsCYxJZCslm_NtuMJg.V4qpGmkldszeRMk.KI_swCCP6rvvkiGOkNWLghqK- 0BXrsz5qdimYNxkGNkbE2NQeJKfaGPtLKb 1d59YIwe_Ng_kqpBg05_39OOLgC4tA5JsEipOPm951fDlclmx0ybKwPqtNCjigGP_yxrwcbHwPSEofnNMakt- GnVpCadUMjeNUb6QRzybylS3CxeWsv19md U48xTiHGNqzgB2iWT9DkzfCcP0o3bTqTNcdD4uLdE1oA-hev5bT3XDV56XlH1SprSva2sQ86k6mFgHTcqTp8MnFzEXSjBe_ QkiJJgfx53c8pzVruby2kiW xdYm91ILStVUCQZ26EPGFhTN03TZTZ0BeM6cHvapvOO_JWwWdbsc_dx4YLpCIdF9FjlJruLHFx- 29ZAweSuXdSmM4v7X9jCh3_5iNWeniYjwmzYb9vMbOd2 UrlGoGxnUdJ_BTOjB8LXHQ7mO35ycl4L0o7j8pF6qDxJiQapPFl4jI77WksrvkVFNvyTUIL_JggQrPjO0cCuHlevIi- W0I50aS3Vj8oGLFcOM9QnBuL3tyk 1BvQdwtfXX6mmqvp1OfFWkfClytBcBcBWdLgzFKKpkXQ0Unaa_uQxtVLBfAuisF1w8idPia9hcP2jv_Eeyy0iqjnDtO. CKPdNsuq22qlhNRRQODqnw” 
+     }  
 
 For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#TokenResponse](http://openid.net/specs/openid-connect-core-1_0.html#TokenResponse)
 
@@ -227,42 +140,25 @@ This flow is implemented on the server side.
 
 #### 3.4.1 Token request
 
-    $ curl -X POST https://wedec.post.ch/WEDECOAuth/token?grant_type=client_credentials&client_id=wedec-fake-shop&client_secret=wedec-fake-shop-secret&scope=WEDEC_DELIVERY
+      $ curl -X POST https://wedec.post.ch/WEDECOAuth/token?grant_type=client_credentials&client_id=wedec-fake-shop&client_secret=wedec-fake-shop-secret&scope=WEDEC_DELIVERY  
 
-Copy
 
 ### 3.5 Use access token
 
 #### 3.5.1 Resource request
 
-    $ curl -H Authorization: Bearer
-    eyJhbGciOiJSU0ExXzUiLCJlbmMiOiJBMjU2R0NNIn0.XpENWZLOwkvlwiY0TWCUZ2LTAbdP895E1BlAClqm-
-    B3oHTehtMGkXCNudURQtwc
-    CVR23dYalRYLDP_huIHqwNjHoAYip2CsyiTrYQySp4wZzRb5Cm1QKvTq2yGfFUcK2qIqr7nFD_CEei8_
-    EpVHanYSE3srnWZkVEI8btQOg32bKOaidwLBaP
-    LgFHfgom6l7n6ewh7UFv1WcRjk9Ug48oHUrpVQEBnu1pXr8gFEtEpmTZhT1TUCwUsyxzH36dkgzSZ4DHCvuIPDOtWpurQZQiu0OQVWd3ih2z7jSECXzUD7
-    9oIxqzN_pWNVeb4jGvVhTYktBmsCYxJZCslm_NtuMJg.V4qpGmkldszeRMk.KI_swCCP6rvvkiGOkNWLghqK0BXrsz5qdimYNxkGNkbE2NQeJKfaGPtLKb
-    1d59YIwe_Ng_kqpBg05_39OOLgC4tA5JsEipOPm951fDlclmx0ybKwPqtNCjigGP_yxrwcbHwPSEofnNMaktGnVpCadUMjeNUb6QRzybylS3CxeWsv19md
-    U48xTiHGNqzgB2iWT9DkzfCcP0o3bTqTNcdD4uLdE1oAhev5bT3XDV56XlH1SprSva2sQ86k6mFgHTcqTp8MnFzEXSjBe_
-    QkiJJgfx53c8pzVruby2kiW
-    xdYm91ILStVUCQZ26EPGFhTN03TZTZ0BeM6cHvapvOO_JWwWdbsc_dx4YLpCIdF9FjlJruLHFx-
-    29ZAweSuXdSmM4v7X9jCh3_5iNWeniYjwmzYb9vMbOd2
-    UrlGoGxnUdJ_BTOjB8LXHQ7mO35ycl4L0o7j8pF6qDxJiQapPFl4jI77WksrvkVFNvyTUIL_JggQrPjO0cCu-
-    HlevIiW0I50aS3Vj8oGLFcOM9QnBuL3tyk
-    1BvQdwtfXX6mmqvp1OfFWkfClytBcBcBWdLgzFKKpkXQ0Unaa_uQxtVLBfAuisF1w8idPia9hcP2jv_Eeyy-
-    0iqjnDtO.CKPdNsuq22qlhNRRQODqnw
-    https://wedec.post.ch/api/userinfo
-    HTTP/1.1 200 OK Content-Type: application/json
-    {
-    “sub”: “248289761001”,
-    “name”: “Lang Michael”,
-    “given_name”: “Michael”,
-    “family_name”: “Lang”,
-    “preferred_username”: “michael.lang”,
-    “email”: “michael.lang@gmail.com”,
-    }
-
-Copy
+    $ curl -H Authorization: Bearer 
+    eyJhbGciOiJSU0ExXzUiLCJlbmMiOiJBMjU2R0NNIn0.XpENWZLOwkvlwiY0TWCUZ2LTAbdP895E1BlAClqm- B3oHTehtMGkXCNudURQtwc CVR23dYalRYLDP_huIHqwNjHoAYip2CsyiTrYQySp4wZzRb5Cm1QKvTq2yGfFUcK2qIqr7nFD_CEei8_ EpVHanYSE3srnWZkVEI8btQOg32bKOaidwLBaP LgFHfgom6l7n6ewh7UFv1WcRjk9Ug48oHUrpVQEBnu1pXr8gFEtEpmTZhT1TUCwUsyxzH36dkgzSZ4DHCvuIPDOtWpurQZQiu0OQVWd3ih2z7jSECXzUD7 9oIxqzN_pWNVeb4jGvVhTYktBmsCYxJZCslm_NtuMJg.V4qpGmkldszeRMk.KI_swCCP6rvvkiGOkNWLghqK0BXrsz5qdimYNxkGNkbE2NQeJKfaGPtLKb 1d59YIwe_Ng_kqpBg05_39OOLgC4tA5JsEipOPm951fDlclmx0ybKwPqtNCjigGP_yxrwcbHwPSEofnNMaktGnVpCadUMjeNUb6QRzybylS3CxeWsv19md U48xTiHGNqzgB2iWT9DkzfCcP0o3bTqTNcdD4uLdE1oAhev5bT3XDV56XlH1SprSva2sQ86k6mFgHTcqTp8MnFzEXSjBe_ QkiJJgfx53c8pzVruby2kiW xdYm91ILStVUCQZ26EPGFhTN03TZTZ0BeM6cHvapvOO_JWwWdbsc_dx4YLpCIdF9FjlJruLHFx- 29ZAweSuXdSmM4v7X9jCh3_5iNWeniYjwmzYb9vMbOd2 UrlGoGxnUdJ_BTOjB8LXHQ7mO35ycl4L0o7j8pF6qDxJiQapPFl4jI77WksrvkVFNvyTUIL_JggQrPjO0cCu- HlevIiW0I50aS3Vj8oGLFcOM9QnBuL3tyk 1BvQdwtfXX6mmqvp1OfFWkfClytBcBcBWdLgzFKKpkXQ0Unaa_uQxtVLBfAuisF1w8idPia9hcP2jv_Eeyy- 0iqjnDtO.CKPdNsuq22qlhNRRQODqnw 
+    https://wedec.post.ch/api/userinfo 
+    HTTP/1.1 200 OK Content-Type: application/json 
+    { 
+       “sub”: “248289761001”, 
+       “name”: “Lang Michael”, 
+       “given_name”: “Michael”, 
+       “family_name”: “Lang”, 
+       “preferred_username”: “michael.lang”, 
+       “email”: “michael.lang@gmail.com”, 
+    }  
 
 ### 3.6 Use refresh token
 
@@ -272,153 +168,52 @@ A refresh token has a higher TTL than the associated access token. This refresh 
 
 #### 3.6.1 Access token renewal
 
-    $ curl -H Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW
-    https://wedec.post.ch/WEDECOAuth/token?
-    grant_type=refresh_token&
-    refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
+    $ curl -H Authorization: Basic czZCaGRSa3F0MzpnWDFmQmF0M2JW 
+    https://wedec.post.ch/WEDECOAuth/token? 
+    grant_type=refresh_token& 
+    refresh_token=tGzv3JOkF0XG5Qx2TlKWIA  
 
-Copy
-
-### 3.7 End user’s personal information query (Login Post Connector)
+### 3.7 End user’s personal information query (Login Post Connector)
 
 #### 3.7.1 Prerequisites
 
-*   OAuth access token for a set of OpenID scopes: openid, profile, email, address, phone. These scopes require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow.
-*   Each OpenID scope is associated with a set of OpenID claims, see [https://openid.net/specs/openid-connect-core-1\_0.html#ClaimsNot AccessibleTarget not accessible](https://openid.net/specs/openid-connect-core-1_0.html#Claims)
-*   Bearer access token stored in the header of the request:  
-    Authorization: Bearer <OAuth access token>
+* OAuth access token for a set of OpenID scopes: openid, profile, email, address, phone. These scopes require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow.
+* Each OpenID scope is associated with a set of OpenID claims, see [https://openid.net/specs/openid-connect-core-1\_0.html#ClaimsNot AccessibleTarget not accessible](https://openid.net/specs/openid-connect-core-1_0.html#Claims)
+* Bearer access token stored in the header of the request:    
+  Authorization: Bearer <OAuth access token>
 
 #### 3.7.2 KLP mapping
 
-The standard OpenID claims (see [http://openid.net/specs/openid-connect-core-1\_0.html#StandardClaims](http://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)) are mapped this way:
-
-OpenID claims
-
-Aggregation
-
-Swiss Post profile attribute
-
-sub
-
-\-
-
-user profile id
-
-name
-
-\-
-
-firstName name
-
-given\_name
-
-\-
-
-firstName
-
-family\_name
-
-\-
-
-name
-
-email
-
-\-
-
-email
-
-email\_verified
-
-\-
-
-TRUE or FALSE
-
-gender
-
-\-
-
-female or male
-
-locale
-
-\-
-
-language (rfc5646, without country code)
-
-phone\_number
-
-\-
-
-mobilePhone or phone
-
-phone\_number\_verified
-
-\-
-
-TRUE or FALSE
-
-address
-
-formatted
-
-name firstName  
-addressLine1  
-addressLine2  
-addressLine3  
-addressLine4  
-zip city  
-country
-
-address
-
-street\_address
-
-addressLine2
-
-address
-
-locality
-
-city
-
-address
-
-postal\_code
-
-zip
-
-address
-
-country
-
-country
-
-updated\_at
-
-\-
-
-last user account change
+The standard OpenID claims (see [http://openid.net/specs/openid-connect-core-1\_0.html#StandardClaims](http://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)) are mapped this way:  
+|OpenID claims|Aggregation|Swiss Post profile attribute|
+|--|--|--|
+|sub|-|user profile id|
+|name|-|firstName name|
+|given_name|-|firstName|
+|family_name|-|name|
+|email|-|email|
+|email_verified|-|TRUE or FALSE|
+|gender|-|female or male|
+|locale|-|language (rfc5646, without country code)|
+|phone_number|-|mobilePhone or phone|
+|phone_number_verified|-|TRUE or FALSE|
+|address|formatted|name firstName<br>addressLine1<br>addressLine2<br>addressLine3<br>addressLine4<br>zip city<br>country|
+|address|street_address|addressLine2|
+|address|locality|city|
+|address|postal_code|zip|
+|address|country|country|
+|updated_at|-|last user account change|
 
 #### 3.7.3 The information out of the profile of the end user
 
-#### GET request
+**GET request**
 
-    https://wedec.post.ch/api/userinfo
+    https://wedec.post.ch/api/userinfo  
 
-Copy
 
 #### Response
 
-    {
-    “sub”: “248289761001”,
-    “name”: “Lang Michael”,
-    “given_name”: “Michael”,
-    “family_name”: “Lang”,
-    “preferred_username”: “michael.lang”,
-    “email”: “michael.lang@gmail.com”,
-    }
-
+{ “sub”: “248289761001”, “name”: “Lang Michael”, “given_name”: “Michael”, “family_name”: “Lang”, “preferred_username”: “michael.lang”, “email”: “michael.lang@gmail.com”, }  
 Copy
 
 #### 3.7.4 Error codes
@@ -444,138 +239,52 @@ No results found
 Internal server error
 
 4 Alternative Delivery Addresses
---------------------------------
+--------------------------------  
 
 ### 4.1 End user’s addresses query
 
 #### 4.1.1 Prerequisites
 
-*   OAuth access token for a set of scopes: WEDEC\_READ\_ADDRESS, WEDEC\_READ\_MAIN\_ADDRESS. Both scopes require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow.
-*   Bearer access token stored in the header of the request:  
-    Authorization: Bearer <OAuth access token>
-*   Address API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml)
-*   Address API | PROD | [https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/address/v1/swagger.yaml](https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/address/v1/swagger.yaml)
+* OAuth access token for a set of scopes: WEDEC\_READ\_ADDRESS, WEDEC\_READ\_MAIN\_ADDRESS. Both scopes require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow.
+* Bearer access token stored in the header of the request:    
+  Authorization: Bearer <OAuth access token>
+* Address API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml)
+* Address API | PROD | [https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/address/v1/swagger.yaml](https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/address/v1/swagger.yaml)
 
 #### 4.1.2 The personal addresses of the end user
 
 #### GET request
 
-    https://wedec.post.ch/api/address/v1/users/current/addresses
-
+https://wedec.post.ch/api/address/v1/users/current/addresses  
 Copy
 
 #### Response
 
-    [
-    {
-    “type”:“MAIN”,
-    “nickname”:“KLP”,
-    “addressee”:{“firstName”:“Massimo”,“lastName”:“Cotelli”},
-    “geographicLocation”:{“house”:{“street”:“Via
-    Golena”,“houseNumber”:“31C”},“zip”:{“zip”:“6512”,“city”:“Giubiasco”}},
-    “logisticLocation”:{“house”:{“street”:“Via
-    Golena”,“houseNumber”:“31C”},“zip”:{“zip”:“6512”,“city”:“Giubiasco”}}
-    },
-    {
-    “id”:“e3089ed6-35cd-47ed-b477-143396f96ef4”,
-    “type”:“DOMICILE”,
-    “nickname”:“test-zytglogge”,
-    “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”},
-    “geographicLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“houseKey”:“701091
-    5”},“zip”:{“zip”:“3011”,“city”:“Bern”}},
-    “logisticLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“houseKey”:“7010915”},
-    “zip”:{“zip”:“3011”,“city”:“Bern”}}
-    },
-    {
-    “id”:“573b3a3c-43df-4c3b-aaf2-4c3c0ca8f315”,
-    “type”:“POST_OFFICE”,
-    “nickname”:“432”,
-    “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”},
-    “geographicLocation”:{“house”:{“street”:“Bahnhofstrasse”,“houseNumber”:“18”,“houseKey”:“37651
-    ”},“zip”:{“zip”:“611000”,“city”:“Wolhusen”}},
-    “logisticLocation”:{“postBoxNumber”:“999”,“house”:{“street”:“Postfach”,“houseKey”:“37651”},“-
-    zip”:{“zip”:“6110”,“city”:“Wolhusen”}}
-    },
-    {
-    “id”:“1abf6700-2a3c-49fb-bf2c-c1790d85352f”,
-    “type”:“PICK_POST”,
-    “nickname”:“Test Modifica”,
-    “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”},
-    “geographicLocation”:{“house”:{“street”:“Brünigstrasse”,“houseNumber”:“101”,“house-
-    Key”:“174827”},
-    “zip”:{“zip”:“607200”,“city”:“Sachseln”}},
-    “logisticLocation”:{“postBoxNumber”:“5”,“house”:{“street”:“Postfach”,“houseKey”:“174827”},“zip”:
-    {“zip”:“6072”,“city”:“Sachseln”}}
-    },
-    {
-    “id”:“b8dbdf51-6a6a-4ba4-aa55-45377277651f”,
-    “type”:“MY_POST_24”,
-    “nickname”:“mypost24”,
-    “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”},
-    “geographicLocation”:{“house”:{“street”:“Avenue
-    A.Piccard”,“houseKey”:“76419394”},“zip”:{“zip”:“101573”,“city”:“Lausanne”}},
-    “logisticLocation”:{“house”:{“street”:“Avenue
-    A.Piccard”,“houseKey”:“76419394”},“zip”:{“zip”:“1015”,“city”:“Lausanne”}}
-    },
-    {
-    “id”:“36e720e8-a908-469e-9daf-6b376071a557”,
-    “type”:“POSTBOX”,
-    “nickname”:“testPF”,
-    “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”},
-    “geographicLocation”:{“house”:{“street”:“Via
-    Galbisio”,“houseNumber”:“2”,“houseKey”:“72014233”,“zip”:{“zip”:“6503”,“city”:“Bellinzona”}},
-    “logisticLocation”:{“postBoxNumber”:“123”,“house”:{“street”:“Casella
-    postale”,“houseKey”:“72014233”},“zip”:{“zip”:“6503”,“city”:“Bellinzona”}}
-    }
-    ]
-
+[ { “type”:“MAIN”, “nickname”:“KLP”, “addressee”:{“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Via Golena”,“houseNumber”:“31C”},“zip”:{“zip”:“6512”,“city”:“Giubiasco”}}, “logisticLocation”:{“house”:{“street”:“Via Golena”,“houseNumber”:“31C”},“zip”:{“zip”:“6512”,“city”:“Giubiasco”}} }, { “id”:“e3089ed6-35cd-47ed-b477-143396f96ef4”, “type”:“DOMICILE”, “nickname”:“test-zytglogge”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“houseKey”:“701091 5”},“zip”:{“zip”:“3011”,“city”:“Bern”}}, “logisticLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“houseKey”:“7010915”}, “zip”:{“zip”:“3011”,“city”:“Bern”}} }, { “id”:“573b3a3c-43df-4c3b-aaf2-4c3c0ca8f315”, “type”:“POST_OFFICE”, “nickname”:“432”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Bahnhofstrasse”,“houseNumber”:“18”,“houseKey”:“37651 ”},“zip”:{“zip”:“611000”,“city”:“Wolhusen”}}, “logisticLocation”:{“postBoxNumber”:“999”,“house”:{“street”:“Postfach”,“houseKey”:“37651”},“- zip”:{“zip”:“6110”,“city”:“Wolhusen”}} }, { “id”:“1abf6700-2a3c-49fb-bf2c-c1790d85352f”, “type”:“PICK_POST”, “nickname”:“Test Modifica”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Brünigstrasse”,“houseNumber”:“101”,“house- Key”:“174827”}, “zip”:{“zip”:“607200”,“city”:“Sachseln”}}, “logisticLocation”:{“postBoxNumber”:“5”,“house”:{“street”:“Postfach”,“houseKey”:“174827”},“zip”: {“zip”:“6072”,“city”:“Sachseln”}} }, { “id”:“b8dbdf51-6a6a-4ba4-aa55-45377277651f”, “type”:“MY_POST_24”, “nickname”:“mypost24”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Avenue A.Piccard”,“houseKey”:“76419394”},“zip”:{“zip”:“101573”,“city”:“Lausanne”}}, “logisticLocation”:{“house”:{“street”:“Avenue A.Piccard”,“houseKey”:“76419394”},“zip”:{“zip”:“1015”,“city”:“Lausanne”}} }, { “id”:“36e720e8-a908-469e-9daf-6b376071a557”, “type”:“POSTBOX”, “nickname”:“testPF”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Via Galbisio”,“houseNumber”:“2”,“houseKey”:“72014233”,“zip”:{“zip”:“6503”,“city”:“Bellinzona”}}, “logisticLocation”:{“postBoxNumber”:“123”,“house”:{“street”:“Casella postale”,“houseKey”:“72014233”},“zip”:{“zip”:“6503”,“city”:“Bellinzona”}} } ]  
 Copy
 
 #### 4.1.3 The main address of the end user
 
 #### GET request
 
-    https://wedec.post.ch/api/address/v1/users/current/addresses/main
-
+https://wedec.post.ch/api/address/v1/users/current/addresses/main  
 Copy
 
 #### Response
 
-    {
-    “type”:“MAIN”,
-    “nickname”:“KLP”,
-    “addressee”:{“firstName”:“Massimo”,“lastName”:“Cotelli”},
-    “geographicLocation”:{“house”:{“street”:“Via Golena”,“houseNumber”:“31C”},“zip”:{“zip”:“6512”,
-    “city”:“Giubiasco”}},
-    “logisticLocation”:{“house”:{“street”:“Via Golena”,“houseNumber”:“31C”},“zip”:{“zip”:“6512”,“city”:
-    “Giubiasco”}}
-    }
-
+{ “type”:“MAIN”, “nickname”:“KLP”, “addressee”:{“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Via Golena”,“houseNumber”:“31C”},“zip”:{“zip”:“6512”, “city”:“Giubiasco”}}, “logisticLocation”:{“house”:{“street”:“Via Golena”,“houseNumber”:“31C”},“zip”:{“zip”:“6512”,“city”: “Giubiasco”}} }  
 Copy
 
 #### 4.1.4 A single personal address of the end user
 
 #### GET request
 
-    https://wedec.post.ch/api/address/v1/users/current/addresses/e3089ed6-35cd-47ed-b477-143396f96ef4
-
+https://wedec.post.ch/api/address/v1/users/current/addresses/e3089ed6-35cd-47ed-b477-143396f96ef4  
 Copy
 
 #### Response
 
-    {
-    “id”:“e3089ed6-35cd-47ed-b477-143396f96ef4”,
-    “type”:“DOMICILE”,
-    “nickname”:“test-zytglogge”,
-    “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”},
-    “geographicLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“house-
-    Key”:“7010915”
-    ,“zip”:{“zip”:“3011”,“city”:“Bern”}},
-    “logisticLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“house-
-    Key”:“7010915”},“zip
-    :{“zip”:“3011”,“city”:“Bern”}}
-    }
-
+{ “id”:“e3089ed6-35cd-47ed-b477-143396f96ef4”, “type”:“DOMICILE”, “nickname”:“test-zytglogge”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“house- Key”:“7010915” ,“zip”:{“zip”:“3011”,“city”:“Bern”}}, “logisticLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“house- Key”:“7010915”},“zip :{“zip”:“3011”,“city”:“Bern”}} }  
 Copy
 
 #### 4.1.5 Error codes
@@ -598,7 +307,7 @@ Not authorized
 
 404
 
-No result found or address does not exist or is not owned by the currently authenticated Swiss Post user
+No result found or address does not exist or is not owned by the currently authenticated Swiss Post user
 
 500
 
@@ -607,89 +316,35 @@ Internal server error
 
 
 5 Address Checker
------------------
+-----------------  
 
 ### 5.1 Address validation
 
 #### 5.1.1 Prerequisites
 
-*   OAuth access token for scope WEDEC\_VALIDATE\_ADDRESS. This scope does not require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow or a client credential grant flow.
-*   Bearer access token stored in the header of the request:  
-    Authorization: Bearer <OAuth access token>
-*   Address API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml)
-*   Address API | PROD | [https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/address/v1/swagger.yaml](https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/address/v1/swagger.yaml)
+* OAuth access token for scope WEDEC\_VALIDATE\_ADDRESS. This scope does not require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow or a client credential grant flow.
+* Bearer access token stored in the header of the request:    
+  Authorization: Bearer <OAuth access token>
+* Address API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml)
+* Address API | PROD | [https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/address/v1/swagger.yaml](https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/address/v1/swagger.yaml)
 
 #### 5.1.2 Validate a given address
 
 #### POST request
 
-    https://wedec.post.ch/api/address/v1/addresses/validation
-
+https://wedec.post.ch/api/address/v1/addresses/validation  
 Copy
 
 #### POST payload
 
-    {
-       "addressee":{
-          "firstName":"Hans",
-          "lastName":"Muster",
-          "title":"MISTER"
-       },
-       "geographicLocation":{
-          "house":{
-             "street":"viale Stazione",
-             "houseNumber":"15",
-             "additionalAddress":""
-          },
-          "zip":{
-             "zip":"6500",
-             "city":"Bellinzona"
-          }
-       },
-       "logisticLocation":{
-          "postBoxNumber":""
-       },
-       "fullValidation":true
-    }
-
+{ "addressee":{ "firstName":"Hans", "lastName":"Muster", "title":"MISTER" }, "geographicLocation":{ "house":{ "street":"viale Stazione", "houseNumber":"15", "additionalAddress":"" }, "zip":{ "zip":"6500", "city":"Bellinzona" } }, "logisticLocation":{ "postBoxNumber":"" }, "fullValidation":true }  
 Copy
 
 #### Response
 
-    {
-       "quality":"CERTIFIED",
-       "expires":"20190822T181333+0200",
-       "address":{
-          "type":"DOMICILE",
-          "addressee":{
-             "firstName":"Hans",
-             "lastName":"Muster"
-          },
-          "logisticLocation":{
-             "postBoxNumber":"",
-             "house":{
-    
-             },
-             "zip":{
-    
-             }
-          },
-          "geographicLocation":{
-             "house":{
-                "street":"viale Stazione",
-                "houseNumber":"15",
-                "additionalAddress":"",
-                "houseKey":"76439798"
-             },
-             "zip":{
-                "zip":"6500",
-                "city":"Bellinzona"
-             }
-          },
-          "id":"034ce086-c9bb-49df-9ed1-1b674e6d5717"
-       }
-    }
-
+{ "quality":"CERTIFIED", "expires":"20190822T181333+0200", "address":{ "type":"DOMICILE", "addressee":{ "firstName":"Hans", "lastName":"Muster" }, "logisticLocation":{ "postBoxNumber":"", "house":{              },  
+"zip":{              }  
+}, "geographicLocation":{ "house":{ "street":"viale Stazione", "houseNumber":"15", "additionalAddress":"", "houseKey":"76439798" }, "zip":{ "zip":"6500", "city":"Bellinzona" } }, "id":"034ce086-c9bb-49df-9ed1-1b674e6d5717" } }  
 Copy
 
 #### 5.1.3 Error codes
@@ -718,84 +373,45 @@ Internal server error
 
 #### 5.2.1 Prerequisites
 
-*   OAuth access token for scope WEDEC\_AUTOCOMPLETE\_ADDRESS. This scope does not require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow or a client credential grant flow.
-*   Bearer access token stored in the header of the request:  
-    Authorization: Bearer <OAuth access token>
-*   Address API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml)
+* OAuth access token for scope WEDEC\_AUTOCOMPLETE\_ADDRESS. This scope does not require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow or a client credential grant flow.
+* Bearer access token stored in the header of the request:    
+  Authorization: Bearer <OAuth access token>
+* Address API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/address/v1/swagger.yaml)
 
 #### 5.2.2 Zip auto-completion
 
 #### GET request
 
-    https://wedec.post.ch/api/address/v1/zips?zipCity=66&type=DOMICILE
-    https://wedec.post.ch/api/address/v1/zips?zipCity=66&type=POSTBOX
-
+https://wedec.post.ch/api/address/v1/zips?zipCity=66&type=DOMICILE https://wedec.post.ch/api/address/v1/zips?zipCity=66&type=POSTBOX  
 Copy
 
 #### Response
 
-    {
-    “zips”:[
-    {“zip”:“6600”,“city18”:“Locarno”,“city27”:“Locarno”},
-    {“zip”:“6600”,“city18”:“Muralto”,“city27”:“Muralto”},
-    {“zip”:“6600”,“city18”:“Solduno”,“city27”:“Solduno”},
-    {“zip”:“6601”,“city18”:“Locarno”,“city27”:“Locarno”},
-    {“zip”:“6602”,“city18”:“Muralto”,“city27”:“Muralto”},
-    {“zip”:“6604”,“city18”:“Locarno”,“city27”:“Locarno”},
-    {“zip”:“6605”,“city18”:“Locarno”,“city27”:“Locarno”},
-    {“zip”:“6605”,“city18”:“Monte Brè Locarno”,“city27”:“Monte Brè sopra Locarno”},
-    {“zip”:“6611”,“city18”:“Crana”,“city27”:“Crana”},
-    {“zip”:“6611”,“city18”:“Gresso”,“city27”:“Gresso”},
-    {“zip”:“6611”,“city18”:“Mosogno”,“city27”:“Mosogno”},
-    {“zip”:“6612”,“city18”:“Ascona”,“city27”:“Ascona”},
-    {“zip”:“6613”,“city18”:“Porto Ronco”,“city27”:“Porto Ronco”},
-    {“zip”:“6614”,“city18”:“Brissago”,“city27”:“Brissago”},
-    {“zip”:“6614”,“city18”:“Isole di Brissago”,“city27”:“Isole di Brissago”},
-    {“zip”:“6616”,“city18”:“Losone”,“city27”:“Losone”},
-    {“zip”:“6618”,“city18”:“Arcegno”,“city27”:“Arcegno”},
-    {“zip”:“6622”,“city18”:“Ronco sopra Ascona”,“city27”:“Ronco sopra Ascona”},
-    {“zip”:“6631”,“city18”:“Corippo”,“city27”:“Corippo”},
-    {“zip”:“6632”,“city18”:“Vogorno”,“city27”:“Vogorno”}
-    ]
-    }
-
+{ “zips”:[ {“zip”:“6600”,“city18”:“Locarno”,“city27”:“Locarno”}, {“zip”:“6600”,“city18”:“Muralto”,“city27”:“Muralto”}, {“zip”:“6600”,“city18”:“Solduno”,“city27”:“Solduno”}, {“zip”:“6601”,“city18”:“Locarno”,“city27”:“Locarno”}, {“zip”:“6602”,“city18”:“Muralto”,“city27”:“Muralto”}, {“zip”:“6604”,“city18”:“Locarno”,“city27”:“Locarno”}, {“zip”:“6605”,“city18”:“Locarno”,“city27”:“Locarno”}, {“zip”:“6605”,“city18”:“Monte Brè Locarno”,“city27”:“Monte Brè sopra Locarno”}, {“zip”:“6611”,“city18”:“Crana”,“city27”:“Crana”}, {“zip”:“6611”,“city18”:“Gresso”,“city27”:“Gresso”}, {“zip”:“6611”,“city18”:“Mosogno”,“city27”:“Mosogno”}, {“zip”:“6612”,“city18”:“Ascona”,“city27”:“Ascona”}, {“zip”:“6613”,“city18”:“Porto Ronco”,“city27”:“Porto Ronco”}, {“zip”:“6614”,“city18”:“Brissago”,“city27”:“Brissago”}, {“zip”:“6614”,“city18”:“Isole di Brissago”,“city27”:“Isole di Brissago”}, {“zip”:“6616”,“city18”:“Losone”,“city27”:“Losone”}, {“zip”:“6618”,“city18”:“Arcegno”,“city27”:“Arcegno”}, {“zip”:“6622”,“city18”:“Ronco sopra Ascona”,“city27”:“Ronco sopra Ascona”}, {“zip”:“6631”,“city18”:“Corippo”,“city27”:“Corippo”}, {“zip”:“6632”,“city18”:“Vogorno”,“city27”:“Vogorno”} ] }  
 Copy
 
 #### 5.2.3 Street name auto-completion
 
 #### GET request
 
-    https://wedec.post.ch/api/address/v1/streets?name=Via+Se
-    https://wedec.post.ch/api/address/v1/streets?name=Via+
-    Se&zip=6600
-
+https://wedec.post.ch/api/address/v1/streets?name=Via+Se https://wedec.post.ch/api/address/v1/streets?name=Via+ Se&zip=6600  
 Copy
 
 #### Response
 
-    {
-    “streets”:[
-    “Via Sempione”,
-    “Via Serafino Balestra”
-    ]
-    }
-
+{ “streets”:[ “Via Sempione”, “Via Serafino Balestra” ] }  
 Copy
 
 #### 5.2.4 House number auto-completion
 
 #### GET request
 
-    https://wedec.post.ch/api/address/v1/houses?zip=6600&streetname=Via+Serafino+Balestra&number=2
-
+https://wedec.post.ch/api/address/v1/houses?zip=6600&streetname=Via+Serafino+Balestra&number=2  
 Copy
 
 #### Response
 
-    {
-    “houses”:[“1”,“1 A”,“2”,“3”,“4”,“5”,“6”,“7”,“8”,“9 A”]
-    }
-
+{ “houses”:[“1”,“1 A”,“2”,“3”,“4”,“5”,“6”,“7”,“8”,“9 A”] }  
 Copy
 
 #### 5.2.5 Error codes
@@ -825,14 +441,14 @@ No results found
 Internal server error
 
 6 Delivery
-----------
+----------  
 
 ### 6.1 Prerequisites
 
-*   OAuth access token for scope WEDEC\_DELIVERY. This scope does not require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow or a client credential grant flow.
-*   Bearer access token stored in the header of the request: Authorization: Bearer <OAuth access token>
-*   Delivery API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/delivery/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/delivery/v1/swagger.yaml)
-*   Delivery API | PROD | [https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/delivery/v1/swagger.yaml](https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/delivery/v1/swagger.yaml)
+* OAuth access token for scope WEDEC\_DELIVERY. This scope does not require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow or a client credential grant flow.
+* Bearer access token stored in the header of the request: Authorization: Bearer <OAuth access token>
+* Delivery API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/delivery/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/delivery/v1/swagger.yaml)
+* Delivery API | PROD | [https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/delivery/v1/swagger.yaml](https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/delivery/v1/swagger.yaml)
 
 ### 6.2 Delivery days query
 
@@ -840,259 +456,38 @@ Internal server error
 
 #### GET request
 
-    https://wedec.post.ch/api/delivery/v1/deliverabilities/when?
-    address.geographicLocation.house.street=Serafino+Balestra&
-    address.geographicLocation.house.houseNumber=20&
-    address.geographicLocation.zip.zip=6600&
-    address.geographicLocation.zip.city=Locarno&
-    dayCount=3
-
+https://wedec.post.ch/api/delivery/v1/deliverabilities/when? address.geographicLocation.house.street=Serafino+Balestra& address.geographicLocation.house.houseNumber=20& address.geographicLocation.zip.zip=6600& address.geographicLocation.zip.city=Locarno& dayCount=3  
 Copy
 
 Please note: Using the product filter is optional.
 
 #### Response
 
-    {
-       "days":[
-          {
-             "deliveryDate":"2019-09-03",
-             "deliverabilities":[
-                {
-                   "incomingDate":"2019-09-02",
-                   "productCode":"PRI",
-                   "deliveryDetails":{
-                      "route":"121",
-                      "branch":{
-                         "id":"659370",
-                         "description":"Cadenazzo Base di distribuzione"
-                      }
-                   }
-                },
-                {
-                   "incomingDate":"2019-09-02",
-                   "productCode":"SEM",
-                   "deliveryDetails":{
-                      "route":"121",
-                      "branch":{
-                         "id":"659370",
-                         "description":"Cadenazzo Base di distribuzione"
-                      }
-                   }
-                },
-                {
-                   "incomingDate":"2019-09-02",
-                   "productCode":"ZFZ0912,PRI",
-                   "deliveryDetails":{
-                      "route":"121",
-                      "branch":{
-                         "id":"659370",
-                         "description":"Cadenazzo Base di distribuzione"
-                      }
-                   }
-                },
-                {
-                   "incomingDate":"2019-09-02",
-                   "productCode":"ZFZ1114,PRI",
-                   "deliveryDetails":{
-                      "route":"121",
-                      "branch":{
-                         "id":"659370",
-                         "description":"Cadenazzo Base di distribuzione"
-                      }
-                   }
-                },
-                {
-                   "incomingDate":"2019-09-03",
-                   "productCode":"ZFZ0912,DIR",
-                   "dropOffInfo":{
-                      "dropOffPoint":"659370",
-                      "lastDropOffTime":"04:00"
-                   },
-                   "deliveryDetails":{
-                      "route":"121",
-                      "branch":{
-                         "id":"659370",
-                         "description":"Cadenazzo Base di distribuzione"
-                      }
-                   }
-                },
-                {
-                   "incomingDate":"2019-09-03",
-                   "productCode":"ZFZ1114,DIR",
-                   "dropOffInfo":{
-                      "dropOffPoint":"659370",
-                      "lastDropOffTime":"04:00"
-                   },
-                   "deliveryDetails":{
-                      "route":"121",
-                      "branch":{
-                         "id":"659370",
-                         "description":"Cadenazzo Base di distribuzione"
-                      }
-                   }
-                },
-                {
-                   "incomingDate":"2019-09-02",
-                   "productCode":"ZF16302100,PRI"
-                },
-                {
-                   "incomingDate":"2019-09-02",
-                   "productCode":"ZF16301800,PRI"
-                },
-                {
-                   "incomingDate":"2019-09-02",
-                   "productCode":"ZF17301900,PRI"
-                },
-                {
-                   "incomingDate":"2019-09-02",
-                   "productCode":"ZF18302000,PRI"
-                },
-                {
-                   "incomingDate":"2019-09-02",
-                   "productCode":"ZF19302100,PRI"
-                },
-                {
-                   "incomingDate":"2019-09-03",
-                   "productCode":"ZF16302100,SKB"
-                },
-                {
-                   "incomingDate":"2019-09-03",
-                   "productCode":"ZF16301800,SKB"
-                },
-                {
-                   "incomingDate":"2019-09-03",
-                   "productCode":"ZF17301900,SKB"
-                },
-                {
-                   "incomingDate":"2019-09-03",
-                   "productCode":"ZF18302000,SKB"
-                },
-                {
-                   "incomingDate":"2019-09-03",
-                   "productCode":"ZF19302100,SKB"
-                },
-                {
-                   "incomingDate":"2019-09-03",
-                   "productCode":"ZF16302100,DIR",
-                   "dropOffInfo":{
-                      "dropOffPoint":"659370",
-                      "lastDropOffTime":"14:00"
-                   }
-                },
-                {
-                   "incomingDate":"2019-09-03",
-                   "productCode":"ZF16301800,DIR",
-                   "dropOffInfo":{
-                      "dropOffPoint":"659370",
-                      "lastDropOffTime":"14:00"
-                   }
-                },
-                {
-                   "incomingDate":"2019-09-03",
-                   "productCode":"ZF17301900,DIR",
-                   "dropOffInfo":{
-                      "dropOffPoint":"659370",
-                      "lastDropOffTime":"14:00"
-                   }
-                },
-                {
-                   "incomingDate":"2019-09-03",
-                   "productCode":"ZF18302000,DIR",
-                   "dropOffInfo":{
-                      "dropOffPoint":"659370",
-                      "lastDropOffTime":"14:00"
-                   }
-                },
-                {
-                   "incomingDate":"2019-09-03",
-                   "productCode":"ZF19302100,DIR",
-                   "dropOffInfo":{
-                      "dropOffPoint":"659370",
-                      "lastDropOffTime":"14:00"
-                   }
-                },
-                {
-                   "incomingDate":"2019-09-02",
-                   "productCode":"ZFZ1217,PRI",
-                   "deliveryDetails":{
-                      "route":"121",
-                      "branch":{
-                         "id":"659370",
-                         "description":"Cadenazzo Base di distribuzione"
-                      }
-                   }
-                },
-                {
-                   "incomingDate":"2019-09-03",
-                   "productCode":"ZFZ1217,DIR",
-                   "dropOffInfo":{
-                      "dropOffPoint":"659370",
-                      "lastDropOffTime":"04:00"
-                   },
-                   "deliveryDetails":{
-                      "route":"121",
-                      "branch":{
-                         "id":"659370",
-                         "description":"Cadenazzo Base di distribuzione"
-                      }
-                   }
-                }
-             ],
-             "activity":"WORK"
-          }
-       ],
-       "quality":"RELIABLE",
-       "deliveryToTheDoor":"AVAILABLE"
-    }
-
+{ "days":[ { "deliveryDate":"2019-09-03", "deliverabilities":[ { "incomingDate":"2019-09-02", "productCode":"PRI", "deliveryDetails":{ "route":"121", "branch":{ "id":"659370", "description":"Cadenazzo Base di distribuzione" } } }, { "incomingDate":"2019-09-02", "productCode":"SEM", "deliveryDetails":{ "route":"121", "branch":{ "id":"659370", "description":"Cadenazzo Base di distribuzione" } } }, { "incomingDate":"2019-09-02", "productCode":"ZFZ0912,PRI", "deliveryDetails":{ "route":"121", "branch":{ "id":"659370", "description":"Cadenazzo Base di distribuzione" } } }, { "incomingDate":"2019-09-02", "productCode":"ZFZ1114,PRI", "deliveryDetails":{ "route":"121", "branch":{ "id":"659370", "description":"Cadenazzo Base di distribuzione" } } }, { "incomingDate":"2019-09-03", "productCode":"ZFZ0912,DIR", "dropOffInfo":{ "dropOffPoint":"659370", "lastDropOffTime":"04:00" }, "deliveryDetails":{ "route":"121", "branch":{ "id":"659370", "description":"Cadenazzo Base di distribuzione" } } }, { "incomingDate":"2019-09-03", "productCode":"ZFZ1114,DIR", "dropOffInfo":{ "dropOffPoint":"659370", "lastDropOffTime":"04:00" }, "deliveryDetails":{ "route":"121", "branch":{ "id":"659370", "description":"Cadenazzo Base di distribuzione" } } }, { "incomingDate":"2019-09-02", "productCode":"ZF16302100,PRI" }, { "incomingDate":"2019-09-02", "productCode":"ZF16301800,PRI" }, { "incomingDate":"2019-09-02", "productCode":"ZF17301900,PRI" }, { "incomingDate":"2019-09-02", "productCode":"ZF18302000,PRI" }, { "incomingDate":"2019-09-02", "productCode":"ZF19302100,PRI" }, { "incomingDate":"2019-09-03", "productCode":"ZF16302100,SKB" }, { "incomingDate":"2019-09-03", "productCode":"ZF16301800,SKB" }, { "incomingDate":"2019-09-03", "productCode":"ZF17301900,SKB" }, { "incomingDate":"2019-09-03", "productCode":"ZF18302000,SKB" }, { "incomingDate":"2019-09-03", "productCode":"ZF19302100,SKB" }, { "incomingDate":"2019-09-03", "productCode":"ZF16302100,DIR", "dropOffInfo":{ "dropOffPoint":"659370", "lastDropOffTime":"14:00" } }, { "incomingDate":"2019-09-03", "productCode":"ZF16301800,DIR", "dropOffInfo":{ "dropOffPoint":"659370", "lastDropOffTime":"14:00" } }, { "incomingDate":"2019-09-03", "productCode":"ZF17301900,DIR", "dropOffInfo":{ "dropOffPoint":"659370", "lastDropOffTime":"14:00" } }, { "incomingDate":"2019-09-03", "productCode":"ZF18302000,DIR", "dropOffInfo":{ "dropOffPoint":"659370", "lastDropOffTime":"14:00" } }, { "incomingDate":"2019-09-03", "productCode":"ZF19302100,DIR", "dropOffInfo":{ "dropOffPoint":"659370", "lastDropOffTime":"14:00" } }, { "incomingDate":"2019-09-02", "productCode":"ZFZ1217,PRI", "deliveryDetails":{ "route":"121", "branch":{ "id":"659370", "description":"Cadenazzo Base di distribuzione" } } }, { "incomingDate":"2019-09-03", "productCode":"ZFZ1217,DIR", "dropOffInfo":{ "dropOffPoint":"659370", "lastDropOffTime":"04:00" }, "deliveryDetails":{ "route":"121", "branch":{ "id":"659370", "description":"Cadenazzo Base di distribuzione" } } } ], "activity":"WORK" } ], "quality":"RELIABLE", "deliveryToTheDoor":"AVAILABLE" }  
 Copy
 
 #### 6.2.2 The deliverabilities at 6600 Locarno (default date of first day = today, default day count = 14)
 
 #### GET request
 
-    https://wedec.post.ch/api/delivery/v1/deliverabilities/when?address.geographicLocation.zip.zip=6600&address.
-    geographicLocation.zip.city=Locarno
-    https://wedec.post.ch/api/delivery/v1/deliverabilities/when?address.geographicLocation.zip.zip=6600&address.
-    geographicLocation.zip.city=Locarno&date=2014-11-17&dayCount=2
-    https://wedec.post.ch/api/delivery/v1/deliverabilities/when?address.geographicLocation.zip.zip=6600&address.
-    geographicLocation.zip.city=Locarno&dayCount=2
-
+https://wedec.post.ch/api/delivery/v1/deliverabilities/when?address.geographicLocation.zip.zip=6600&address. geographicLocation.zip.city=Locarno https://wedec.post.ch/api/delivery/v1/deliverabilities/when?address.geographicLocation.zip.zip=6600&address. geographicLocation.zip.city=Locarno&date=2014-11-17&dayCount=2 https://wedec.post.ch/api/delivery/v1/deliverabilities/when?address.geographicLocation.zip.zip=6600&address. geographicLocation.zip.city=Locarno&dayCount=2  
 Copy
 
 #### 6.2.3 The deliverabilities at 6959 Piandera Paese for the given delivery dates
 
 #### GET request
 
-    https://wedec.post.ch/api/delivery/v1/deliverabilities/when?
-    address.geographicLocation.zip.zip=6959&
-    address.geographicLocation.zip.city=Piandera+Paese&
-    deliveryDates=2014-12-24&
-    deliveryDates=2014-12-25
-
+https://wedec.post.ch/api/delivery/v1/deliverabilities/when? address.geographicLocation.zip.zip=6959& address.geographicLocation.zip.city=Piandera+Paese& deliveryDates=2014-12-24& deliveryDates=2014-12-25  
 Copy
 
 #### POST request
 
-    https://wedec.post.ch/api/delivery/v1/deliverabilities/when
-
+https://wedec.post.ch/api/delivery/v1/deliverabilities/when  
 Copy
 
 #### POST payload
 
-    {
-    “address”: {
-    “geographicLocation”: {
-    “zip”: {
-    “zip”: 6959,
-    “city”: “Piandera Paese”
-    }
-    }
-    },
-    “deliveryDates”: [“2014-12-24”,“2014-12-25“]
-    }
-
+{ “address”: { “geographicLocation”: { “zip”: { “zip”: 6959, “city”: “Piandera Paese” } } }, “deliveryDates”: [“2014-12-24”,“2014-12-25“] }  
 Copy
 
 #### 6.2.4 Error codes
@@ -1123,33 +518,12 @@ Internal server error
 
 #### GET request
 
-    https://wedec.post.ch/api/delivery/v1/deliverabilities/how/PRI
-
+https://wedec.post.ch/api/delivery/v1/deliverabilities/how/PRI  
 Copy
 
 #### Response
 
-    {
-    “productCode”:“PRI”,
-    “barcode”:“0509”,
-    “deliveryInstructions”:[
-    {“code”:“3211”},{“code”:“3212”},{“code”:“3213”},{“code”:“3214”},{“code”:“3215”},{“code”:
-    “3216”},
-    {“code”:“3217”},{“code”:“3218”},{“code”:“3219”},{“code”:“3220”},{“code”:“3222”},{“code”:
-    “3232”},
-    {“code”:“3233”},{“code”:“3234”}],
-    “additionalServices”:[
-    {“code”:“BLN”,“mandatory”:false},
-    {“code”:“COLD”,“mandatory”:false},
-    {“code”:“RMP”,“mandatory”:false},
-    {“code”:“SP”,“mandatory”:false},
-    {“code”:“MAN”,“mandatory”:false},
-    {“code”:“FRA”,“mandatory”:false},
-    {“code”:“AS”,“mandatory”:false},
-    {“code”:“SI”,“mandatory”:false},
-    {“code”:“LQ”,“mandatory”:false}]
-    }
-
+{ “productCode”:“PRI”, “barcode”:“0509”, “deliveryInstructions”:[ {“code”:“3211”},{“code”:“3212”},{“code”:“3213”},{“code”:“3214”},{“code”:“3215”},{“code”: “3216”}, {“code”:“3217”},{“code”:“3218”},{“code”:“3219”},{“code”:“3220”},{“code”:“3222”},{“code”: “3232”}, {“code”:“3233”},{“code”:“3234”}], “additionalServices”:[ {“code”:“BLN”,“mandatory”:false}, {“code”:“COLD”,“mandatory”:false}, {“code”:“RMP”,“mandatory”:false}, {“code”:“SP”,“mandatory”:false}, {“code”:“MAN”,“mandatory”:false}, {“code”:“FRA”,“mandatory”:false}, {“code”:“AS”,“mandatory”:false}, {“code”:“SI”,“mandatory”:false}, {“code”:“LQ”,“mandatory”:false}] }  
 Copy
 
 #### 6.3.2 Error codes
@@ -1174,71 +548,30 @@ No results found
 
 Internal server error
 
-### 6.4 Additional services information query 
-
+### 6.4 Additional services information query
 #### 6.4.1 Information for all additional services
 
 #### GET request
 
-    https://wedec.post.ch/api/delivery/v1/options/additionalservices
-
+https://wedec.post.ch/api/delivery/v1/options/additionalservices  
 Copy
 
 #### Response
 
-    [
-    {
-    “code”:“BLN”,
-    “name”:{
-    “de”:“BLN”,
-    “fr”:“BLN”,
-    “it”:“BLN”,
-    “en”:“BLN”},
-    “barcode”:“0341”
-    },
-    {“code”:“COLD”,“name”:{“de”:“COLD”,“fr”:“COLD”,“it”:“COLD”,“en”:“COLD”},“barcode”:“
-    3781”},
-    {“code”:“RMP”,“name”:{“de”:“RMP”,“fr”:“RMP”,“it”:“RMP”,“en”:“RMP”},“barcode”:“0322”},
-    {“code”:“SP”,“name”:{“de”:“SP”,“fr”:“SP”,“it”:“SP”,“en”:“SP”},“barcode”:“0309”},
-    {“code”:“MAN”,“name”:{“de”:“MAN”,“fr”:“MAN”,“it”:“MAN”,“en”:“MAN”},“barcode”:“0421”},
-    {“code”:“FRA”,“name”:{“de”:“FRA”,“fr”:“FRA”,“it”:“FRA”,“en”:“FRA”},“barcode”:“0310”},
-    {“code”:“AS”,“name”:{“de”:“AS”,“fr”:“AS”,“it”:“AS”,“en”:“AS”},“barcode”:“0308”},
-    {“code”:“SI”,“name”:{“de”:“SI”,“fr”:“SI”,“it”:“SI”,“en”:“SI”},“barcode”:“0307”},
-    {“code”:“LQ”,“name”:{“de”:“LQ”,“fr”:“LQ”,“it”:“LQ”,“en”:“LQ”},“barcode”:“0549”},
-    {“code”:“SA”,“name”:{“de”:“SA”,“fr”:“SA”,“it”:“SA”,“en”:“SA”},“barcode”:“0543”},
-    {“code”:“AZS”,“name”:{“de”:“AZS”,“fr”:“AZS”,“it”:“AZS”,“en”:“AZS”},“barcode”:“0581”}
-    ]
-
+[ { “code”:“BLN”, “name”:{ “de”:“BLN”, “fr”:“BLN”, “it”:“BLN”, “en”:“BLN”}, “barcode”:“0341” }, {“code”:“COLD”,“name”:{“de”:“COLD”,“fr”:“COLD”,“it”:“COLD”,“en”:“COLD”},“barcode”:“ 3781”}, {“code”:“RMP”,“name”:{“de”:“RMP”,“fr”:“RMP”,“it”:“RMP”,“en”:“RMP”},“barcode”:“0322”}, {“code”:“SP”,“name”:{“de”:“SP”,“fr”:“SP”,“it”:“SP”,“en”:“SP”},“barcode”:“0309”}, {“code”:“MAN”,“name”:{“de”:“MAN”,“fr”:“MAN”,“it”:“MAN”,“en”:“MAN”},“barcode”:“0421”}, {“code”:“FRA”,“name”:{“de”:“FRA”,“fr”:“FRA”,“it”:“FRA”,“en”:“FRA”},“barcode”:“0310”}, {“code”:“AS”,“name”:{“de”:“AS”,“fr”:“AS”,“it”:“AS”,“en”:“AS”},“barcode”:“0308”}, {“code”:“SI”,“name”:{“de”:“SI”,“fr”:“SI”,“it”:“SI”,“en”:“SI”},“barcode”:“0307”}, {“code”:“LQ”,“name”:{“de”:“LQ”,“fr”:“LQ”,“it”:“LQ”,“en”:“LQ”},“barcode”:“0549”}, {“code”:“SA”,“name”:{“de”:“SA”,“fr”:“SA”,“it”:“SA”,“en”:“SA”},“barcode”:“0543”}, {“code”:“AZS”,“name”:{“de”:“AZS”,“fr”:“AZS”,“it”:“AZS”,“en”:“AZS”},“barcode”:“0581”} ]  
 Copy
 
-### 6.5 Delivery instructions information query 
-
+### 6.5 Delivery instructions information query
 #### 6.5.1 Information for all delivery instructions
 
 #### GET request
 
-    https://wedec.post.ch/api/delivery/v1/options/deliveryinstructions
-
+https://wedec.post.ch/api/delivery/v1/options/deliveryinstructions  
 Copy
 
 #### Response
 
-    [
-    {
-    “code”:“3211”,
-    “barcode”:“3211”,
-    “name”:{
-    “de”:“Sendung dem Empfänger direkt auf der Etage zustellen”,
-    “fr”:“Sendung dem Empfänger direkt auf der Etage zustellen”,
-    “it”:“Sendung dem Empfänger direkt auf der Etage zustellen”,
-    “en”:“Sendung dem Empfänger direkt auf der Etage zustellen”},
-    “editable”:false,
-    “placeHolderNames”:[],
-    “optionNames”:[]
-    },
-    ...
-    ]
-
+[ { “code”:“3211”, “barcode”:“3211”, “name”:{ “de”:“Sendung dem Empfänger direkt auf der Etage zustellen”, “fr”:“Sendung dem Empfänger direkt auf der Etage zustellen”, “it”:“Sendung dem Empfänger direkt auf der Etage zustellen”, “en”:“Sendung dem Empfänger direkt auf der Etage zustellen”}, “editable”:false, “placeHolderNames”:[], “optionNames”:[] }, ... ]  
 Copy
 
 #### 6.5.2 Error codes
@@ -1263,30 +596,17 @@ No results found
 
 Internal server error
 
-### 6.6 Holidays query 
-
+### 6.6 Holidays query
 #### 6.6.1 The list of holidays
 
 #### GET request
 
-    https://wedec.post.ch/api/delivery/v1/options/holidays
-
+https://wedec.post.ch/api/delivery/v1/options/holidays  
 Copy
 
 #### Response
 
-    [
-    {
-    “date”:“2014-12-24”,
-    “name”:{
-    “de”:“Weihnachten”,
-    “fr”:“Weihnachten”,
-    “it”:“Weihnachten”,
-    “en”:“Weihnachten”}
-    },
-    ...
-    ]
-
+[ { “date”:“2014-12-24”, “name”:{ “de”:“Weihnachten”, “fr”:“Weihnachten”, “it”:“Weihnachten”, “en”:“Weihnachten”} }, ... ]  
 Copy
 
 #### 6.6.2 Error codes
@@ -1312,66 +632,37 @@ No results found
 Internal server error
 
 7 PickPost / My Post 24
------------------------
+-----------------------  
 
 ### 7.1 Prerequisites
 
-*   OAuth access token for scope WEDEC\_PICKPOST. This scope does not require the consent of the end user and can be obtained from:  
-    \- an authorization code grant flow  
-    \- an implicit grant flow  
-    \- a client credential grant flow
-*   Bearer access token stored in the header of the request:Authorization: Bearer <OAuth access token>
-*   Integration of the “Location search” map application:  
-    \- You need to obtain a Google Maps API key. Registration with Google is a necessary prerequisite for this.  
-    \- Make the necessary changes in the HTML code in order to integrate the Swiss Post location search into your website.  
-    \- You can find a [detailed manual for the integration of the “Location search” map application here](https://www.post.ch/en/business-solutions/digital-commerce/integration-of-the-location-search-map-application).
-*   PickPost API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/pickpost/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/pickpost/v1/swagger.yaml)
-*   PickPost API | PROD | [https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/pickpost/v1/swagger.yaml](https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/pickpost/v1/swagger.yaml)
+* OAuth access token for scope WEDEC\_PICKPOST. This scope does not require the consent of the end user and can be obtained from:    
+  \- an authorization code grant flow    
+  \- an implicit grant flow    
+  \- a client credential grant flow
+* Bearer access token stored in the header of the request:Authorization: Bearer <OAuth access token>
+* Integration of the “Location search” map application:    
+  \- You need to obtain a Google Maps API key. Registration with Google is a necessary prerequisite for this.    
+  \- Make the necessary changes in the HTML code in order to integrate the Swiss Post location search into your website.    
+  \- You can find a [detailed manual for the integration of the “Location search” map application here](https://www.post.ch/en/business-solutions/digital-commerce/integration-of-the-location-search-map-application).
+* PickPost API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/pickpost/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/pickpost/v1/swagger.yaml)
+* PickPost API | PROD | [https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/pickpost/v1/swagger.yaml](https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/pickpost/v1/swagger.yaml)
 
 ### 7.2 Get PickPost ID or My Post 24 ID for a specific user
 
 #### POST request
 
-    https://wedecint.post.ch/api/pickpost/v1/users
-
+https://wedecint.post.ch/api/pickpost/v1/users  
 Copy
 
 #### POST payload
 
-    {
-    “userDetails”: {
-    “gender”: “MALE”,
-    “firstName”: “Test”,
-    “lastName”: “User”,
-    “language”: “DE”
-    },
-    “address”: {
-    “house”: {
-    “street”: “Bellerivestrasse”,
-    “houseNumber”: “5”
-    },
-    “zip”: {
-    “zip”: “8008”,
-    “city”: “Zürich”,
-    “countryCode”: “CH”
-    }
-    },
-    “notification”: {
-    “notifyMode”: “EMAIL”,
-    “email”: “testuser1@post.ch”
-    },
-    “service”: “PICKPOST”
-    }
-
+{ “userDetails”: { “gender”: “MALE”, “firstName”: “Test”, “lastName”: “User”, “language”: “DE” }, “address”: { “house”: { “street”: “Bellerivestrasse”, “houseNumber”: “5” }, “zip”: { “zip”: “8008”, “city”: “Zürich”, “countryCode”: “CH” } }, “notification”: { “notifyMode”: “EMAIL”, “email”: “testuser1@post.ch” }, “service”: “PICKPOST” }  
 Copy
 
 #### Response
 
-    {
-    “id”: “PT011227”,
-    “verified”: “NONE”
-    }
-
+{ “id”: “PT011227”, “verified”: “NONE” }  
 Copy
 
 #### 7.2.1 Error codes
@@ -1393,21 +684,21 @@ Not authorized
 Internal server error
 
 8 Barcode
----------
+---------  
 
 ### 8.1 Prerequisites
 
-*   OAuth access token for scope WEDEC\_BARCODE\_READ. This scope does not require the consent of the end user and can be obtained from a client credential grant flow.
-*   Bearer access token stored in the header of the request: Authorization: Bearer <OAuth access token>
-*   Barcode API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/barcode/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/barcode/v1/swagger.yaml)
-*   • Barcode API | PROD | [https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/barcode/v1/swagger.yaml](https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/barcode/v1/swagger.yaml)
+* OAuth access token for scope WEDEC\_BARCODE\_READ. This scope does not require the consent of the end user and can be obtained from a client credential grant flow.
+* Bearer access token stored in the header of the request: Authorization: Bearer <OAuth access token>
+* Barcode API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/barcode/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/barcode/v1/swagger.yaml)
+* • Barcode API | PROD | [https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/barcode/v1/swagger.yaml](https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/barcode/v1/swagger.yaml)
 
 ### 8.2 Label formats
 
-*   A7 format (74 ×105 mm)
-*   A6 format (105 ×148 mm)
-*   A5 format (148 × 210 mm): only available for Domestic Parcels, Express and Solutions
-*   Format FE (window envelope): only available for Letters with barcode (BMB) domestic and international
+* A7 format (74 ×105 mm)
+* A6 format (105 ×148 mm)
+* A5 format (148 × 210 mm): only available for Domestic Parcels, Express and Solutions
+* Format FE (window envelope): only available for Letters with barcode (BMB) domestic and international
 
 #### 8.2.1 Recipient’s address – maximum number of address lines (concerns the “GenerateLabel” request)
 
@@ -1417,10 +708,10 @@ The number of address lines that can be printed on an address label is limited b
 
 When the maximum permitted amount of address lines is exceeded, address lines are omitted from the address label in the order below. This only applies to address lines from the “Recipient” address block and – if applicable and permissible – for free text:
 
-1.  Title (Title) is omitted
-2.  Address suffix (AddressSuffix) is omitted
-3.  Name 3 (Name3) is omitted
-4.  Free text (FreeText) is omitted
+1. Title (Title) is omitted
+2. Address suffix (AddressSuffix) is omitted
+3. Name 3 (Name3) is omitted
+4. Free text (FreeText) is omitted
 
 Please find some examples further down.
 
@@ -1432,7 +723,7 @@ The information from the “AddressSuffix” address field element is not transm
 
 When using the “LabelAddress” address block, you can define yourself which recipient’s address lines are to be printed on the address label and in what order for a minimum of 2 and a maximum of 5 address lines (LabelLine1 to LabelLine5). An exception applies to the fields “ZIP” and “City” (and, for international mailings, also to “Country”), which are taken across from the “Recipient” address block. This means that you must define the procedure to be used yourself if the maximum amount of address lines is exceeded.
 
-1 [↑](#bffn1) Delivery instructions are not possible for A7 format.
+1 [↑](#bffn1) Delivery instructions are not possible for A7 format.
 
 ##### Examples for addressing rules for the “Recipient” address block
 
@@ -1535,8 +826,8 @@ Notime
 \-
 
 3
-
--
+  
+-  
 
 DLG BMB domestic
 
@@ -1545,8 +836,8 @@ DLG BMB domestic
 6[\[1\]](#ffn1)
 
 8
-
--
+  
+-  
 
 DLG BMB international
 
@@ -1555,10 +846,10 @@ DLG BMB international
 6[\[1\]](#ffn1)
 
 8
+  
+-  
 
--
-
-Example 1: Format A6, max. 1 ZAW, DLG parcels Details in the “Recipient” block + free text: 8 address lines
+Example 1: Format A6, max. 1 ZAW, DLG parcels Details in the “Recipient” block + free text: 8 address lines
 
 Details on the address label: max. no. of address lines allowed: 8 no adjustment by WSBC required
 
@@ -1700,23 +991,23 @@ City (7th address line)
 
 ### 8.3 Printer resolution (dpi)
 
-*   200 dpi (equivalent to 203 dpi on Zebra label printers)
-*   300 dpi (equivalent to 305 dpi on Zebra label printers)
-*   600 dpi (equivalent to 610 dpi on Zebra label printers)
+* 200 dpi (equivalent to 203 dpi on Zebra label printers)
+* 300 dpi (equivalent to 305 dpi on Zebra label printers)
+* 600 dpi (equivalent to 610 dpi on Zebra label printers)
 
 ### 8.4 Image formats / printer languages
 
-*   EPS
-*   GIF
-*   JPG (not recommended as barcode may not have high enough quality)
-*   PNG
-*   PDF[\[2\]](#ffn2)
-*   sPDF[\[1\]](#ffn2)
-*   ZPL2
+* EPS
+* GIF
+* JPG (not recommended as barcode may not have high enough quality)
+* PNG
+* PDF[\[2\]](#ffn2)
+* sPDF[\[1\]](#ffn2)
+* ZPL2
 
-1 [↑](#bffn2)  Format sPDF is a PDF file without embedded fonts. In order to display this format correctly, the Arial font must be installed on your computer. The generation and transmission times are faster with sPDF than with PDF.
+1 [↑](#bffn2)  Format sPDF is a PDF file without embedded fonts. In order to display this format correctly, the Arial font must be installed on your computer. The generation and transmission times are faster with sPDF than with PDF.
 
-2 [↑](#bffn2)  notime labels can only be created as PDF files.
+2 [↑](#bffn2)  notime labels can only be created as PDF files.
 
 ### 8.5 Layout options for express items
 
@@ -1792,15 +1083,15 @@ File format: GIF, PNG or JPG
 
 You can control how your image/logo is printed on address labels with the following four optional fields:
 
-*   Aspect ratio: Using this field, you can decide whether the original ratio of width to height should be maintained or scaled to 47 mm × 25 mm.
-*   Vertical align: Using this field, you can decide whether the logo should be aligned vertically at the top or in the middle.
-*   Horizontal align: Using this field, you can decide whether the logo should be aligned horizontally at the left margin or flush with the barcode.
-*   Rotation: Using this field, you can decide whether the logo should be printed in portrait or landscape orientation on the address label (clockwise rotation options: 0°/90°/180°/270°).
+* Aspect ratio: Using this field, you can decide whether the original ratio of width to height should be maintained or scaled to 47 mm × 25 mm.
+* Vertical align: Using this field, you can decide whether the logo should be aligned vertically at the top or in the middle.
+* Horizontal align: Using this field, you can decide whether the logo should be aligned horizontally at the left margin or flush with the barcode.
+* Rotation: Using this field, you can decide whether the logo should be printed in portrait or landscape orientation on the address label (clockwise rotation options: 0°/90°/180°/270°).
 
 If no settings are changed in these fields, your image/logo will be automatically printed with the following settings:
 
-*   Scaling to the aspect ratio of 1.88 (image width: 47 mm / image height: 25 mm)
-*   The logo will be printed rotated anti-clockwise by 90°.
+* Scaling to the aspect ratio of 1.88 (image width: 47 mm / image height: 25 mm)
+* The logo will be printed rotated anti-clockwise by 90°.
 
 We recommend using a black and white logo for printing in the ZLP2 format.
 
@@ -1842,10 +1133,10 @@ Saturday delivery
 
 256 \*\*
 
-\* This notification service can only be used with delivery instruction ZAW3233.  
+\* This notification service can only be used with delivery instruction ZAW3233.    
 \*\* This notification service can only be used with the additional service “SA”.
 
-Note: this kind of notification services cannot be used for notime. For notime notification please contact your notime agent.
+Note: this kind of notification services cannot be used for notime. For notime notification please contact your notime agent.
 
 #### 8.8.2 Overview of notification services
 
@@ -1945,11 +1236,9 @@ Swiss-Express "Moon"
 
 ✓
 
- 
 
-Bulky goods "Moon"
 
-✓
+Bulky goods "Moon"
 
 ✓
 
@@ -1961,7 +1250,9 @@ Bulky goods "Moon"
 
 ✓
 
- 
+✓
+
+
 
 SameDay afternoon/evening
 
@@ -2085,11 +1376,11 @@ Product description (e.g. PRI, SEM)
 
 DeliveryInstructions
 
-Description of the permitted service  
-Available options:   
-10 = Deposit consignment  
-14 = Desired neighbour  
-18 = Weekday  
+Description of the permitted service    
+Available options:     
+10 = Deposit consignment    
+14 = Desired neighbour    
+18 = Weekday    
 20 = Forwarding
 
 #### 8.8.4.2 Optimal data delivery
@@ -2114,10 +1405,10 @@ Note also that shipping labels are printed in either landscape or portrait forma
 
 The service descriptions for the following basic and additional services plus delivery instructions can be found at www.swisspost.ch/post-distribution-national.
 
-Combinations of multiple service codes, e.g. “PRI, SP”, are split into their individual elements. The following is given as an example (sequencing of individual content does not matter):
+Combinations of multiple service codes, e.g. “PRI, SP”, are split into their individual elements. The following is given as an example (sequencing of individual content does not matter):
 
-*   <PRZL>PRI</PRZL>
-*   <PRZL>SP</PRZL>
+* <PRZL>PRI</PRZL>
+* <PRZL>SP</PRZL>
 
 DLC
 
@@ -2177,7 +1468,7 @@ PostPac Priority GAS
 
 GAS, SP, ECO
 
-Bulky goods Economy GAS
+Bulky goods Economy GAS
 
 GAS, SP, PRI
 
@@ -2259,9 +1550,9 @@ ZAW3234
 
 Do not deliver to mailbox or neighbour: do not leave anywhere
 
-2 [↑](#bffn4)  For the collection of empty containers or materials for recycling – please contact your customer advisor for further information.
+2 [↑](#bffn4)  For the collection of empty containers or materials for recycling – please contact your customer advisor for further information.
 
-3 [↑](#bffn5)  Only available in conjunction with notification service code 128 (“Exchange/return”).
+3 [↑](#bffn5)  Only available in conjunction with notification service code 128 (“Exchange/return”).
 
 DLC
 
@@ -2344,7 +1635,7 @@ ZF19302100
 Time slot delivery 1930–21[\[1\]](#ffn3)
 
 
-1 [↑](#bffn3)  When using the ZFZ (Time slot delivery) value-added service, we recommend you first perform an area check for each recipient address via your connection to the Digital Commerce API – Swiss Post shipping options.
+1 [↑](#bffn3)  When using the ZFZ (Time slot delivery) value-added service, we recommend you first perform an area check for each recipient address via your connection to the Digital Commerce API – Swiss Post shipping options.
 
 DLC
 
@@ -2642,10 +1933,10 @@ PrintAddresses
 
 Enumeration (None, OnlyRecipient, OnlyCustomer, RecipientAndCustomer)
 
-Details on the printing of sender’s and recipient’s address (delivery note)  
-None – no addresses are printed   
-OnlyRecipient – only the recipient’s address is printed  
-OnlyCustomer – only the customer’s address is printed  
+Details on the printing of sender’s and recipient’s address (delivery note)    
+None – no addresses are printed     
+OnlyRecipient – only the recipient’s address is printed    
+OnlyCustomer – only the customer’s address is printed    
 RecipientAndCustomer – Both the sender’s and the recipient’s addresses are printed
 
 OnlyRecipient
@@ -2748,7 +2039,7 @@ String (0..25)
 
 Additional name 1 (company suffix or department)
 
-General  
+General    
 Agency
 
 Street
@@ -2907,7 +2198,7 @@ Content holder
 
 String (0..50)
 
-ID assigned by customer at request level is returned unchanged in the response.  
+ID assigned by customer at request level is returned unchanged in the response.    
 If no SendingID is supplied, WSBC generates a random number.
 
 \-
@@ -2950,14 +2241,14 @@ String (13..23, \[0-9\]{18} or \[0-9\]{23} or \[a-zA-Z,0-9\]{13})
 
 Mailing code. For use by Swiss Post internal systems only. In systems external to Swiss Post this field is ignored and a warning returned.
 
-9934123456  
+9934123456    
 12345678
 
 Recipient[\[3\]](#ffn9)
 
 1..1
 
-Generate  
+Generate    
 Recipient
 
 Content holder with recipient details
@@ -3032,7 +2323,7 @@ String (0..35)
 
 Additional name 2 (Attn/FAO; c/o or department \[if not in Name2\])
 
-Attn/FAO  
+Attn/FAO    
 Hans Meier
 
 AddressSuffix
@@ -3207,15 +2498,15 @@ Content holder
 
 Type
 
-1..1  
+1..1    
 1..1
 
 String (0..35)
 
-**General keys for electronic cash on delivery (BLN)** COD amount in CHF  
+**General keys for electronic cash on delivery (BLN)** COD amount in CHF    
 **Additional keys for BLN with ISR** ISR reference number
 
-NN\_BETRAG  
+NN\_BETRAG    
 NN\_ESR\_REFNR
 
 Value
@@ -3489,21 +2780,21 @@ Mobile number
 +41791234567
 
 
-1 [↑](#bffn7)  Domestic Parcels, Express and Solutions: either address **or** P.O. box permitted. BMB domestic: state address **and** P.O. box with number (if applicable). P.O. Box details are compulsory fpr Dispomail and Dispomail Easy. BMB international: no rules. All address components must be split between Address 1 and Address 2.
+1 [↑](#bffn7)  Domestic Parcels, Express and Solutions: either address **or** P.O. box permitted. BMB domestic: state address **and** P.O. box with number (if applicable). P.O. Box details are compulsory fpr Dispomail and Dispomail Easy. BMB international: no rules. All address components must be split between Address 1 and Address 2.
 
 
-2 [↑](#bffn8)  Validation logic for FrankingLicence, ItemID, ItemNumber IdentCode and Hauskey fields:
+2 [↑](#bffn8)  Validation logic for FrankingLicence, ItemID, ItemNumber IdentCode and Hauskey fields:
 
-*   FrankingLicence: Mandatory (left-pad with zeros up to 8 digits)
-*   ItemID: Optional, any value
-*   ItemNumber: Optional, any value. If filled in, validation for uniqueness. If ItemNumber is empty, the item number is generated and the identcode is generated from this item number and the franking licence.
-*   IdentCode and Hauskey: Not permitted. If this field is filled, it will be ignored and a warning will also be returned. IdentCode is provided solely for internal calls at Swiss Post.
-
-
-3 [↑](#bffn9)  With the basic services with GAS, the recipient is the return address in accordance with the contractual terms for business reply items.
+* FrankingLicence: Mandatory (left-pad with zeros up to 8 digits)
+* ItemID: Optional, any value
+* ItemNumber: Optional, any value. If filled in, validation for uniqueness. If ItemNumber is empty, the item number is generated and the identcode is generated from this item number and the franking licence.
+* IdentCode and Hauskey: Not permitted. If this field is filled, it will be ignored and a warning will also be returned. IdentCode is provided solely for internal calls at Swiss Post.
 
 
-4 [↑](#bffn10)  The postage paid impression for the Letters with barcode (BMB) domestic and international service groups does not appear automatically in the address and applies to each request.
+3 [↑](#bffn9)  With the basic services with GAS, the recipient is the return address in accordance with the contractual terms for business reply items.
+
+
+4 [↑](#bffn10)  The postage paid impression for the Letters with barcode (BMB) domestic and international service groups does not appear automatically in the address and applies to each request.
 
 #### 8.11.1 Posting BLN (electronic COD) via “Barcode” web service (for “Parcels” and “Swiss-Express”)
 
@@ -3513,8 +2804,8 @@ If you already use the “Barcode” web service actively and would later like t
 
 The credit note for COD amounts can be applied by means of two different account types:
 
-1.  Yellow Account with inpayment slip (IS) from PostFinance, with upper limit on domestic transactions.
-2.  By Swiss Post ISR.
+1. Yellow Account with inpayment slip (IS) from PostFinance, with upper limit on domestic transactions.
+2. By Swiss Post ISR.
 
 With transaction type 1 (yellow Account IS) only the COD amount is required. With transaction type 2 (Swiss Post ISR) both the COD amount and the ISR reference number is required.
 
@@ -3522,12 +2813,12 @@ With transaction type 1 (yellow Account IS) only the COD amount is required. Wit
 
 For the ISR reference number, the following data format is valid (excerpt from the PostFinance manual on “Record Structures – electronic Services”) [www.postfinance.ch/content/dam/pf/de/doc/consult/manual/dldata/efin\_recdescr\_man\_en.pdf](www.postfinance.ch/content/dam/pf/de/doc/consult/manual/dldata/efin_recdescr_man_en.pdf)
 
-*   Reference number
-*   84
-*   9(27)
-*   For 5-digit ISR customer numbers 000000000000999999999999999
-*   For 9-digit ISR customer numbers 99999999999999999999999999P
-*   Mandatory: The reference number is printed on the processing document in blocks of 5, whereby leading zeros can be suppresses. The details must be entered in the field with right alignment, empty positions must be extended with leading zeros. Reference numbers with the value “0” (zero) will be rejected. We recommaned that you recalculate and compare the check digit (modulo 10, recursive).
+* Reference number
+* 84
+* 9(27)
+* For 5-digit ISR customer numbers 000000000000999999999999999
+* For 9-digit ISR customer numbers 99999999999999999999999999P
+* Mandatory: The reference number is printed on the processing document in blocks of 5, whereby leading zeros can be suppresses. The details must be entered in the field with right alignment, empty positions must be extended with leading zeros. Reference numbers with the value “0” (zero) will be rejected. We recommaned that you recalculate and compare the check digit (modulo 10, recursive).
 
 ##### Yellow Account with inpayment slip (TransactionType 1)
 
@@ -3640,16 +2931,16 @@ Saturday delivery
 256[\[2\]](#ffn12)
 
 
-1 [↑](#bffn11)  This notification service can only be used with delivery instruction ZAW3233.
+1 [↑](#bffn11)  This notification service can only be used with delivery instruction ZAW3233.
 
 
-2 [↑](#bffn12)  This notification service can only be used with the additional service “SA”.
+2 [↑](#bffn12)  This notification service can only be used with the additional service “SA”.
 
 
-3 [↑](#bffn13)  This notification service can only be used with the additional service “AZS” and the basic service PostPac Priority, bulky goods Priority, PostPac Economy or bulky goods Economy.
+3 [↑](#bffn13)  This notification service can only be used with the additional service “AZS” and the basic service PostPac Priority, bulky goods Priority, PostPac Economy or bulky goods Economy.
 
 
-4 [↑](#bffn14)  This notification service can only be used with the additional service “AZS” and the basic services SameDay afternoon/evening, SameDay afternoon/evening bulky goods or “Direct”.
+4 [↑](#bffn14)  This notification service can only be used with the additional service “AZS” and the basic services SameDay afternoon/evening, SameDay afternoon/evening bulky goods or “Direct”.
 
 ##### Notification text messages
 
@@ -3659,67 +2950,17 @@ The description of the content of SMS and e-mail messages as well as technical s
 
 #### POST request
 
-    https://wedecint.post.ch/api/barcode/v1/generateAddressLabel
-
+https://wedecint.post.ch/api/barcode/v1/generateAddressLabel  
 Copy
 
 #### POST payload
 
-    {
-    “language”:”DE”,
-    “frankingLicense”: “35900034”,
-    “customer”: {
-    “name1”: “Test Kunde”,
-    “street”: “Wankdorfallee 4”,
-    “zip”: “3030”,
-    “city”: “Bern”,
-    “domicilePostOffice”:”3011 Bern”,
-    “country”: “CH”
-    },
-    “labelDefinition”: {
-    “labelLayout”: “A6”,
-    “printAddresses”: “RECIPIENT_AND_CUSTOMER”,
-    “imageFileType”: “JPG”,
-    “imageResolution”: 300
-    },
-    “item”:
-    {
-    “itemID”: “1234567”,
-    “recipient”: {
-    “name1”: “Hans”,
-    “name2”: “Muster”,
-    “street”: “Wankdorfallee”,
-    “houseNo”: “4”,
-    “zip”:”3030”,
-    “city”: “Bern”,
-    “country”: “CH”
-    },
-    “attributes”: {
-    “przl”: [“PRI”,”SA”],
-    “weight”:12345
-    }
-    }
-    }
-
+{ “language”:”DE”, “frankingLicense”: “35900034”, “customer”: { “name1”: “Test Kunde”, “street”: “Wankdorfallee 4”, “zip”: “3030”, “city”: “Bern”, “domicilePostOffice”:”3011 Bern”, “country”: “CH” }, “labelDefinition”: { “labelLayout”: “A6”, “printAddresses”: “RECIPIENT_AND_CUSTOMER”, “imageFileType”: “JPG”, “imageResolution”: 300 }, “item”: { “itemID”: “1234567”, “recipient”: { “name1”: “Hans”, “name2”: “Muster”, “street”: “Wankdorfallee”, “houseNo”: “4”, “zip”:”3030”, “city”: “Bern”, “country”: “CH” }, “attributes”: { “przl”: [“PRI”,”SA”], “weight”:12345 } } }  
 Copy
 
 #### Response
 
-    {
-    “labelDefinition” : {
-    “labelLayout” : “A6”,
-    “imageFileType” : “jpg”,
-    “imageResolution” : 300,
-    “printPreview” : false,
-    “colorPrintRequired” : true
-    },
-    “item” : {
-    “itemID” : “1234567”,
-    “identCode” : “993590003400000002”,
-    “label” : [ “<Base64Image>” ]
-    }
-    }
-
+{ “labelDefinition” : { “labelLayout” : “A6”, “imageFileType” : “jpg”, “imageResolution” : 300, “printPreview” : false, “colorPrintRequired” : true }, “item” : { “itemID” : “1234567”, “identCode” : “993590003400000002”, “label” : [ “<Base64Image>” ] } }  
 Copy
 
 #### 8.14.1 Error messages
@@ -4169,15 +3410,15 @@ W9997
 The Consignment code field may be filled in using Swiss Post applications only.
 
 9\. pick@home
--------------
+-------------  
 
 ### 9.1 Prerequisits
 
-*   OAuth access token for scope PICKHOME. This scope does not require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow or a client credential grant flow.
-*   Bearer access token stored in the header of the request:  
-    Authorization: Bearer <OAuth access token>
-*   Pick@home API | INT | [h](https://serviceint2.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://serviceint2.post.ch/rhe/rhe-public/doc/pah-order-api/v1/rest/swagger)[ttps://serviceint2.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://serviceint2.post.ch/rhe/rhe-public/doc/rhe-order-api/v1/rest/swagger](https://serviceint2.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://serviceint2.post.ch/rhe/rhe-public/doc/pah-order-api/v1/rest/swagger)
-*   pick@home API | PROD | [https://service.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://service.post.ch/rhe/rhe-public/doc/rhe-order-api/v1/rest/swagger](https://service.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://service.post.ch/rhe/rhe-public/doc/rhe-order-api/v1/rest/swagger)
+* OAuth access token for scope PICKHOME. This scope does not require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow or a client credential grant flow.
+* Bearer access token stored in the header of the request:    
+  Authorization: Bearer <OAuth access token>
+* Pick@home API | INT | [h](https://serviceint2.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://serviceint2.post.ch/rhe/rhe-public/doc/pah-order-api/v1/rest/swagger)[ttps://serviceint2.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://serviceint2.post.ch/rhe/rhe-public/doc/rhe-order-api/v1/rest/swagger](https://serviceint2.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://serviceint2.post.ch/rhe/rhe-public/doc/pah-order-api/v1/rest/swagger)
+* pick@home API | PROD | [https://service.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://service.post.ch/rhe/rhe-public/doc/rhe-order-api/v1/rest/swagger](https://service.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://service.post.ch/rhe/rhe-public/doc/rhe-order-api/v1/rest/swagger)
 
 ### 9.2 Order
 
@@ -4193,8 +3434,8 @@ A order resource has the following structure:
 
 #### 9.2.3 Common Sequence creating a order
 
-*   Create a order resource (POST /orders) minimally providing the pickupAddress and a parcel.
-*   Set the approval for the order (POST /orders/{orderKey}/approval). Order can't be updated after this call.
+* Create a order resource (POST /orders) minimally providing the pickupAddress and a parcel.
+* Set the approval for the order (POST /orders/{orderKey}/approval). Order can't be updated after this call.
 
 A created order that is not confirmed within 60 minutes will be deleted.
 
@@ -4204,22 +3445,7 @@ A created order that is not confirmed within 60 minutes will be deleted.
 
 Errors and warnings are returned in the following format:
 
-    {
-            "orderKey": "0fb4efdf-e8b1-4593-a20c-39ab7fc6bb36",
-            "errors": [
-                {
-                    "code": 1000,
-                    "description": "Pickup address is required"
-                }
-            ],
-            "warnings": [
-                {
-                    "code": 1102,
-                    "description": "The length of lastname is invalid"
-                }
-            ]
-        }
-
+{ "orderKey": "0fb4efdf-e8b1-4593-a20c-39ab7fc6bb36", "errors": [ { "code": 1000, "description": "Pickup address is required" } ], "warnings": [ { "code": 1102, "description": "The length of lastname is invalid" } ] }  
 Copy
 
 **Important**: be aware that the status code of a request can be 200 but the response contains errors and warnings. Do not treat a status code 200 as a successful call per se. Always evaluate the error and warning arrays.
@@ -4695,16 +3921,16 @@ The parcel is in a wrong state for this action.
 
 
 10 Registration
----------------
+---------------  
 
-A client of the Swiss Post Digital Commerce API must be registered at Swiss Post. No online registration feature supports the registration process at the moment. To obtain access to Digital Commerce API, please contact your Swiss Post Sales Representant or [digitalintegration@post.ch](mailto:digitalintegration@post.ch).
+A client of the Swiss Post Digital Commerce API must be registered at Swiss Post. No online registration feature supports the registration process at the moment. To obtain access to Digital Commerce API, please contact your Swiss Post Sales Representant or [digitalintegration@post.ch](mailto:digitalintegration@post.ch).
 
 ### 10.1 Artifacts
 
 ##### Artifact
 
-*   Client Identifier (Secret-ID)
-*   Client Secret (Token-ID)
+* Client Identifier (Secret-ID)
+* Client Secret (Token-ID)
 
 ##### Remark
 
@@ -4757,7 +3983,7 @@ Barcode / pick@home
 
 
 11 CORS
--------
+-------  
 
 **Cross Origin Resource Sharing** is a relaxing technique for the **cross origin policy**. This policy is imposed by web browsers in order to minimize cross origin problems. It does not concern requests initiated on the server side.
 
