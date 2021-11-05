@@ -185,8 +185,9 @@ A refresh token has a higher TTL than the associated access token. This refresh 
 #### 3.7.2 KLP mapping
 
 The standard OpenID claims (see [http://openid.net/specs/openid-connect-core-1\_0.html#StandardClaims](http://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)) are mapped this way:  
+
 |OpenID claims|Aggregation|Swiss Post profile attribute|
-|--|--|--|
+|---|---|---|
 |sub|-|user profile id|
 |name|-|firstName name|
 |given_name|-|firstName|
