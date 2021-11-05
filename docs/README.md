@@ -4,10 +4,7 @@ Digital Commerce API
 ====================  
 
 # 1 Swiss Post e-commerce API reference
-
-
 The Swiss Post **e-commerce API** is a **REST** API which provides predictable and resource-oriented URLs and uses HTTP response codes to indicate API errors. It uses built-in HTTP features to receive commands and return responses. This makes it easy to communicate with from a wide variety of environments, from command-line utilities, server-side or client-side web applications and mobile devices. It supports the **JSON** format in requests and it returns JSON content in all of its responses, including errors. It supports cross-origin resource sharing to allow you to interact securely with our API from a client-side web application.
-
 The access to the Swiss Post e-commerce API is controlled by the **OAuth** authorization protocol. An **access token** is required to consume the **endpoints** exposed by the API. This is obtained after a sucessful authentication.
 
 # 2 Overview

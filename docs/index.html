@@ -9,8 +9,6 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 <body>
-  <div>header</div>
-
   <div id="app"></div>
   <script>
     window.$docsify = {
@@ -50,6 +48,21 @@
           '/de/': 'Keine Ergebnisse',
           '/': 'No Results'
         }
+      },
+
+      themeColor: "#ffcc00",
+
+      darkMode: {
+        dark: {
+          background: "#1c2022",
+          toggleBtnBg: "#34495e",
+          textColor: "#b4b4b4"
+        },
+        light: {
+          background: "#f7f4ed",
+          toggleBtnBg: "var(--theme-color)",
+          textColor: "#34495e"
+        }
       }
     }
   </script>
@@ -71,5 +84,9 @@
 
   <!-- Copy to clipboard -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+
+  <!-- Dark mode -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css" />
+  <script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script>
 </body>
 </html>
