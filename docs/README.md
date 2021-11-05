@@ -1,59 +1,4 @@
-         Digital Commerce API                                  window.estatico.helpers.extend(window.estatico, {"resourceRoot":"/","isFrontendPreview":false,"i18n":{"targetNotAccessible":"Not Accessible"},"isSearchEnabled":false});   
 
-Digital Commerce API
-====================
-
-*   [Homepage](/en/ "[ALT + 0]")
-*   [Go to main navigation](#main_navigation "[ALT + 1]")
-*   [Go to content](#main "[ALT + 2]")
-
-var digitalData = {"page\_pageInfo\_language":"en","page\_pageInfo\_pageID":"c60752fe-dd02-4f9c-8da1-e383b5a4a173","page\_category\_pageType":"Sidebar Page","page\_category\_primaryCategory":"Digital Commerce API"}; (function(a,b,c,d){ a='//tags.tiqcdn.com/utag/schweizerischepost/microsite/prod/utag.js'; b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true; a=b.getElementsByTagName(c)\[0\];a.parentNode.insertBefore(d,a); })();
-
-[Swisspost ![Swiss Post](https://developer.post.ch/-/media/post-maxisites/global/images/post-logo.svg?vs=2&sc_lang=en&h=47&w=160&la=en&hash=C76414F34AEF8CA93ADEB3EF448949F4)](/en/ "Swiss Post")
-
-Main navigation
----------------
-
-*   [Newspaper online services API](/en/newspaper-online-services)
-*   [Address web services REST](/en/address-web-services-rest)
-*   [Address web services SOAP](/en/address-web-services-soap)
-*   [Postcard API](/en/technical-specifications-of-postcard-api)
-*   [E-Post API](/en/e-post-api)
-*   [WebStamp web service: SOAP](/en/webstamp-web-service-soap)
-    *   [Overview](/en/webstamp-web-service-soap)
-    *   [WebStamp web service: SOAP](/en/webstamp-web-service-soap/webstamp-web-service-soap-version-v06-03)
-*   [WebStamp light](/en/webstamp-light)
-*   [Digital Commerce API Active menu item](/en/digital-commerce-api)
-*   [KMU Plus](/en/kmu-plus)
-*   [Post E-Health Platform](/en/e-health/)
-*   [BillingOnline Integration Guidelines](/en/billingonline)
-    *   [Overview](/en/billingonline)
-    *   [BillingOnline Integration Guidelines](/en/billingonline/billingonline-v1-07)
-    *   [BillingOnline Integration Guidelines](/en/billingonline/billingonline-v1-08)
-    *   [BillingOnline Integration Guidelines](/en/billingonline/billingonline-v1-09)
-    *   [BillingOnline Integration Guidelines](/en/billingonline/billingonline-v1-10)
-    *   [BillingOnline Integration Guidelines](/en/billingonline/billingonline-v1-11)
-*   More
-
-    More
-
-    *   [More](#)
-
-
-Menu
-
-Close menu
-
-[Back](#backbutton)
-
-Digital Commerce API
-====================
-
-[Close](#)
-
-[](#)
-
-Index
 
 Digital Commerce API
 ====================
@@ -68,9 +13,9 @@ The access to the Swiss Post e-commerce API is controlled by the **OAuth** autho
 2 Overview
 ----------
 
-![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
+![](https://developer.post.ch/-/media/post-maxisites/developer/images/ms-develop-dc-api-general-info-01.jpg?mw=1600&vs=2&sc_lang=en&hash=33149EEA90A1215CC53FAD2FDFC241C4)
 
-![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
+![](https://developer.post.ch/-/media/post-maxisites/developer/images/ms-develop-dc-api-general-info-02.jpg?mw=1600&vs=2&sc_lang=en&hash=7BADBF17749FE08E274F94C2BF85A1D2)
 
 ### 2.1 API endpoints
 
@@ -105,7 +50,7 @@ Barcode
 
 Provides access to generate address labels
 
-[\[email protected\]](/cdn-cgi/l/email-protection)
+pick@home
 
 [https://api.post.ch/pah/v1](https://api.post.ch/pah/v1)
 
@@ -116,22 +61,22 @@ userinfo
 [https://wedec.post.ch/api/userinfo](http://https://wedec.post.ch/api/userinfo)
 
 Provides the access to personal data of Swiss Post registered users, it refers to the attributes of their Swiss Post profile.  
-[http://openid.net/specs/openid-connect-core-1\_0.html#UserInfo](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo)  
-[http://openid.net/specs/openid-connect-core-1\_0.html#IDToken](https://openid.net/specs/openid-connect-core-1_0.html#IDToken)
+[http://openid.net/specs/openid-connect-core-1\_0.html#UserInfo](http://openid.net/specs/openid-connect-core-1_0.html#UserInfo)  
+[http://openid.net/specs/openid-connect-core-1\_0.html#IDToken](http://openid.net/specs/openid-connect-core-1_0.html#IDToken)
 
 authorization
 
 [https://wedec.post.ch/WEDECOAuth/authorization](https://wedec.post.ch/WEDECOAuth/authorization)
 
 OAuth Endpoint for querying an authorization code, usually obtained with the consent of an authenticated end user, given a set of scopes and credentials.  
-[http://openid.net/specs/openid-connect-core-1\_0.html#AuthRequest](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest)
+[http://openid.net/specs/openid-connect-core-1\_0.html#AuthRequest](http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest)
 
 token
 
 [https://wedec.post.ch/WEDECOAuth/token](https://wedec.post.ch/WEDECOAuth/token)
 
 OAuth Endpoint for exchanging an authorization code against an access token.  
-[http://openid.net/specs/openid-connect-core-1\_0.html#TokenRequest](https://openid.net/specs/openid-connect-core-1_0.html#TokenRequest)
+[http://openid.net/specs/openid-connect-core-1\_0.html#TokenRequest](http://openid.net/specs/openid-connect-core-1_0.html#TokenRequest)
 
 
 
@@ -144,7 +89,7 @@ Only Swiss Post registered clients can be authorized to consume the Swiss Post c
 
 OAuth is an authorization protocol and not an authentication protocol. The client and the end user have to be authenticated; consequently the authentication is an implicit part of the protocol.
 
-For more information see [http://tools.ietf.org/html/rfc6749](https://tools.ietf.org/html/rfc6749)
+For more information see [http://tools.ietf.org/html/rfc6749](http://tools.ietf.org/html/rfc6749)
 
 ### 3.1 OAuth
 
@@ -159,7 +104,7 @@ A client of the Swiss Post e-commerce API must first obtain an OAuth **access to
 
 The OAuth authorization protocol defines a set of standard flows for querying an access token. A client of the Swiss Post e-commerce API is responsible for the integration of the desired flows in his use cases.
 
-For more information see [http://tools.ietf.org/html/rfc6749](https://tools.ietf.org/html/rfc6749)
+For more information see [http://tools.ietf.org/html/rfc6749](http://tools.ietf.org/html/rfc6749)
 
 ### 3.2 OpenID-Connect
 
@@ -172,11 +117,11 @@ The access to personal data by a registered client through the Swiss Post connec
 
 A client of the Swiss Post Connector is responsible for the integration of the desired flows in his use cases.
 
-For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#Introduction](https://openid.net/specs/openid-connect-core-1_0.html#Introduction)
+For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#Introduction](http://openid.net/specs/openid-connect-core-1_0.html#Introduction)
 
 ### 3.3 Authorization code grant flow
 
-See [http://openid.net/specs/openid-connect-core-1\_0.html#CodeFlowAuth](https://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth)
+See [http://openid.net/specs/openid-connect-core-1\_0.html#CodeFlowAuth](http://openid.net/specs/openid-connect-core-1_0.html#CodeFlowAuth)
 
 Flow meant for scopes giving access to personal data, requiring consent by the end user.
 
@@ -198,7 +143,7 @@ If only non-personal-data scopes are used, it’s usually better to use the Clie
 
 Copy
 
-For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#AuthRequest](https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest)
+For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#AuthRequest](http://openid.net/specs/openid-connect-core-1_0.html#AuthRequest)
 
 #### 3.3.2 Authentication response
 
@@ -209,11 +154,11 @@ For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#
 
 Copy
 
-For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#AuthResponse](https://openid.net/specs/openid-connect-core-1_0.html#AuthResponse)
+For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#AuthResponse](http://openid.net/specs/openid-connect-core-1_0.html#AuthResponse)
 
 #### 3.3.3 Authentication response validation
 
-We recommend that the client validates the authentication response, see [http://openid.net/specs/openid-connect-core-1\_0.html#AuthResponseValidation](https://openid.net/specs/openid-connect-core-1_0.html#AuthResponseValidation)
+We recommend that the client validates the authentication response, see [http://openid.net/specs/openid-connect-core-1\_0.html#AuthResponseValidation](http://openid.net/specs/openid-connect-core-1_0.html#AuthResponseValidation)
 
 #### 3.3.4 Token request
 
@@ -228,7 +173,7 @@ We recommend that the client validates the authentication response, see [http://
 
 Copy
 
-For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#TokenRequest](https://openid.net/specs/openid-connect-core-1_0.html#TokenRequest)
+For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#TokenRequest](http://openid.net/specs/openid-connect-core-1_0.html#TokenRequest)
 
 #### 3.3.5 Token response
 
@@ -268,11 +213,11 @@ For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#
 
 Copy
 
-For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#TokenResponse](https://openid.net/specs/openid-connect-core-1_0.html#TokenResponse)
+For more information see [http://openid.net/specs/openid-connect-core-1\_0.html#TokenResponse](http://openid.net/specs/openid-connect-core-1_0.html#TokenResponse)
 
 #### 3.3.6 Token response validation
 
-We recommend that the client validates the token response, see [http://openid.net/specs/openid-connectcore-1\_0.html#TokenResponseValidation](https://openid.net/specs/openid-connectcore-1_0.html#TokenResponseValidation)
+We recommend that the client validates the token response, see [http://openid.net/specs/openid-connectcore-1\_0.html#TokenResponseValidation](http://openid.net/specs/openid-connectcore-1_0.html#TokenResponseValidation)
 
 ### 3.4 Client credential flow
 
@@ -314,7 +259,7 @@ Copy
     “given_name”: “Michael”,
     “family_name”: “Lang”,
     “preferred_username”: “michael.lang”,
-    “email”: “[email protected]”,
+    “email”: “michael.lang@gmail.com”,
     }
 
 Copy
@@ -345,7 +290,7 @@ Copy
 
 #### 3.7.2 KLP mapping
 
-The standard OpenID claims (see [http://openid.net/specs/openid-connect-core-1\_0.html#StandardClaims](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)) are mapped this way:
+The standard OpenID claims (see [http://openid.net/specs/openid-connect-core-1\_0.html#StandardClaims](http://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)) are mapped this way:
 
 OpenID claims
 
@@ -471,7 +416,7 @@ Copy
     “given_name”: “Michael”,
     “family_name”: “Lang”,
     “preferred_username”: “michael.lang”,
-    “email”: “[email protected]”,
+    “email”: “michael.lang@gmail.com”,
     }
 
 Copy
@@ -1413,7 +1358,7 @@ Copy
     },
     “notification”: {
     “notifyMode”: “EMAIL”,
-    “email”: “[email protected]”
+    “email”: “testuser1@post.ch”
     },
     “service”: “PICKPOST”
     }
@@ -1777,7 +1722,7 @@ City (7th address line)
 
 The basic service barcodes for SameDay and Swiss-Express “Moon” services are printed in colour.
 
-![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
+![](https://developer.post.ch/-/media/post-maxisites/developer/images/layoutexpressitem.jpg?mw=1600&vs=2&hash=8A903536E950E604C73E2708DC3A1C7D)
 
 If there is no possibility to print the corresponding basic service barcode in colour on the address label, it can be printed in black and white. However, an additional, coloured basic service barcode must then be affixed to the item.
 
@@ -3218,7 +3163,7 @@ String (0..160)
 
 E-mail address
 
-[\[email protected\]](/cdn-cgi/l/email-protection)
+h.muster@post.ch
 
 **LabelAddress**
 
@@ -3531,7 +3476,7 @@ String (0..160)
 
 E-mail address
 
-[\[email protected\]](/cdn-cgi/l/email-protection)
+a@b.ch
 
 Mobile
 
@@ -4223,16 +4168,16 @@ W9997
 
 The Consignment code field may be filled in using Swiss Post applications only.
 
-9\. [\[email protected\]](/cdn-cgi/l/email-protection)
-------------------------------------------------------
+9\. pick@home
+-------------
 
 ### 9.1 Prerequisits
 
 *   OAuth access token for scope PICKHOME. This scope does not require the consent of the end user and can be obtained from an authorization code grant flow or an implicit grant flow or a client credential grant flow.
 *   Bearer access token stored in the header of the request:  
     Authorization: Bearer <OAuth access token>
-*   [\[email protected\]](/cdn-cgi/l/email-protection) API | INT | [h](https://serviceint2.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://serviceint2.post.ch/rhe/rhe-public/doc/pah-order-api/v1/rest/swagger)[ttps://serviceint2.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://serviceint2.post.ch/rhe/rhe-public/doc/rhe-order-api/v1/rest/swagger](https://serviceint2.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://serviceint2.post.ch/rhe/rhe-public/doc/pah-order-api/v1/rest/swagger)
-*   [\[email protected\]](/cdn-cgi/l/email-protection) API | PROD | [https://service.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://service.post.ch/rhe/rhe-public/doc/rhe-order-api/v1/rest/swagger](https://service.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://service.post.ch/rhe/rhe-public/doc/rhe-order-api/v1/rest/swagger)
+*   Pick@home API | INT | [h](https://serviceint2.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://serviceint2.post.ch/rhe/rhe-public/doc/pah-order-api/v1/rest/swagger)[ttps://serviceint2.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://serviceint2.post.ch/rhe/rhe-public/doc/rhe-order-api/v1/rest/swagger](https://serviceint2.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://serviceint2.post.ch/rhe/rhe-public/doc/pah-order-api/v1/rest/swagger)
+*   pick@home API | PROD | [https://service.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://service.post.ch/rhe/rhe-public/doc/rhe-order-api/v1/rest/swagger](https://service.post.ch/rhe/rhe-public/doc/assets/index.html?api=https://service.post.ch/rhe/rhe-public/doc/rhe-order-api/v1/rest/swagger)
 
 ### 9.2 Order
 
@@ -4240,11 +4185,11 @@ The Consignment code field may be filled in using Swiss Post applications only.
 
 A order resource has the following structure:
 
-![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
+![](https://developer.post.ch/-/media/post-maxisites/developer/images/pickathome.jpg?mw=1600&vs=2&hash=F78BD0261DC4C6AD3EA370218C7D3153)
 
 #### 9.2.2 Order Resource State Event Diagram
 
-![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
+![](https://developer.post.ch/-/media/post-maxisites/developer/images/pickathome2.jpg?mw=1600&vs=2&hash=8DC76D37D816B5C2B36454276478F638)
 
 #### 9.2.3 Common Sequence creating a order
 
@@ -4253,7 +4198,7 @@ A order resource has the following structure:
 
 A created order that is not confirmed within 60 minutes will be deleted.
 
-![](data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7)
+![](https://developer.post.ch/-/media/post-maxisites/developer/images/pickathome3.jpg?mw=1600&vs=2&hash=4FFAB7CEC99C825A8FFEF34D65515667)
 
 ### 9.3 Error and warning messages
 
@@ -4752,7 +4697,7 @@ The parcel is in a wrong state for this action.
 10 Registration
 ---------------
 
-A client of the Swiss Post Digital Commerce API must be registered at Swiss Post. No online registration feature supports the registration process at the moment. To obtain access to Digital Commerce API, please contact your Swiss Post Sales Representant or [\[email protected\]](/cdn-cgi/l/email-protection#9ffbf6f8f6ebfef3f6f1ebfaf8edfeebf6f0f1dfeff0ecebb1fcf7).
+A client of the Swiss Post Digital Commerce API must be registered at Swiss Post. No online registration feature supports the registration process at the moment. To obtain access to Digital Commerce API, please contact your Swiss Post Sales Representant or [digitalintegration@post.ch](mailto:digitalintegration@post.ch).
 
 ### 10.1 Artifacts
 
@@ -4807,7 +4752,7 @@ Debitor number
 
 The identification number of business clients
 
-Barcode / [\[email protected\]](/cdn-cgi/l/email-protection)
+Barcode / pick@home
 
 
 
@@ -4819,17 +4764,3 @@ Barcode / [\[email protected\]](/cdn-cgi/l/email-protection)
 Any client who wants to consume an endpoint of the Swiss Post e-commerce API from the client-side (for example with Javascript) will face the cross origin policy because the domains where the client and the Swiss Post e-commerce API are running are different.
 
 The domain of the client must be registered in the CORS configuration of the API proxy server. This step is part of the registration process.
-
-Back To Top
-
-Footer
-------
-
-© 2021 Swiss Post Ltd
-
-### Additional links
-
-*   [Data protection and disclaimer](https://www.swisspost.ch/disclaimer)
-*   [Publication details](https://www.swisspost.ch/publication-details)
-
-More Data protection and disclaimer Publication details
