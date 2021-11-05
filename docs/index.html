@@ -17,7 +17,25 @@
       name: 'Docsify-POC',
       maxLevel: 4,
       repo: '',
-      loadNavbar: true
+      loadNavbar: true,
+
+      // complete configuration parameters
+      search: {
+        maxAge: 86400000, // Expiration time, the default one day
+
+        placeholder: 'Type to search',
+        noData: 'No Results!',
+
+        // Localization
+        placeholder: {
+          '/de/': 'Tippe um zu suchen',
+          '/': 'Type to search'
+        },
+        noData: {
+          '/de/': 'Keine Ergebnisse',
+          '/': 'No Results'
+        }
+      }
     }
   </script>
 
@@ -30,7 +48,8 @@
   <!-- Language highlighting via Prism. See https://docsify.js.org/#/language-highlight -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
 
-
+  <!-- Full text search -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 
   <div>header</div>
 </body>
