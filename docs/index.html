@@ -11,11 +11,23 @@
 <body>
   <div>header</div>
 
+  <!--Navigation bar -->
+  <nav>
+    <a href="#/">EN</a>
+    <a href="#/de-de/">German</a>
+    <a href="#/zh-cn/">中文</a>
+  </nav>
+
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: '',
-      repo: ''
+      maxLevel: 4,
+      repo: '',
+
+
+      // load from nav.md
+      loadNavbar: 'nav.md',
     }
   </script>
 
