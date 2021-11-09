@@ -107,10 +107,10 @@ HTTP/1.1 200 OK<br>Content-Type: application/json;charset=UTF-8
 
 ```json
 { 
-    "expires_in”:300, 
-    "token_type”:"Bearer”, 
-    "id_token”: "eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0MTEwNTE5MTQsInN1YiI6IjEwMDQ5MjIiLCJub25jZSI6IjczZDc3N2U0LTciLCJhdWQiOlsid2Vk ZWMtZmFrZS1zaG9wIl0sImlzcyI6Imh0dHBzOlwvXC9hcGlkZXYucG5ldC5jaCIsImlhdCI6MTQxMTA1MTMxNH0. SBYodQCRmsbZvSHnBenLqPGS-U9Q_Z S8wTM7TvvyiDxiF27pKvjwsF6vYzJsucpluz750bH-OVtL-Esh72M-Ki8L_3hGImgpZ-K7KaRRM9BG3UA- 5M8ZZloVTpz6W47H_xi-Q_NwCqApgawdEP8rI ECKtSdk3En8A3rDSrCLNhF2LO-56rsC2rwcdBqrpth_89Iq00O1kMPNZ2H_HJpQzBIku04WGOwbx- 2K3f5b_BV-VKVjqkqEMoacJcP_c9pQY2YxpIGAfOnS ROMYCJfM5M-QmsgDCn9B9Z0yicbPwDexS4y1FqOMFXVIJYt94qek8n8CVqp9KQBl2ptEuAbD6HIA”,
-    "access_token”:"eyJhbGciOiJSU0ExXzUiLCJlbmMiOiJBMjU2R0NNIn0.XpENWZLOwkvlwiY0TWCUZ2LTAbd- P895E1BlAClqmB3oHTehtMGkXCNudURQtwc CVR23dYalRYLDP_huIHqwNjHoAYip2CsyiTrYQySp4wZzRb5Cm1QKvTq2yGfFUcK2qIqr7nFD_CEei8_EpVHanYSE3srnWZkVEI8btQOg32bKOaidwLBaP LgFHfgom6l7n6ewh7UFv1WcRjk9Ug48oHUrpVQEBnu1pXr8gFEtEpmTZhT1TUCwUsyxzH36dkgzSZ4DHCvuIPDOtWpurQZQiu0OQVWd3ih2z7jSECXzUD7 9oIxqzN_pWNVeb4jGvVhTYktBmsCYxJZCslm_NtuMJg.V4qpGmkldszeRMk.KI_swCCP6rvvkiGOkNWLghqK- 0BXrsz5qdimYNxkGNkbE2NQeJKfaGPtLKb 1d59YIwe_Ng_kqpBg05_39OOLgC4tA5JsEipOPm951fDlclmx0ybKwPqtNCjigGP_yxrwcbHwPSEofnNMakt- GnVpCadUMjeNUb6QRzybylS3CxeWsv19md U48xTiHGNqzgB2iWT9DkzfCcP0o3bTqTNcdD4uLdE1oA-hev5bT3XDV56XlH1SprSva2sQ86k6mFgHTcqTp8MnFzEXSjBe_ QkiJJgfx53c8pzVruby2kiW xdYm91ILStVUCQZ26EPGFhTN03TZTZ0BeM6cHvapvOO_JWwWdbsc_dx4YLpCIdF9FjlJruLHFx- 29ZAweSuXdSmM4v7X9jCh3_5iNWeniYjwmzYb9vMbOd2 UrlGoGxnUdJ_BTOjB8LXHQ7mO35ycl4L0o7j8pF6qDxJiQapPFl4jI77WksrvkVFNvyTUIL_JggQrPjO0cCuHlevIi- W0I50aS3Vj8oGLFcOM9QnBuL3tyk 1BvQdwtfXX6mmqvp1OfFWkfClytBcBcBWdLgzFKKpkXQ0Unaa_uQxtVLBfAuisF1w8idPia9hcP2jv_Eeyy0iqjnDtO. CKPdNsuq22qlhNRRQODqnw” 
+    "expires_in":300, 
+    "token_type":"Bearer", 
+    "id_token": "eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0MTEwNTE5MTQsInN1YiI6IjEwMDQ5MjIiLCJub25jZSI6IjczZDc3N2U0LTciLCJhdWQiOlsid2Vk ZWMtZmFrZS1zaG9wIl0sImlzcyI6Imh0dHBzOlwvXC9hcGlkZXYucG5ldC5jaCIsImlhdCI6MTQxMTA1MTMxNH0. SBYodQCRmsbZvSHnBenLqPGS-U9Q_Z S8wTM7TvvyiDxiF27pKvjwsF6vYzJsucpluz750bH-OVtL-Esh72M-Ki8L_3hGImgpZ-K7KaRRM9BG3UA- 5M8ZZloVTpz6W47H_xi-Q_NwCqApgawdEP8rI ECKtSdk3En8A3rDSrCLNhF2LO-56rsC2rwcdBqrpth_89Iq00O1kMPNZ2H_HJpQzBIku04WGOwbx- 2K3f5b_BV-VKVjqkqEMoacJcP_c9pQY2YxpIGAfOnS ROMYCJfM5M-QmsgDCn9B9Z0yicbPwDexS4y1FqOMFXVIJYt94qek8n8CVqp9KQBl2ptEuAbD6HIA",
+    "access_token":"eyJhbGciOiJSU0ExXzUiLCJlbmMiOiJBMjU2R0NNIn0.XpENWZLOwkvlwiY0TWCUZ2LTAbd- P895E1BlAClqmB3oHTehtMGkXCNudURQtwc CVR23dYalRYLDP_huIHqwNjHoAYip2CsyiTrYQySp4wZzRb5Cm1QKvTq2yGfFUcK2qIqr7nFD_CEei8_EpVHanYSE3srnWZkVEI8btQOg32bKOaidwLBaP LgFHfgom6l7n6ewh7UFv1WcRjk9Ug48oHUrpVQEBnu1pXr8gFEtEpmTZhT1TUCwUsyxzH36dkgzSZ4DHCvuIPDOtWpurQZQiu0OQVWd3ih2z7jSECXzUD7 9oIxqzN_pWNVeb4jGvVhTYktBmsCYxJZCslm_NtuMJg.V4qpGmkldszeRMk.KI_swCCP6rvvkiGOkNWLghqK- 0BXrsz5qdimYNxkGNkbE2NQeJKfaGPtLKb 1d59YIwe_Ng_kqpBg05_39OOLgC4tA5JsEipOPm951fDlclmx0ybKwPqtNCjigGP_yxrwcbHwPSEofnNMakt- GnVpCadUMjeNUb6QRzybylS3CxeWsv19md U48xTiHGNqzgB2iWT9DkzfCcP0o3bTqTNcdD4uLdE1oA-hev5bT3XDV56XlH1SprSva2sQ86k6mFgHTcqTp8MnFzEXSjBe_ QkiJJgfx53c8pzVruby2kiW xdYm91ILStVUCQZ26EPGFhTN03TZTZ0BeM6cHvapvOO_JWwWdbsc_dx4YLpCIdF9FjlJruLHFx- 29ZAweSuXdSmM4v7X9jCh3_5iNWeniYjwmzYb9vMbOd2 UrlGoGxnUdJ_BTOjB8LXHQ7mO35ycl4L0o7j8pF6qDxJiQapPFl4jI77WksrvkVFNvyTUIL_JggQrPjO0cCuHlevIi- W0I50aS3Vj8oGLFcOM9QnBuL3tyk 1BvQdwtfXX6mmqvp1OfFWkfClytBcBcBWdLgzFKKpkXQ0Unaa_uQxtVLBfAuisF1w8idPia9hcP2jv_Eeyy0iqjnDtO. CKPdNsuq22qlhNRRQODqnw" 
 }  
 ```
 
@@ -137,12 +137,12 @@ This flow is implemented on the server side.
     https://wedec.post.ch/api/userinfo 
     HTTP/1.1 200 OK Content-Type: application/json 
     { 
-       “sub”: “248289761001”, 
-       “name”: “Lang Michael”, 
-       “given_name”: “Michael”, 
-       “family_name”: “Lang”, 
-       “preferred_username”: “michael.lang”, 
-       “email”: “michael.lang@gmail.com”, 
+       "sub": "248289761001", 
+       "name": "Lang Michael", 
+       "given_name": "Michael", 
+       "family_name": "Lang", 
+       "preferred_username": "michael.lang", 
+       "email": "michael.lang@gmail.com", 
     }  
 
 ## 3.6 Use refresh token
@@ -194,12 +194,12 @@ The standard OpenID claims (see [http://openid.net/specs/openid-connect-core-1\_
 **Response**
 
     { 
-        “sub”: “248289761001”, 
-        “name”: “Lang Michael”, 
-        “given_name”: “Michael”, 
-        “family_name”: “Lang”, 
-        “preferred_username”: “michael.lang”, 
-        “email”: “michael.lang@gmail.com”,
+        "sub": "248289761001", 
+        "name": "Lang Michael", 
+        "given_name": "Michael", 
+        "family_name": "Lang", 
+        "preferred_username": "michael.lang", 
+        "email": "michael.lang@gmail.com",
     }  
 
 
@@ -231,59 +231,59 @@ The standard OpenID claims (see [http://openid.net/specs/openid-connect-core-1\_
 
     [ 
       { 
-        “type”:“MAIN”, 
-        “nickname”:“KLP”, 
-        “addressee”: {
-           “firstName”:“Massimo”,
-           “lastName”:“Cotelli”
+        "type":"MAIN", 
+        "nickname":"KLP", 
+        "addressee": {
+           "firstName":"Massimo",
+           "lastName":"Cotelli"
         }, 
-        “geographicLocation”: {
-           “house”: {
-              “street”:“Via Golena”,
-              “houseNumber”:“31C”
+        "geographicLocation": {
+           "house": {
+              "street":"Via Golena",
+              "houseNumber":"31C"
            },
-           “zip”: {
-              “zip”:“6512”,
-              “city”:“Giubiasco”
+           "zip": {
+              "zip":"6512",
+              "city":"Giubiasco"
            }
         }, 
-        “logisticLocation”: {
-           “house”: {
-              “street”:“Via Golena”,
-              “houseNumber”:“31C”
+        "logisticLocation": {
+           "house": {
+              "street":"Via Golena",
+              "houseNumber":"31C"
            },
-           “zip”: {
-              “zip”:“6512”,
-              “city”:“Giubiasco”
+           "zip": {
+              "zip":"6512",
+              "city":"Giubiasco"
            }
         } 
       }, 
       { 
-         “id”:“e3089ed6-35cd-47ed-b477-143396f96ef4”, 
-         “type”:“DOMICILE”, 
-         “nickname”:“test-zytglogge”, 
-         “addressee”: {
-            “title”:“MISTER”,
-            “firstName”:“Massimo”,
-            “lastName”:“Cotelli”
+         "id":"e3089ed6-35cd-47ed-b477-143396f96ef4", 
+         "type":"DOMICILE", 
+         "nickname":"test-zytglogge", 
+         "addressee": {
+            "title":"MISTER",
+            "firstName":"Massimo",
+            "lastName":"Cotelli"
          }, 
-         “geographicLocation”: {
-            “house”: {
-                “street”:“Zytgloggelaube”,
-                “houseNumber”:“2”,
-                “houseKey”:“701091 5”
+         "geographicLocation": {
+            "house": {
+                "street":"Zytgloggelaube",
+                "houseNumber":"2",
+                "houseKey":"701091 5"
             },
-            “zip”: {
-                “zip”:“3011”,
-                “city”:“Bern”
+            "zip": {
+                "zip":"3011",
+                "city":"Bern"
             }
          }, 
-         “logisticLocation”: {
-            “house”: {
-                “street”:“Zytgloggelaube”,
-                “houseNumber”:“2”,
-                “houseKey”:“7010915”
-            }, “zip”:{“zip”:“3011”,“city”:“Bern”}} }, { “id”:“573b3a3c-43df-4c3b-aaf2-4c3c0ca8f315”, “type”:“POST_OFFICE”, “nickname”:“432”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Bahnhofstrasse”,“houseNumber”:“18”,“houseKey”:“37651 ”},“zip”:{“zip”:“611000”,“city”:“Wolhusen”}}, “logisticLocation”:{“postBoxNumber”:“999”,“house”:{“street”:“Postfach”,“houseKey”:“37651”},“- zip”:{“zip”:“6110”,“city”:“Wolhusen”}} }, { “id”:“1abf6700-2a3c-49fb-bf2c-c1790d85352f”, “type”:“PICK_POST”, “nickname”:“Test Modifica”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Brünigstrasse”,“houseNumber”:“101”,“house- Key”:“174827”}, “zip”:{“zip”:“607200”,“city”:“Sachseln”}}, “logisticLocation”:{“postBoxNumber”:“5”,“house”:{“street”:“Postfach”,“houseKey”:“174827”},“zip”: {“zip”:“6072”,“city”:“Sachseln”}} }, { “id”:“b8dbdf51-6a6a-4ba4-aa55-45377277651f”, “type”:“MY_POST_24”, “nickname”:“mypost24”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Avenue A.Piccard”,“houseKey”:“76419394”},“zip”:{“zip”:“101573”,“city”:“Lausanne”}}, “logisticLocation”:{“house”:{“street”:“Avenue A.Piccard”,“houseKey”:“76419394”},“zip”:{“zip”:“1015”,“city”:“Lausanne”}} }, { “id”:“36e720e8-a908-469e-9daf-6b376071a557”, “type”:“POSTBOX”, “nickname”:“testPF”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Via Galbisio”,“houseNumber”:“2”,“houseKey”:“72014233”,“zip”:{“zip”:“6503”,“city”:“Bellinzona”}}, “logisticLocation”:{“postBoxNumber”:“123”,“house”:{“street”:“Casella postale”,“houseKey”:“72014233”},“zip”:{“zip”:“6503”,“city”:“Bellinzona”}} } ]  
+         "logisticLocation": {
+            "house": {
+                "street":"Zytgloggelaube",
+                "houseNumber":"2",
+                "houseKey":"7010915"
+            }, "zip":{"zip":"3011","city":"Bern"}} }, { "id":"573b3a3c-43df-4c3b-aaf2-4c3c0ca8f315", "type":"POST_OFFICE", "nickname":"432", "addressee":{"title":"MISTER","firstName":"Massimo","lastName":"Cotelli"}, "geographicLocation":{"house":{"street":"Bahnhofstrasse","houseNumber":"18","houseKey":"37651 "},"zip":{"zip":"611000","city":"Wolhusen"}}, "logisticLocation":{"postBoxNumber":"999","house":{"street":"Postfach","houseKey":"37651"},"- zip":{"zip":"6110","city":"Wolhusen"}} }, { "id":"1abf6700-2a3c-49fb-bf2c-c1790d85352f", "type":"PICK_POST", "nickname":"Test Modifica", "addressee":{"title":"MISTER","firstName":"Massimo","lastName":"Cotelli"}, "geographicLocation":{"house":{"street":"Brünigstrasse","houseNumber":"101","house- Key":"174827"}, "zip":{"zip":"607200","city":"Sachseln"}}, "logisticLocation":{"postBoxNumber":"5","house":{"street":"Postfach","houseKey":"174827"},"zip": {"zip":"6072","city":"Sachseln"}} }, { "id":"b8dbdf51-6a6a-4ba4-aa55-45377277651f", "type":"MY_POST_24", "nickname":"mypost24", "addressee":{"title":"MISTER","firstName":"Massimo","lastName":"Cotelli"}, "geographicLocation":{"house":{"street":"Avenue A.Piccard","houseKey":"76419394"},"zip":{"zip":"101573","city":"Lausanne"}}, "logisticLocation":{"house":{"street":"Avenue A.Piccard","houseKey":"76419394"},"zip":{"zip":"1015","city":"Lausanne"}} }, { "id":"36e720e8-a908-469e-9daf-6b376071a557", "type":"POSTBOX", "nickname":"testPF", "addressee":{"title":"MISTER","firstName":"Massimo","lastName":"Cotelli"}, "geographicLocation":{"house":{"street":"Via Galbisio","houseNumber":"2","houseKey":"72014233","zip":{"zip":"6503","city":"Bellinzona"}}, "logisticLocation":{"postBoxNumber":"123","house":{"street":"Casella postale","houseKey":"72014233"},"zip":{"zip":"6503","city":"Bellinzona"}} } ]  
 
 
 ### 4.1.3 The main address of the end user
@@ -294,23 +294,23 @@ The standard OpenID claims (see [http://openid.net/specs/openid-connect-core-1\_
 **Response**
 
     { 
-        “type”:“MAIN”, 
-        “nickname”:“KLP”, 
-        “addressee”: {
-            “firstName”:“Massimo”,
-            “lastName”:“Cotelli”
+        "type":"MAIN", 
+        "nickname":"KLP", 
+        "addressee": {
+            "firstName":"Massimo",
+            "lastName":"Cotelli"
         }, 
-        “geographicLocation”: {
-           “house”: {
-              “street”:“Via Golena”,
-              “houseNumber”:“31C”
+        "geographicLocation": {
+           "house": {
+              "street":"Via Golena",
+              "houseNumber":"31C"
            },
-           zip”: {
-              “zip”:“6512”, 
-              “city”:“Giubiasco”
+           zip": {
+              "zip":"6512", 
+              "city":"Giubiasco"
            }
         }, 
-        “logisticLocation”:{“house”:{“street”:“Via Golena”,“houseNumber”:“31C”},“zip”:{“zip”:“6512”,“city”: “Giubiasco”}} }  
+        "logisticLocation":{"house":{"street":"Via Golena","houseNumber":"31C"},"zip":{"zip":"6512","city": "Giubiasco"}} }  
 
 ### 4.1.4 A single personal address of the end user
 **GET request**
@@ -319,7 +319,7 @@ The standard OpenID claims (see [http://openid.net/specs/openid-connect-core-1\_
 
 **Response**
 
-    { “id”:“e3089ed6-35cd-47ed-b477-143396f96ef4”, “type”:“DOMICILE”, “nickname”:“test-zytglogge”, “addressee”:{“title”:“MISTER”,“firstName”:“Massimo”,“lastName”:“Cotelli”}, “geographicLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“house- Key”:“7010915” ,“zip”:{“zip”:“3011”,“city”:“Bern”}}, “logisticLocation”:{“house”:{“street”:“Zytgloggelaube”,“houseNumber”:“2”,“house- Key”:“7010915”},“zip :{“zip”:“3011”,“city”:“Bern”}} }  
+    { "id":"e3089ed6-35cd-47ed-b477-143396f96ef4", "type":"DOMICILE", "nickname":"test-zytglogge", "addressee":{"title":"MISTER","firstName":"Massimo","lastName":"Cotelli"}, "geographicLocation":{"house":{"street":"Zytgloggelaube","houseNumber":"2","house- Key":"7010915" ,"zip":{"zip":"3011","city":"Bern"}}, "logisticLocation":{"house":{"street":"Zytgloggelaube","houseNumber":"2","house- Key":"7010915"},"zip :{"zip":"3011","city":"Bern"}} }  
 
 
 ### 4.1.5 Error codes
@@ -442,7 +442,7 @@ Copy
 
 #### Response
 
-{ “zips”:[ {“zip”:“6600”,“city18”:“Locarno”,“city27”:“Locarno”}, {“zip”:“6600”,“city18”:“Muralto”,“city27”:“Muralto”}, {“zip”:“6600”,“city18”:“Solduno”,“city27”:“Solduno”}, {“zip”:“6601”,“city18”:“Locarno”,“city27”:“Locarno”}, {“zip”:“6602”,“city18”:“Muralto”,“city27”:“Muralto”}, {“zip”:“6604”,“city18”:“Locarno”,“city27”:“Locarno”}, {“zip”:“6605”,“city18”:“Locarno”,“city27”:“Locarno”}, {“zip”:“6605”,“city18”:“Monte Brè Locarno”,“city27”:“Monte Brè sopra Locarno”}, {“zip”:“6611”,“city18”:“Crana”,“city27”:“Crana”}, {“zip”:“6611”,“city18”:“Gresso”,“city27”:“Gresso”}, {“zip”:“6611”,“city18”:“Mosogno”,“city27”:“Mosogno”}, {“zip”:“6612”,“city18”:“Ascona”,“city27”:“Ascona”}, {“zip”:“6613”,“city18”:“Porto Ronco”,“city27”:“Porto Ronco”}, {“zip”:“6614”,“city18”:“Brissago”,“city27”:“Brissago”}, {“zip”:“6614”,“city18”:“Isole di Brissago”,“city27”:“Isole di Brissago”}, {“zip”:“6616”,“city18”:“Losone”,“city27”:“Losone”}, {“zip”:“6618”,“city18”:“Arcegno”,“city27”:“Arcegno”}, {“zip”:“6622”,“city18”:“Ronco sopra Ascona”,“city27”:“Ronco sopra Ascona”}, {“zip”:“6631”,“city18”:“Corippo”,“city27”:“Corippo”}, {“zip”:“6632”,“city18”:“Vogorno”,“city27”:“Vogorno”} ] }  
+{ "zips":[ {"zip":"6600","city18":"Locarno","city27":"Locarno"}, {"zip":"6600","city18":"Muralto","city27":"Muralto"}, {"zip":"6600","city18":"Solduno","city27":"Solduno"}, {"zip":"6601","city18":"Locarno","city27":"Locarno"}, {"zip":"6602","city18":"Muralto","city27":"Muralto"}, {"zip":"6604","city18":"Locarno","city27":"Locarno"}, {"zip":"6605","city18":"Locarno","city27":"Locarno"}, {"zip":"6605","city18":"Monte Brè Locarno","city27":"Monte Brè sopra Locarno"}, {"zip":"6611","city18":"Crana","city27":"Crana"}, {"zip":"6611","city18":"Gresso","city27":"Gresso"}, {"zip":"6611","city18":"Mosogno","city27":"Mosogno"}, {"zip":"6612","city18":"Ascona","city27":"Ascona"}, {"zip":"6613","city18":"Porto Ronco","city27":"Porto Ronco"}, {"zip":"6614","city18":"Brissago","city27":"Brissago"}, {"zip":"6614","city18":"Isole di Brissago","city27":"Isole di Brissago"}, {"zip":"6616","city18":"Losone","city27":"Losone"}, {"zip":"6618","city18":"Arcegno","city27":"Arcegno"}, {"zip":"6622","city18":"Ronco sopra Ascona","city27":"Ronco sopra Ascona"}, {"zip":"6631","city18":"Corippo","city27":"Corippo"}, {"zip":"6632","city18":"Vogorno","city27":"Vogorno"} ] }  
 Copy
 
 #### 5.2.3 Street name auto-completion
@@ -454,7 +454,7 @@ Copy
 
 #### Response
 
-{ “streets”:[ “Via Sempione”, “Via Serafino Balestra” ] }  
+{ "streets":[ "Via Sempione", "Via Serafino Balestra" ] }  
 Copy
 
 #### 5.2.4 House number auto-completion
@@ -466,7 +466,7 @@ Copy
 
 #### Response
 
-{ “houses”:[“1”,“1 A”,“2”,“3”,“4”,“5”,“6”,“7”,“8”,“9 A”] }  
+{ "houses":["1","1 A","2","3","4","5","6","7","8","9 A"] }  
 Copy
 
 #### 5.2.5 Error codes
@@ -542,7 +542,7 @@ Copy
 
 #### POST payload
 
-{ “address”: { “geographicLocation”: { “zip”: { “zip”: 6959, “city”: “Piandera Paese” } } }, “deliveryDates”: [“2014-12-24”,“2014-12-25“] }  
+{ "address": { "geographicLocation": { "zip": { "zip": 6959, "city": "Piandera Paese" } } }, "deliveryDates": ["2014-12-24","2014-12-25"] }  
 Copy
 
 #### 6.2.4 Error codes
@@ -569,7 +569,7 @@ Internal server error
 
 ### 6.3 Logistic product information query
 
-#### 6.3.1 The information for the logistic product: example “PRI”
+#### 6.3.1 The information for the logistic product: example "PRI"
 
 #### GET request
 
@@ -578,7 +578,7 @@ Copy
 
 #### Response
 
-{ “productCode”:“PRI”, “barcode”:“0509”, “deliveryInstructions”:[ {“code”:“3211”},{“code”:“3212”},{“code”:“3213”},{“code”:“3214”},{“code”:“3215”},{“code”: “3216”}, {“code”:“3217”},{“code”:“3218”},{“code”:“3219”},{“code”:“3220”},{“code”:“3222”},{“code”: “3232”}, {“code”:“3233”},{“code”:“3234”}], “additionalServices”:[ {“code”:“BLN”,“mandatory”:false}, {“code”:“COLD”,“mandatory”:false}, {“code”:“RMP”,“mandatory”:false}, {“code”:“SP”,“mandatory”:false}, {“code”:“MAN”,“mandatory”:false}, {“code”:“FRA”,“mandatory”:false}, {“code”:“AS”,“mandatory”:false}, {“code”:“SI”,“mandatory”:false}, {“code”:“LQ”,“mandatory”:false}] }  
+{ "productCode":"PRI", "barcode":"0509", "deliveryInstructions":[ {"code":"3211"},{"code":"3212"},{"code":"3213"},{"code":"3214"},{"code":"3215"},{"code": "3216"}, {"code":"3217"},{"code":"3218"},{"code":"3219"},{"code":"3220"},{"code":"3222"},{"code": "3232"}, {"code":"3233"},{"code":"3234"}], "additionalServices":[ {"code":"BLN","mandatory":false}, {"code":"COLD","mandatory":false}, {"code":"RMP","mandatory":false}, {"code":"SP","mandatory":false}, {"code":"MAN","mandatory":false}, {"code":"FRA","mandatory":false}, {"code":"AS","mandatory":false}, {"code":"SI","mandatory":false}, {"code":"LQ","mandatory":false}] }  
 Copy
 
 #### 6.3.2 Error codes
@@ -613,7 +613,7 @@ Copy
 
 #### Response
 
-[ { “code”:“BLN”, “name”:{ “de”:“BLN”, “fr”:“BLN”, “it”:“BLN”, “en”:“BLN”}, “barcode”:“0341” }, {“code”:“COLD”,“name”:{“de”:“COLD”,“fr”:“COLD”,“it”:“COLD”,“en”:“COLD”},“barcode”:“ 3781”}, {“code”:“RMP”,“name”:{“de”:“RMP”,“fr”:“RMP”,“it”:“RMP”,“en”:“RMP”},“barcode”:“0322”}, {“code”:“SP”,“name”:{“de”:“SP”,“fr”:“SP”,“it”:“SP”,“en”:“SP”},“barcode”:“0309”}, {“code”:“MAN”,“name”:{“de”:“MAN”,“fr”:“MAN”,“it”:“MAN”,“en”:“MAN”},“barcode”:“0421”}, {“code”:“FRA”,“name”:{“de”:“FRA”,“fr”:“FRA”,“it”:“FRA”,“en”:“FRA”},“barcode”:“0310”}, {“code”:“AS”,“name”:{“de”:“AS”,“fr”:“AS”,“it”:“AS”,“en”:“AS”},“barcode”:“0308”}, {“code”:“SI”,“name”:{“de”:“SI”,“fr”:“SI”,“it”:“SI”,“en”:“SI”},“barcode”:“0307”}, {“code”:“LQ”,“name”:{“de”:“LQ”,“fr”:“LQ”,“it”:“LQ”,“en”:“LQ”},“barcode”:“0549”}, {“code”:“SA”,“name”:{“de”:“SA”,“fr”:“SA”,“it”:“SA”,“en”:“SA”},“barcode”:“0543”}, {“code”:“AZS”,“name”:{“de”:“AZS”,“fr”:“AZS”,“it”:“AZS”,“en”:“AZS”},“barcode”:“0581”} ]  
+[ { "code":"BLN", "name":{ "de":"BLN", "fr":"BLN", "it":"BLN", "en":"BLN"}, "barcode":"0341" }, {"code":"COLD","name":{"de":"COLD","fr":"COLD","it":"COLD","en":"COLD"},"barcode":" 3781"}, {"code":"RMP","name":{"de":"RMP","fr":"RMP","it":"RMP","en":"RMP"},"barcode":"0322"}, {"code":"SP","name":{"de":"SP","fr":"SP","it":"SP","en":"SP"},"barcode":"0309"}, {"code":"MAN","name":{"de":"MAN","fr":"MAN","it":"MAN","en":"MAN"},"barcode":"0421"}, {"code":"FRA","name":{"de":"FRA","fr":"FRA","it":"FRA","en":"FRA"},"barcode":"0310"}, {"code":"AS","name":{"de":"AS","fr":"AS","it":"AS","en":"AS"},"barcode":"0308"}, {"code":"SI","name":{"de":"SI","fr":"SI","it":"SI","en":"SI"},"barcode":"0307"}, {"code":"LQ","name":{"de":"LQ","fr":"LQ","it":"LQ","en":"LQ"},"barcode":"0549"}, {"code":"SA","name":{"de":"SA","fr":"SA","it":"SA","en":"SA"},"barcode":"0543"}, {"code":"AZS","name":{"de":"AZS","fr":"AZS","it":"AZS","en":"AZS"},"barcode":"0581"} ]  
 Copy
 
 ### 6.5 Delivery instructions information query
@@ -626,7 +626,7 @@ Copy
 
 #### Response
 
-[ { “code”:“3211”, “barcode”:“3211”, “name”:{ “de”:“Sendung dem Empfänger direkt auf der Etage zustellen”, “fr”:“Sendung dem Empfänger direkt auf der Etage zustellen”, “it”:“Sendung dem Empfänger direkt auf der Etage zustellen”, “en”:“Sendung dem Empfänger direkt auf der Etage zustellen”}, “editable”:false, “placeHolderNames”:[], “optionNames”:[] }, ... ]  
+[ { "code":"3211", "barcode":"3211", "name":{ "de":"Sendung dem Empfänger direkt auf der Etage zustellen", "fr":"Sendung dem Empfänger direkt auf der Etage zustellen", "it":"Sendung dem Empfänger direkt auf der Etage zustellen", "en":"Sendung dem Empfänger direkt auf der Etage zustellen"}, "editable":false, "placeHolderNames":[], "optionNames":[] }, ... ]  
 Copy
 
 #### 6.5.2 Error codes
@@ -661,7 +661,7 @@ Copy
 
 #### Response
 
-[ { “date”:“2014-12-24”, “name”:{ “de”:“Weihnachten”, “fr”:“Weihnachten”, “it”:“Weihnachten”, “en”:“Weihnachten”} }, ... ]  
+[ { "date":"2014-12-24", "name":{ "de":"Weihnachten", "fr":"Weihnachten", "it":"Weihnachten", "en":"Weihnachten"} }, ... ]  
 Copy
 
 #### 6.6.2 Error codes
@@ -696,10 +696,10 @@ Internal server error
   \- an implicit grant flow    
   \- a client credential grant flow
 * Bearer access token stored in the header of the request:Authorization: Bearer <OAuth access token>
-* Integration of the “Location search” map application:    
+* Integration of the "Location search" map application:    
   \- You need to obtain a Google Maps API key. Registration with Google is a necessary prerequisite for this.    
   \- Make the necessary changes in the HTML code in order to integrate the Swiss Post location search into your website.    
-  \- You can find a [detailed manual for the integration of the “Location search” map application here](https://www.post.ch/en/business-solutions/digital-commerce/integration-of-the-location-search-map-application).
+  \- You can find a [detailed manual for the integration of the "Location search" map application here](https://www.post.ch/en/business-solutions/digital-commerce/integration-of-the-location-search-map-application).
 * PickPost API | INT | [https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/pickpost/v1/swagger.yaml](https://wedecint.post.ch/doc/swagger/index.html?url=https://wedecint.post.ch/doc/api/pickpost/v1/swagger.yaml)
 * PickPost API | PROD | [https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/pickpost/v1/swagger.yaml](https://wedec.post.ch/doc/swagger/index.html?url=https://wedec.post.ch/doc/api/pickpost/v1/swagger.yaml)
 
@@ -712,12 +712,12 @@ Copy
 
 #### POST payload
 
-{ “userDetails”: { “gender”: “MALE”, “firstName”: “Test”, “lastName”: “User”, “language”: “DE” }, “address”: { “house”: { “street”: “Bellerivestrasse”, “houseNumber”: “5” }, “zip”: { “zip”: “8008”, “city”: “Zürich”, “countryCode”: “CH” } }, “notification”: { “notifyMode”: “EMAIL”, “email”: “testuser1@post.ch” }, “service”: “PICKPOST” }  
+{ "userDetails": { "gender": "MALE", "firstName": "Test", "lastName": "User", "language": "DE" }, "address": { "house": { "street": "Bellerivestrasse", "houseNumber": "5" }, "zip": { "zip": "8008", "city": "Zürich", "countryCode": "CH" } }, "notification": { "notifyMode": "EMAIL", "email": "testuser1@post.ch" }, "service": "PICKPOST" }  
 Copy
 
 #### Response
 
-{ “id”: “PT011227”, “verified”: “NONE” }  
+{ "id": "PT011227", "verified": "NONE" }  
 Copy
 
 #### 7.2.1 Error codes
@@ -755,13 +755,13 @@ Internal server error
 * A5 format (148 × 210 mm): only available for Domestic Parcels, Express and Solutions
 * Format FE (window envelope): only available for Letters with barcode (BMB) domestic and international
 
-#### 8.2.1 Recipient’s address – maximum number of address lines (concerns the “GenerateLabel” request)
+#### 8.2.1 Recipient’s address – maximum number of address lines (concerns the "GenerateLabel" request)
 
 The number of address lines that can be printed on an address label is limited because there is a limited amount of space on the labels. Depending on the selected format, the selected basic service, the number of address fields and, if applicable, the delivery instructions (ZAW) or free text, not all address lines can be printed.
 
 ##### Rules when exceeding the maximum amount of address lines
 
-When the maximum permitted amount of address lines is exceeded, address lines are omitted from the address label in the order below. This only applies to address lines from the “Recipient” address block and – if applicable and permissible – for free text:
+When the maximum permitted amount of address lines is exceeded, address lines are omitted from the address label in the order below. This only applies to address lines from the "Recipient" address block and – if applicable and permissible – for free text:
 
 1. Title (Title) is omitted
 2. Address suffix (AddressSuffix) is omitted
@@ -772,21 +772,21 @@ Please find some examples further down.
 
 ##### Data transmission
 
-The information from the “AddressSuffix” address field element is not transmitted to DataTransfer, regardless of the number of address lines used.
+The information from the "AddressSuffix" address field element is not transmitted to DataTransfer, regardless of the number of address lines used.
 
-##### “LabelAddress“ address block
+##### "LabelAddress" address block
 
-When using the “LabelAddress” address block, you can define yourself which recipient’s address lines are to be printed on the address label and in what order for a minimum of 2 and a maximum of 5 address lines (LabelLine1 to LabelLine5). An exception applies to the fields “ZIP” and “City” (and, for international mailings, also to “Country”), which are taken across from the “Recipient” address block. This means that you must define the procedure to be used yourself if the maximum amount of address lines is exceeded.
+When using the "LabelAddress" address block, you can define yourself which recipient’s address lines are to be printed on the address label and in what order for a minimum of 2 and a maximum of 5 address lines (LabelLine1 to LabelLine5). An exception applies to the fields "ZIP" and "City" (and, for international mailings, also to "Country"), which are taken across from the "Recipient" address block. This means that you must define the procedure to be used yourself if the maximum amount of address lines is exceeded.
 
 1 [↑](#bffn1) Delivery instructions are not possible for A7 format.
 
-##### Examples for addressing rules for the “Recipient” address block
+##### Examples for addressing rules for the "Recipient" address block
 
-The examples below apply only if the “LabelAddress” address block is not used. Missing information in the recipient’s address is completed using the contents of the “Recipient” address block and – if available – the free text.
+The examples below apply only if the "LabelAddress" address block is not used. Missing information in the recipient’s address is completed using the contents of the "Recipient" address block and – if available – the free text.
 
 Maximum number of address lines per DLG and format
 
-Format ”Fenster“ (FE)
+Format "Fenster" (FE)
 
 Format A7[\[1\]](#ffn1)
 
@@ -904,7 +904,7 @@ DLG BMB international
   
 -  
 
-Example 1: Format A6, max. 1 ZAW, DLG parcels Details in the “Recipient” block + free text: 8 address lines
+Example 1: Format A6, max. 1 ZAW, DLG parcels Details in the "Recipient" block + free text: 8 address lines
 
 Details on the address label: max. no. of address lines allowed: 8 no adjustment by WSBC required
 
@@ -952,7 +952,7 @@ City (8th address line)
 
 \-
 
-Example 2: Format A6, 1 ZAW, DLG parcels Details in the “Recipient” block + free text: 8 address lines
+Example 2: Format A6, 1 ZAW, DLG parcels Details in the "Recipient" block + free text: 8 address lines
 
 Details on the address label: max. no. of address lines allowed: 6 automatic adjustment by WSBC required
 
@@ -1000,7 +1000,7 @@ City (8th address line)
 
 \-
 
-Example 3: Format A7, DLG BMB domestic; “Registered (R) domestic” Details in the “Recipient” block: 7 address lines
+Example 3: Format A7, DLG BMB domestic; "Registered (R) domestic" Details in the "Recipient" block: 7 address lines
 
 Details on the address label: max. no. of address lines allowed: 6 automatic adjustment by WSBC
 
@@ -1066,7 +1066,7 @@ City (7th address line)
 
 ### 8.5 Layout options for express items
 
-The basic service barcodes for SameDay and Swiss-Express “Moon” services are printed in colour.
+The basic service barcodes for SameDay and Swiss-Express "Moon" services are printed in colour.
 
 ![](https://developer.post.ch/-/media/post-maxisites/developer/images/layoutexpressitem.jpg?mw=1600&vs=2&hash=8A903536E950E604C73E2708DC3A1C7D)
 
@@ -1128,7 +1128,7 @@ ZPL2
 
 ### 8.7 Sender’s logo
 
-The sender’s address must always be entered in the “Barcode” web service. You can hide the display of the sender details on the address label or display them as a text or image (e.g. company logo).
+The sender’s address must always be entered in the "Barcode" web service. You can hide the display of the sender details on the address label or display them as a text or image (e.g. company logo).
 
 If using an image/logo, please note the following:
 
@@ -1189,7 +1189,7 @@ Saturday delivery
 256 \*\*
 
 \* This notification service can only be used with delivery instruction ZAW3233.    
-\*\* This notification service can only be used with the additional service “SA”.
+\*\* This notification service can only be used with the additional service "SA".
 
 Note: this kind of notification services cannot be used for notime. For notime notification please contact your notime agent.
 
@@ -1397,7 +1397,7 @@ The description of the content of SMS and e-mail messages are available at [http
 
 #### 8.8.4 Notification with delivery management option
 
-Offer your customers the option of individually controlling the receipt of their consignments with the status message "Proof of posting"or “delivery information”.
+Offer your customers the option of individually controlling the receipt of their consignments with the status message "Proof of posting"or "delivery information".
 
 #### 8.8.4.1 Necessary fields
 
@@ -1415,7 +1415,7 @@ E-mail address of the consignment recipient
 
 Service
 
-Time of notification (1 “Proof of mailing” or 2 “Delivery information”)
+Time of notification (1 "Proof of mailing" or 2 "Delivery information")
 
 Language
 
@@ -1440,17 +1440,17 @@ Available options:
 
 #### 8.8.4.2 Optimal data delivery
 
-In order for the recipient to have as much time as possible to manage the consignment, we recommend ordering service 1 “Notification upon proof of posting”. By specifying the handover date of the delivery (“DispatchDate”) and the product description (“Przl”), the recipient can also be informed of the expected delivery date beforehand.
+In order for the recipient to have as much time as possible to manage the consignment, we recommend ordering service 1 "Notification upon proof of posting". By specifying the handover date of the delivery ("DispatchDate") and the product description ("Przl"), the recipient can also be informed of the expected delivery date beforehand.
 
-The “Notification with delivery management option” can only be sent by E-Mail.
+The "Notification with delivery management option" can only be sent by E-Mail.
 
 If Swiss Post identifies the recipient as a registered user of the "My consignments" online service, he will not receive the notification with delivery management option. Instead, he will be forwarded to his login to access all services of "My consignments".
 
 With the field "DynPic" your logo can be transmitted. This will then be displayed in the notification. The image can have the following formats: jpg, jpeg, gif, png. The ideal resolution is 640x160 pixels.
 
-### 8.9 Printer models approved for “Barcode” web service
+### 8.9 Printer models approved for "Barcode" web service
 
-When your system receives them, you can forward the labels generated by the “Barcode” web service directly to a continuous label printer. This is possible with printer language ZPL2. In order for this to work, the printer models used must support ZPL2 as a printer language, otherwise the quality requirements of the labels will not be met.
+When your system receives them, you can forward the labels generated by the "Barcode" web service directly to a continuous label printer. This is possible with printer language ZPL2. In order for this to work, the printer models used must support ZPL2 as a printer language, otherwise the quality requirements of the labels will not be met.
 
 Ideally you should use one of the printer models we have already homologated. To ensure adequate barcode print quality, you should always use high-quality shipping label materials. An overview of our homologated printer models is available at www.swisspost.ch/post-mypostbusiness-auftrag-druckermodelle.
 
@@ -1460,7 +1460,7 @@ Note also that shipping labels are printed in either landscape or portrait forma
 
 The service descriptions for the following basic and additional services plus delivery instructions can be found at www.swisspost.ch/post-distribution-national.
 
-Combinations of multiple service codes, e.g. “PRI, SP”, are split into their individual elements. The following is given as an example (sequencing of individual content does not matter):
+Combinations of multiple service codes, e.g. "PRI, SP", are split into their individual elements. The following is given as an example (sequencing of individual content does not matter):
 
 * <PRZL>PRI</PRZL>
 * <PRZL>SP</PRZL>
@@ -1491,11 +1491,11 @@ PostPac Promo
 
 SEM
 
-Swiss-Express “Moon”
+Swiss-Express "Moon"
 
 SEM, SP
 
-Bulky goods “Moon”
+Bulky goods "Moon"
 
 SKB
 
@@ -1531,7 +1531,7 @@ Bulky goods Priority GAS
 
 GAS, SEM
 
-Swiss-Express “Moon” GAS
+Swiss-Express "Moon" GAS
 
 GAS, SKB
 
@@ -1607,7 +1607,7 @@ Do not deliver to mailbox or neighbour: do not leave anywhere
 
 2 [↑](#bffn4)  For the collection of empty containers or materials for recycling – please contact your customer advisor for further information.
 
-3 [↑](#bffn5)  Only available in conjunction with notification service code 128 (“Exchange/return”).
+3 [↑](#bffn5)  Only available in conjunction with notification service code 128 ("Exchange/return").
 
 DLC
 
@@ -2417,7 +2417,7 @@ PoBox[\[1\]](#ffn7)
 
 String (0..35)
 
-Name “P.O. box” and – if available – P.O. box number
+Name "P.O. box" and – if available – P.O. box number
 
 P.O. Box 4021
 
@@ -2517,7 +2517,7 @@ h.muster@post.ch
 
 LabelAddress
 
-Used in order to display the address lines in a customized order, or to specifically abbreviate long addresses. The postcode and location are taken across from the “Recipient” address block.
+Used in order to display the address lines in a customized order, or to specifically abbreviate long addresses. The postcode and location are taken across from the "Recipient" address block.
 
 \-
 
@@ -2527,7 +2527,7 @@ LabelLine
 
 String (0..35)
 
-Contents of the recipient address lines, min. 2 and max. 5 address lines (the postcode and location fields are automatically taken across from the “Recipient” address block.
+Contents of the recipient address lines, min. 2 and max. 5 address lines (the postcode and location fields are automatically taken across from the "Recipient" address block.
 
 \-
 
@@ -2730,7 +2730,7 @@ Weight in grams (limited to 5 digits) for Parcels, Express and Solutions service
 
 \-
 
-Content holder for UN number for the “LQ” (hazardous goods) additional service
+Content holder for UN number for the "LQ" (hazardous goods) additional service
 
 \-
 
@@ -2740,7 +2740,7 @@ UNNumber
 
 Integer (0..9’999)
 
-List of UN numbers (limited to 4 digits) for “LQ” additional service (hazardous goods)
+List of UN numbers (limited to 4 digits) for "LQ" additional service (hazardous goods)
 
 1234, 1235, 1236
 
@@ -2851,11 +2851,11 @@ Mobile number
 
 4 [↑](#bffn10)  The postage paid impression for the Letters with barcode (BMB) domestic and international service groups does not appear automatically in the address and applies to each request.
 
-#### 8.11.1 Posting BLN (electronic COD) via “Barcode” web service (for “Parcels” and “Swiss-Express”)
+#### 8.11.1 Posting BLN (electronic COD) via "Barcode" web service (for "Parcels" and "Swiss-Express")
 
 ##### BLN-defined transaction types
 
-If you already use the “Barcode” web service actively and would later like to programme BLN, we can provide a test environment for you. Please contact Web Service Support for further information.
+If you already use the "Barcode" web service actively and would later like to programme BLN, we can provide a test environment for you. Please contact Web Service Support for further information.
 
 The credit note for COD amounts can be applied by means of two different account types:
 
@@ -2866,14 +2866,14 @@ With transaction type 1 (yellow Account IS) only the COD amount is required. Wit
 
 ##### ISR reference number
 
-For the ISR reference number, the following data format is valid (excerpt from the PostFinance manual on “Record Structures – electronic Services”) [www.postfinance.ch/content/dam/pf/de/doc/consult/manual/dldata/efin\_recdescr\_man\_en.pdf](www.postfinance.ch/content/dam/pf/de/doc/consult/manual/dldata/efin_recdescr_man_en.pdf)
+For the ISR reference number, the following data format is valid (excerpt from the PostFinance manual on "Record Structures – electronic Services") [www.postfinance.ch/content/dam/pf/de/doc/consult/manual/dldata/efin\_recdescr\_man\_en.pdf](www.postfinance.ch/content/dam/pf/de/doc/consult/manual/dldata/efin_recdescr_man_en.pdf)
 
 * Reference number
 * 84
 * 9(27)
 * For 5-digit ISR customer numbers 000000000000999999999999999
 * For 9-digit ISR customer numbers 99999999999999999999999999P
-* Mandatory: The reference number is printed on the processing document in blocks of 5, whereby leading zeros can be suppresses. The details must be entered in the field with right alignment, empty positions must be extended with leading zeros. Reference numbers with the value “0” (zero) will be rejected. We recommaned that you recalculate and compare the check digit (modulo 10, recursive).
+* Mandatory: The reference number is printed on the processing document in blocks of 5, whereby leading zeros can be suppresses. The details must be entered in the field with right alignment, empty positions must be extended with leading zeros. Reference numbers with the value "0" (zero) will be rejected. We recommaned that you recalculate and compare the check digit (modulo 10, recursive).
 
 ##### Yellow Account with inpayment slip (TransactionType 1)
 
@@ -2951,7 +2951,7 @@ Reference number
 
 ##### Notification code
 
-In the “Notification” element, the “Service” field has the following valid values:
+In the "Notification" element, the "Service" field has the following valid values:
 
 Notification
 
@@ -2977,7 +2977,7 @@ Handover status to sender
 
 64
 
-“Exchange/return”
+"Exchange/return"
 
 128[\[1\]](#ffn11)
 
@@ -2989,13 +2989,13 @@ Saturday delivery
 1 [↑](#bffn11)  This notification service can only be used with delivery instruction ZAW3233.
 
 
-2 [↑](#bffn12)  This notification service can only be used with the additional service “SA”.
+2 [↑](#bffn12)  This notification service can only be used with the additional service "SA".
 
 
-3 [↑](#bffn13)  This notification service can only be used with the additional service “AZS” and the basic service PostPac Priority, bulky goods Priority, PostPac Economy or bulky goods Economy.
+3 [↑](#bffn13)  This notification service can only be used with the additional service "AZS" and the basic service PostPac Priority, bulky goods Priority, PostPac Economy or bulky goods Economy.
 
 
-4 [↑](#bffn14)  This notification service can only be used with the additional service “AZS” and the basic services SameDay afternoon/evening, SameDay afternoon/evening bulky goods or “Direct”.
+4 [↑](#bffn14)  This notification service can only be used with the additional service "AZS" and the basic services SameDay afternoon/evening, SameDay afternoon/evening bulky goods or "Direct".
 
 ##### Notification text messages
 
@@ -3010,17 +3010,17 @@ Copy
 
 #### POST payload
 
-{ “language”:”DE”, “frankingLicense”: “35900034”, “customer”: { “name1”: “Test Kunde”, “street”: “Wankdorfallee 4”, “zip”: “3030”, “city”: “Bern”, “domicilePostOffice”:”3011 Bern”, “country”: “CH” }, “labelDefinition”: { “labelLayout”: “A6”, “printAddresses”: “RECIPIENT_AND_CUSTOMER”, “imageFileType”: “JPG”, “imageResolution”: 300 }, “item”: { “itemID”: “1234567”, “recipient”: { “name1”: “Hans”, “name2”: “Muster”, “street”: “Wankdorfallee”, “houseNo”: “4”, “zip”:”3030”, “city”: “Bern”, “country”: “CH” }, “attributes”: { “przl”: [“PRI”,”SA”], “weight”:12345 } } }  
+{ "language":"DE", "frankingLicense": "35900034", "customer": { "name1": "Test Kunde", "street": "Wankdorfallee 4", "zip": "3030", "city": "Bern", "domicilePostOffice":"3011 Bern", "country": "CH" }, "labelDefinition": { "labelLayout": "A6", "printAddresses": "RECIPIENT_AND_CUSTOMER", "imageFileType": "JPG", "imageResolution": 300 }, "item": { "itemID": "1234567", "recipient": { "name1": "Hans", "name2": "Muster", "street": "Wankdorfallee", "houseNo": "4", "zip":"3030", "city": "Bern", "country": "CH" }, "attributes": { "przl": ["PRI","SA"], "weight":12345 } } }  
 Copy
 
 #### Response
 
-{ “labelDefinition” : { “labelLayout” : “A6”, “imageFileType” : “jpg”, “imageResolution” : 300, “printPreview” : false, “colorPrintRequired” : true }, “item” : { “itemID” : “1234567”, “identCode” : “993590003400000002”, “label” : [ “<Base64Image>” ] } }  
+{ "labelDefinition" : { "labelLayout" : "A6", "imageFileType" : "jpg", "imageResolution" : 300, "printPreview" : false, "colorPrintRequired" : true }, "item" : { "itemID" : "1234567", "identCode" : "993590003400000002", "label" : [ "<Base64Image>" ] } }  
 Copy
 
 #### 8.14.1 Error messages
 
-Every error message consists of a four-digit error code prefixed by “E” (E1234), beginning at E1000, plus an associated error text. The web service returns the error texts in the specified language (German, French, Italian or English).
+Every error message consists of a four-digit error code prefixed by "E" (E1234), beginning at E1000, plus an associated error text. The web service returns the error texts in the specified language (German, French, Italian or English).
 
 If an error message is returned, the requested service is not executed and is rejected. The error must be corrected and the call repeated.
 
@@ -3112,19 +3112,19 @@ The ISR reference number for the electronic COD (BLN) is invalid. Please check t
 
 E2005
 
-A telephone number must be provided for the delivery instruction “Notify delivery by telephone” (ZAW3213).
+A telephone number must be provided for the delivery instruction "Notify delivery by telephone" (ZAW3213).
 
 E2006
 
-A valid delivery date must be stated for the delivery instruction “Specific delivery date: deliver on ...” (ZAW3217).
+A valid delivery date must be stated for the delivery instruction "Specific delivery date: deliver on ..." (ZAW3217).
 
 E2007
 
-A “parcel number” and a “parcel total” must be provided for the delivery instruction “Deliver when all items have arrived” (ZAW3218).
+A "parcel number" and a "parcel total" must be provided for the delivery instruction "Deliver when all items have arrived" (ZAW3218).
 
 E2008
 
-A “deposit point” must be provided for the delivery instruction “Deposit consignments” (ZAW3219).
+A "deposit point" must be provided for the delivery instruction "Deposit consignments" (ZAW3219).
 
 E2009
 
@@ -3176,7 +3176,7 @@ The COD amount is outside the valid range.
 
 E2021
 
-Two COD amounts were indicated. Please indicate the amount for COD items (N) in the “ATT\_Amount” field and in the “REC\_DATA” field for electronic COD items (BLN).
+Two COD amounts were indicated. Please indicate the amount for COD items (N) in the "ATT\_Amount" field and in the "REC\_DATA" field for electronic COD items (BLN).
 
 E2024
 
@@ -3264,7 +3264,7 @@ For the {0} delivery instruction the notification {1} is required.
 
 E2045
 
-The following characters only are permitted in the Item ID: A to Z (and a to z), numbers 0 to 9, underscore “\_”, hyphen “-”, plus sign “+”.
+The following characters only are permitted in the Item ID: A to Z (and a to z), numbers 0 to 9, underscore "\_", hyphen "-", plus sign "+".
 
 E2047
 
@@ -3374,9 +3374,9 @@ The service is not available at the moment.
 
 #### 8.14.2 Warnings
 
-Every warning consists of a four-digit warning code prefixed by “W” (W1234), beginning at W1000, plus an associated warning text. The web service returns the warning texts in the specified language (German, French, Italian or English). An operation may return more than one warning at a time.
+Every warning consists of a four-digit warning code prefixed by "W" (W1234), beginning at W1000, plus an associated warning text. The web service returns the warning texts in the specified language (German, French, Italian or English). An operation may return more than one warning at a time.
 
-If a warning is returned, the requested service is executed, taking the warning into account. Warnings help to optimize your use of the “Barcode” web service.
+If a warning is returned, the requested service is executed, taking the warning into account. Warnings help to optimize your use of the "Barcode" web service.
 
 The curly brackets are placeholders and are replaced by the relevant values in the actual warning.
 
@@ -3386,27 +3386,27 @@ Warning (English)
 
 W2003
 
-You have indicated a COD amount without requesting the additional service “COD” (BLN).
+You have indicated a COD amount without requesting the additional service "COD" (BLN).
 
 W2004
 
-You have indicated an ISR reference number without requesting the additional service “Electronic COD” (BLN).
+You have indicated an ISR reference number without requesting the additional service "Electronic COD" (BLN).
 
 W2005
 
-You have indicated a telephone number without requesting the delivery instruction “Notify delivery by telephone” (ZAW3213).
+You have indicated a telephone number without requesting the delivery instruction "Notify delivery by telephone" (ZAW3213).
 
 W2006
 
-You have indicated a delivery date without requesting the delivery instruction “Specific delivery date: delivery on ...” (ZAW3217).
+You have indicated a delivery date without requesting the delivery instruction "Specific delivery date: delivery on ..." (ZAW3217).
 
 W2007
 
-You have indicated a parcel number and/or a parcel total without requesting the delivery instruction “Deliver when all consignments have arrived” (ZAW3218).
+You have indicated a parcel number and/or a parcel total without requesting the delivery instruction "Deliver when all consignments have arrived" (ZAW3218).
 
 W2008
 
-You have indicated a deposit point without requesting the delivery instruction “Deposit consignments” (ZAW3219).
+You have indicated a deposit point without requesting the delivery instruction "Deposit consignments" (ZAW3219).
 
 W2009
 

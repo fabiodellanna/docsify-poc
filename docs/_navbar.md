@@ -1,3 +1,3 @@
 * Language
-  * [:uk: English](/)
-  * [:de: Deutsch](/de/)
+  * [:uk: EN](/)
+  * [:de: DE](/de/)
